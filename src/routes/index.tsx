@@ -21,12 +21,12 @@ function Index() {
       <section className={`${MAX} pt-20 pb-24`}>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
-            <div className="t-eyebrow text-primary mb-5">The Platform</div>
-            <h1 className="t-display mb-8">
+            <div className="txt-label-nav text-primary mb-5">The Platform</div>
+            <h1 className="txt-primary-headline text-primary mb-8">
               Operational Excellence,<br />
-              <span className="text-on-surface-variant" style={{ fontWeight: 400 }}>finally scalable.</span>
+              <span className="text-on-surface-variant font-normal">finally scalable.</span>
             </h1>
-            <p className="t-body mb-10 max-w-2xl">
+            <p className="txt-body mb-10 max-w-2xl">
               The Einklang Agent gives every team access to proven improvement methods — keeps capability inside your organisation, not in a consultant's head — and turns every improvement project into a step toward AI-native ways of working.
               <br /><br />
               Strategy and execution, connected by AI.
@@ -37,11 +37,10 @@ function Index() {
             </div>
           </div>
           <div className="lg:col-span-5 lg:pl-12 lg:border-l border-outline-variant">
-            {/* One-off display exception: oversized hero stat */}
             <div className="text-primary leading-[0.9] text-[112px] md:text-[160px] mb-2" style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 800, letterSpacing: "-0.06em" }}>
               30%+
             </div>
-            <div className="t-eyebrow text-on-surface-variant mb-10">Productivity gain · avg. reported by clients</div>
+            <div className="txt-label-nav text-on-surface-variant mb-10">Productivity gain · avg. reported by clients</div>
             <dl className="grid grid-cols-3 gap-6 border-t border-outline-variant pt-8">
               {[
                 { v: "5:1", l: "ROI validated" },
@@ -49,8 +48,8 @@ function Index() {
                 { v: "60 yrs", l: "OE expertise" },
               ].map((s) => (
                 <div key={s.v}>
-                  <div className="t-stat">{s.v}</div>
-                  <div className="t-eyebrow text-on-surface-variant mt-1">{s.l}</div>
+                  <div className="text-2xl text-primary" style={{ fontWeight: 700, letterSpacing: "-0.03em" }}>{s.v}</div>
+                  <div className="text-xs text-on-surface-variant mt-1">{s.l}</div>
                 </div>
               ))}
             </dl>
@@ -60,8 +59,8 @@ function Index() {
 
       {/* Operating regions */}
       <section className="border-y border-outline-variant bg-surface-container-lowest">
-        <div className={`${MAX} py-5 t-body text-center`}>
-          <span className="t-eyebrow text-primary mr-3">Operating in</span>
+        <div className={`${MAX} py-5 text-sm text-on-surface-variant text-center`}>
+          <span className="txt-label-nav text-primary mr-3">Operating in</span>
           Switzerland (DACH) · Germany / Austria · Brazil · LatAm · EU / UK
         </div>
       </section>
@@ -70,9 +69,9 @@ function Index() {
       <section className="bg-surface-container-lowest py-28">
         <div className={MAX}>
           <div className="max-w-3xl mb-20">
-            <div className="t-eyebrow text-primary mb-4">The Transformation</div>
-            <h2 className="t-h2 mb-6">OpEx methods work great — but only for a few. We change that.</h2>
-            <p className="t-body">We bridge the gap between traditional improvement challenges and scalable, AI-driven solutions.</p>
+            <div className="txt-label-nav text-primary mb-4">The Transformation</div>
+            <h2 className="txt-primary-headline text-primary mb-6">OpEx methods work great — but only for a few. We change that.</h2>
+            <p className="txt-body">We bridge the gap between traditional improvement challenges and scalable, AI-driven solutions.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -97,8 +96,8 @@ function Index() {
             ].map((c) => (
               <div key={c.title} className="flex flex-col">
                 <div className="bg-surface border border-outline-variant p-10 z-10 h-full">
-                  <h3 className="t-h3 mb-5">{c.problem}</h3>
-                  <p className="t-body">{c.pBody}</p>
+                  <h3 className="txt-section-title text-primary mb-5">{c.problem}</h3>
+                  <p className="txt-body text-base">{c.pBody}</p>
                 </div>
                 <div className="flex justify-center -my-3 relative z-20">
                   <div className="bg-primary rounded-full p-2 border-4 border-surface-container-lowest text-on-primary">
@@ -106,8 +105,8 @@ function Index() {
                   </div>
                 </div>
                 <div className="bg-primary text-on-primary p-10 pt-12 h-full">
-                  <h4 className="t-h3 text-on-primary mb-5">{c.title}</h4>
-                  <p className="t-body text-on-primary/90">{c.body}</p>
+                  <h4 className="txt-section-title text-on-primary mb-5">{c.title}</h4>
+                  <p className="text-base leading-relaxed text-on-primary/90">{c.body}</p>
                 </div>
               </div>
             ))}
@@ -119,11 +118,11 @@ function Index() {
       <section className="py-28 border-t border-outline-variant">
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
-            <div className="t-eyebrow text-primary mb-4">Why Einklang</div>
-            <h2 className="t-h2">Deep OE expertise, delivered through AI.</h2>
+            <div className="txt-label-nav text-primary mb-4">Why Einklang</div>
+            <h2 className="txt-primary-headline text-primary">Deep OE expertise, delivered through AI.</h2>
           </div>
           <div className="grid lg:grid-cols-2 gap-16">
-            <div className="space-y-6 t-body">
+            <div className="space-y-6 txt-body">
               <p>Most AI tools for business are built by technologists. Einklang is different — built by operational excellence practitioners with decades of experience across manufacturing, banking, consulting, and technology.</p>
               <p>Knowing which method to apply to which problem — when to use a DMAIC cycle versus a rapid kaizen, how to map a value stream in financial services versus a production line — is the difference between OE that creates lasting change and OE that produces a report.</p>
               <p>This domain knowledge powers the Einklang Agent. It is not a generic chatbot. It is an AI that knows what good looks like in operational excellence.</p>
@@ -136,8 +135,8 @@ function Index() {
                 { t: "Built to transfer capability", b: "Every interaction builds the practitioner's own judgement — not dependency on the tool." },
               ].map((f) => (
                 <div key={f.t} className="bg-surface p-7">
-                  <h3 className="t-h3 mb-2">{f.t}</h3>
-                  <p className="t-body">{f.b}</p>
+                  <h3 className="txt-section-title text-primary text-lg mb-2">{f.t}</h3>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">{f.b}</p>
                 </div>
               ))}
             </div>
@@ -149,8 +148,8 @@ function Index() {
       <section className="py-28 bg-surface-container-low border-t border-outline-variant">
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
-            <div className="t-eyebrow text-primary mb-4">Proven Results</div>
-            <h2 className="t-h2">Measurable impact, across real organisations.</h2>
+            <div className="txt-label-nav text-primary mb-4">Proven Results</div>
+            <h2 className="txt-primary-headline text-primary">Measurable impact, across real organisations.</h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant mb-16">
             {[
@@ -160,24 +159,24 @@ function Index() {
               { v: "160+", l: "Leaders certified", s: "Across DACH" },
             ].map((s) => (
               <div key={s.l} className="bg-surface p-8">
-                <div className="t-stat mb-3">{s.v}</div>
-                <div className="t-h3 mb-1">{s.l}</div>
-                <div className="t-eyebrow text-on-surface-variant">{s.s}</div>
+                <div className="text-4xl md:text-5xl text-primary mb-3" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{s.v}</div>
+                <div className="text-sm font-medium text-primary mb-1">{s.l}</div>
+                <div className="text-xs text-on-surface-variant">{s.s}</div>
               </div>
             ))}
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <Link to="/case-studies/swiss-bank" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
-              <div className="t-eyebrow text-on-surface-variant mb-3">Case study</div>
-              <h3 className="t-h3 mb-3">Switzerland's largest global bank</h3>
-              <p className="t-body mb-5">13 Orchestrators · 5:1 ROI · CHF 200k savings. AI-native audit capability embedded across Switzerland and the UK.</p>
-              <span className="t-eyebrow text-primary group-hover:underline">Read the case study →</span>
+              <div className="txt-label-nav text-on-surface-variant mb-3">Case study</div>
+              <h3 className="txt-section-title text-primary mb-3">Switzerland's largest global bank</h3>
+              <p className="txt-body text-base mb-5">13 Orchestrators · 5:1 ROI · CHF 200k savings. AI-native audit capability embedded across Switzerland and the UK.</p>
+              <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
             </Link>
             <Link to="/case-studies/swissmem" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
-              <div className="t-eyebrow text-on-surface-variant mb-3">Case study</div>
-              <h3 className="t-h3 mb-3">Swissmem — 1,300 member companies</h3>
-              <p className="t-body mb-5">160+ leaders certified · CHF 3.8m+ impact. Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
-              <span className="t-eyebrow text-primary group-hover:underline">Read the case study →</span>
+              <div className="txt-label-nav text-on-surface-variant mb-3">Case study</div>
+              <h3 className="txt-section-title text-primary mb-3">Swissmem — 1,300 member companies</h3>
+              <p className="txt-body text-base mb-5">160+ leaders certified · CHF 3.8m+ impact. Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
+              <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
             </Link>
           </div>
         </div>
@@ -187,8 +186,8 @@ function Index() {
       <section className="py-28 border-t border-outline-variant">
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
-            <div className="t-eyebrow text-primary mb-4">Enterprise Ready</div>
-            <h2 className="t-h2">Enterprise-ready by design.</h2>
+            <div className="txt-label-nav text-primary mb-4">Enterprise Ready</div>
+            <h2 className="txt-primary-headline text-primary">Enterprise-ready by design.</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -199,8 +198,8 @@ function Index() {
             ].map((f) => (
               <div key={f.t}>
                 <span className="material-symbols-outlined text-primary text-3xl mb-4 block">{f.i}</span>
-                <h3 className="t-h3 mb-2">{f.t}</h3>
-                <p className="t-body">{f.b}</p>
+                <h3 className="txt-section-title text-primary text-lg mb-2">{f.t}</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">{f.b}</p>
               </div>
             ))}
           </div>
@@ -210,11 +209,11 @@ function Index() {
       {/* Final CTA */}
       <section className="bg-surface-container-low py-28 border-t border-outline-variant text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="t-h2 mb-8">
+          <h2 className="txt-primary-headline text-primary mb-8">
             Scale operational excellence across your organisation.<br />
-            <span className="text-on-surface-variant" style={{ fontWeight: 400 }}>One process at a time. By anyone, anywhere.</span>
+            <span className="text-on-surface-variant font-normal">One process at a time. By anyone, anywhere.</span>
           </h2>
-          <p className="t-body mb-10">See how Einklang can help your teams improve performance today, keep the gains, and identify where AI can redesign work for tomorrow.</p>
+          <p className="txt-body mb-10">See how Einklang can help your teams improve performance today, keep the gains, and identify where AI can redesign work for tomorrow.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a demo</a>
             <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-secondary">Start a pilot</a>

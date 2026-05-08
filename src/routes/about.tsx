@@ -76,45 +76,45 @@ function AboutPage() {
     <div className="max-w-6xl mx-auto px-6 lg:px-10 py-20">
       {/* Hero */}
       <section className="max-w-3xl mb-20">
-        <div className="t-eyebrow text-primary mb-4">About Einklang</div>
-        <h1 className="t-display mb-6">
+        <div className="txt-label-nav text-primary mb-4">About Einklang</div>
+        <h1 className="txt-primary-headline text-primary mb-6">
           Built by practitioners, for practitioners — with a clear purpose.
         </h1>
-        <p className="t-body">
+        <p className="txt-body text-lg">
           We started Einklang because we saw the same problem everywhere: world-class operational excellence methodology locked inside expensive consulting engagements, inaccessible to the organisations that need it most.
         </p>
       </section>
 
       {/* Vision & Mission */}
       <section className="mb-20">
-        <div className="t-eyebrow text-primary mb-3">Why we exist</div>
-        <h2 className="t-h2 mb-8">Our vision & mission</h2>
+        <div className="txt-label-nav text-primary mb-3">Why we exist</div>
+        <h2 className="txt-primary-headline text-primary mb-8 text-3xl md:text-4xl">Our vision & mission</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
-            <div className="t-eyebrow text-primary mb-3">Vision</div>
-            <h3 className="t-h3 mb-3">OE for everyone</h3>
-            <p className="t-body">A world where every organisation — from a São Paulo SME to a Swiss industrial group — can access and apply world-class operational excellence methodology.</p>
+            <div className="txt-label-nav text-primary mb-3">Vision</div>
+            <h3 className="text-xl font-semibold text-primary mb-3">OE for everyone</h3>
+            <p className="txt-body">A world where every organisation — from a São Paulo SME to a Swiss industrial group — can access and apply world-class operational excellence methodology.</p>
           </div>
           <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
-            <div className="t-eyebrow text-primary mb-3">Mission</div>
-            <h3 className="t-h3 mb-3">Embed AI into how work improves</h3>
-            <p className="t-body">We build AI-native tools and certified learning programmes that put OE capability directly in the hands of practitioners, not just consultants.</p>
+            <div className="txt-label-nav text-primary mb-3">Mission</div>
+            <h3 className="text-xl font-semibold text-primary mb-3">Embed AI into how work improves</h3>
+            <p className="txt-body">We build AI-native tools and certified learning programmes that put OE capability directly in the hands of practitioners, not just consultants.</p>
           </div>
         </div>
       </section>
 
       {/* Founders */}
       <section className="mb-20">
-        <div className="t-eyebrow text-primary mb-3">The team</div>
-        <h2 className="t-h2 mb-8">Founders</h2>
+        <div className="txt-label-nav text-primary mb-3">The team</div>
+        <h2 className="txt-primary-headline text-primary mb-8 text-3xl md:text-4xl">Founders</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {founders.map((f) => (
             <div key={f.name} className="flex flex-col">
               <img src={f.img} alt={f.name} className="w-28 h-28 rounded-full object-cover mb-4" />
-              <div className="t-h3">{f.name}</div>
-              <div className="t-small mb-1">{f.role}</div>
-              <div className="t-eyebrow text-on-surface-variant mb-3">{f.location}</div>
-              <p className="t-body">{f.bio}</p>
+              <div className="font-semibold text-primary text-lg">{f.name}</div>
+              <div className="text-sm text-on-surface-variant mb-1">{f.role}</div>
+              <div className="text-xs text-on-surface-variant mb-3">{f.location}</div>
+              <p className="txt-body text-sm">{f.bio}</p>
             </div>
           ))}
         </div>
@@ -122,15 +122,15 @@ function AboutPage() {
 
       {/* Partners */}
       <section className="mb-20">
-        <div className="t-eyebrow text-primary mb-3">Ecosystem</div>
-        <h2 className="t-h2 mb-4">Partners & advisors</h2>
-        <p className="t-body mb-8 max-w-2xl">We work with organisations that share our belief that operational excellence should be accessible to everyone.</p>
+        <div className="txt-label-nav text-primary mb-3">Ecosystem</div>
+        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">Partners & advisors</h2>
+        <p className="txt-body mb-8 max-w-2xl">We work with organisations that share our belief that operational excellence should be accessible to everyone.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {partners.map((p) => (
             <div key={p.name} className="border border-outline-variant rounded p-6 bg-surface-container-lowest">
-              <div className="t-h3 mb-1">{p.name}</div>
-              <div className="t-eyebrow text-on-surface-variant mb-3">{p.role}</div>
-              <p className="t-body">{p.desc}</p>
+              <div className="font-semibold text-primary text-lg mb-1">{p.name}</div>
+              <div className="text-sm text-on-surface-variant mb-3">{p.role}</div>
+              <p className="txt-body text-sm">{p.desc}</p>
             </div>
           ))}
         </div>
@@ -138,15 +138,15 @@ function AboutPage() {
 
       {/* Regions */}
       <section className="mb-20">
-        <div className="t-eyebrow text-primary mb-3">Where we operate</div>
-        <h2 className="t-h2 mb-4">DACH and LatAm — with global reach</h2>
-        <p className="t-body mb-8 max-w-2xl">Headquartered in Zurich, with teams in São Paulo and Utrecht. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
+        <div className="txt-label-nav text-primary mb-3">Where we operate</div>
+        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">DACH and LatAm — with global reach</h2>
+        <p className="txt-body mb-8 max-w-2xl">Headquartered in Zurich, with teams in São Paulo and Utrecht. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {regions.map((r) => (
             <div key={r.name} className="border border-outline-variant rounded p-6 bg-surface-container-lowest">
               <div className="text-3xl mb-3">{r.flag}</div>
-              <div className="t-h3 mb-2">{r.name}</div>
-              <p className="t-body">{r.desc}</p>
+              <div className="font-semibold text-primary mb-2">{r.name}</div>
+              <p className="txt-body text-sm">{r.desc}</p>
             </div>
           ))}
         </div>
@@ -154,13 +154,13 @@ function AboutPage() {
 
       {/* CTA */}
       <section className="border-t border-outline-variant pt-16 text-center">
-        <h2 className="t-h2 mb-4">Want to know more about Einklang?</h2>
-        <p className="t-body mb-8 max-w-xl mx-auto">Book a 30-minute call with Aslam — no commitment, just a conversation.</p>
+        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">Want to know more about Einklang?</h2>
+        <p className="txt-body mb-8 max-w-xl mx-auto">Book a 30-minute call with Aslam — no commitment, just a conversation.</p>
         <a
           href="https://calendly.com/aslamjilani-einklangacademy/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="t-eyebrow inline-flex items-center justify-center rounded bg-primary text-on-primary px-6 py-3 hover:opacity-90 transition"
+          className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-6 py-3 text-sm font-bold hover:opacity-90 transition"
         >
           Book a call
         </a>
