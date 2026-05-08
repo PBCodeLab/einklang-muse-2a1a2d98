@@ -26,7 +26,7 @@ function SwissBank() {
           { v: "CHF 200k", l: "Savings (pilot)" },
         ].map((s) => (
           <div key={s.l}>
-            <div className="text-3xl font-semibold text-primary mb-1" style={{ fontFamily: "Fraunces, Georgia, serif" }}>{s.v}</div>
+            <div className="text-3xl font-semibold text-primary mb-1">{s.v}</div>
             <div className="text-xs text-on-surface-variant">{s.l}</div>
           </div>
         ))}
