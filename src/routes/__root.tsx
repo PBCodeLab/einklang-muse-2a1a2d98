@@ -18,19 +18,24 @@ function SiteHeader() {
         <Link to="/" className="flex items-center" aria-label="Einklang Academy home">
           <img src={logoUrl} alt="Einklang Academy" className="h-12 md:h-14 w-auto" />
         </Link>
-        <nav className="hidden md:flex items-center gap-8 text-sm">
-          <Link to="/" activeOptions={{ exact: true }} className="text-on-surface-variant hover:text-primary transition" activeProps={{ className: "text-primary" }}>Platform</Link>
-          <Link to="/case-studies" className="text-on-surface-variant hover:text-primary transition" activeProps={{ className: "text-primary" }}>Case studies</Link>
-          <Link to="/contact" className="text-on-surface-variant hover:text-primary transition" activeProps={{ className: "text-primary" }}>Contact</Link>
-        </nav>
-        <a
-          href="https://calendly.com/aslamjilani-einklangacademy/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary !py-2 !px-4 text-sm"
-        >
-          Book a demo
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="https://calendly.com/aslamjilani-einklangacademy/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center justify-center rounded border border-primary text-primary px-5 py-2 text-sm font-bold hover:bg-primary hover:text-on-primary transition"
+          >
+            Start a pilot
+          </a>
+          <a
+            href="https://calendly.com/aslamjilani-einklangacademy/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-5 py-2 text-sm font-bold hover:opacity-90 transition"
+          >
+            Book a demo
+          </a>
+        </div>
       </div>
     </header>
   );
