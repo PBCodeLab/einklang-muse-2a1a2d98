@@ -70,7 +70,10 @@ function Index() {
         <div className={MAX}>
           <div className="max-w-3xl mb-20">
             <div className="txt-label-nav text-primary mb-4">The Transformation</div>
-            <h2 className="txt-primary-headline text-primary mb-6">OpEx methods work great — but only for a few. We change that.</h2>
+            <h2 className="txt-primary-headline text-primary mb-6">
+              OpEx methods work great — but only for a few.<br />
+              <span className="text-on-surface-variant font-normal">We change that.</span>
+            </h2>
             <p className="txt-body">We bridge the gap between traditional improvement challenges and scalable, AI-driven solutions.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -119,7 +122,10 @@ function Index() {
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
             <div className="txt-label-nav text-primary mb-4">Why Einklang</div>
-            <h2 className="txt-primary-headline text-primary">Deep OE expertise, delivered through AI.</h2>
+            <h2 className="txt-primary-headline text-primary">
+              Deep OE expertise,<br />
+              <span className="text-on-surface-variant font-normal">delivered through AI.</span>
+            </h2>
           </div>
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-6 txt-body">
@@ -149,7 +155,10 @@ function Index() {
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
             <div className="txt-label-nav text-primary mb-4">Proven Results</div>
-            <h2 className="txt-primary-headline text-primary">Measurable impact, across real organisations.</h2>
+            <h2 className="txt-primary-headline text-primary">
+              Measurable impact,<br />
+              <span className="text-on-surface-variant font-normal">across real organisations.</span>
+            </h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant mb-16">
             {[
