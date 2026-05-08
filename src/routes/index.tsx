@@ -218,7 +218,7 @@ function Index() {
       {/* Final CTA */}
       <section className="bg-surface-container-low py-28 border-t border-outline-variant text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="txt-primary-headline text-primary mb-8">
+          <h2 className="txt-primary-headline text-primary mb-8 text-3xl md:text-4xl">
             Scale operational excellence across your organisation.<br />
             <span className="text-on-surface-variant font-normal">One process at a time. By anyone, anywhere.</span>
           </h2>
