@@ -27,7 +27,7 @@ function SiteHeader() {
           <nav className="hidden md:flex items-center gap-8">
             <Link to="/solutions" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Solutions</Link>
             <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Select Cases</Link>
-            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Letter to our CEO clients</Link>
+            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>TO OUR CEO CLIENTS</Link>
             <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Who we are</Link>
           </nav>
           <a
