@@ -37,7 +37,7 @@ function Index() {
             </div>
           </div>
           <div className="lg:col-span-5 lg:pl-12 lg:border-l border-outline-variant">
-            <div className="font-semibold text-primary leading-none text-[96px] md:text-[140px] tracking-tighter mb-2" style={{ fontFamily: "Fraunces, Georgia, serif" }}>
+            <div className="font-semibold text-primary leading-none text-[96px] md:text-[140px] tracking-tighter mb-2">
               30%+
             </div>
             <div className="txt-label-nav text-on-surface-variant mb-10">Productivity gain · avg. reported by clients</div>
@@ -48,7 +48,7 @@ function Index() {
                 { v: "60 yrs", l: "OE expertise" },
               ].map((s) => (
                 <div key={s.v}>
-                  <div className="text-2xl font-semibold text-primary" style={{ fontFamily: "Fraunces, Georgia, serif" }}>{s.v}</div>
+                  <div className="text-2xl font-semibold text-primary">{s.v}</div>
                   <div className="text-xs text-on-surface-variant mt-1">{s.l}</div>
                 </div>
               ))}
@@ -159,7 +159,7 @@ function Index() {
               { v: "160+", l: "Leaders certified", s: "Across DACH" },
             ].map((s) => (
               <div key={s.l} className="bg-surface p-8">
-                <div className="text-4xl md:text-5xl font-semibold text-primary mb-3" style={{ fontFamily: "Fraunces, Georgia, serif" }}>{s.v}</div>
+                <div className="text-4xl md:text-5xl font-semibold text-primary mb-3">{s.v}</div>
                 <div className="text-sm font-medium text-primary mb-1">{s.l}</div>
                 <div className="text-xs text-on-surface-variant">{s.s}</div>
               </div>
