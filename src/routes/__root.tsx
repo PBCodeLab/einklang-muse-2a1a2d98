@@ -10,6 +10,58 @@ import {
 
 import appCss from "../styles.css?url";
 
+function SiteHeader() {
+  return (
+    <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+        <Link to="/" className="font-semibold text-lg tracking-tight text-primary">
+          Einklang
+          <span className="text-on-surface-variant font-normal"> Academy</span>
+        </Link>
+        <nav className="hidden md:flex items-center gap-8 text-sm">
+          <Link to="/" activeOptions={{ exact: true }} className="text-on-surface-variant hover:text-primary transition" activeProps={{ className: "text-primary" }}>Platform</Link>
+          <Link to="/case-studies" className="text-on-surface-variant hover:text-primary transition" activeProps={{ className: "text-primary" }}>Case studies</Link>
+          <Link to="/contact" className="text-on-surface-variant hover:text-primary transition" activeProps={{ className: "text-primary" }}>Contact</Link>
+        </nav>
+        <a
+          href="https://calendly.com/aslamjilani-einklangacademy/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary !py-2 !px-4 text-sm"
+        >
+          Book a demo
+        </a>
+      </div>
+    </header>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="border-t border-outline-variant bg-surface-container-lowest mt-0">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-3 gap-10">
+        <div>
+          <div className="font-semibold text-primary text-lg mb-3">Einklang Academy</div>
+          <p className="txt-body text-sm">Operational excellence, finally scalable. The Einklang Agent for AI-native ways of working.</p>
+        </div>
+        <div>
+          <div className="txt-label-nav text-primary mb-3">Operating in</div>
+          <p className="text-sm text-on-surface-variant leading-relaxed">
+            Switzerland (DACH) · Germany / Austria · Brazil · LatAm · EU / UK
+          </p>
+        </div>
+        <div>
+          <div className="txt-label-nav text-primary mb-3">Get in touch</div>
+          <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline underline-offset-4">Book a 30-min demo</a>
+        </div>
+      </div>
+      <div className="border-t border-outline-variant py-6 text-center text-xs text-on-surface-variant">
+        © {new Date().getFullYear()} Einklang Academy. All rights reserved.
+      </div>
+    </footer>
+  );
+}
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -72,20 +124,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Einklang Academy — Operational Excellence, finally scalable." },
+      { name: "description", content: "The Einklang Agent gives every team access to proven improvement methods and turns every project into a step toward AI-native ways of working." },
+      { name: "author", content: "Einklang Academy" },
+      { property: "og:title", content: "Einklang Academy" },
+      { property: "og:description", content: "Operational Excellence, finally scalable." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" },
     ],
   }),
   shellComponent: RootShell,
@@ -113,7 +165,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <SiteFooter />
+      </div>
     </QueryClientProvider>
   );
 }
