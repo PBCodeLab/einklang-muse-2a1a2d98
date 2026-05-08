@@ -146,5 +146,79 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
   }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .txt-primary-headline {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .txt-section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  .txt-label-nav {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .txt-body {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--on-surface-variant);
+  }
+
+  .text-on-surface-variant { color: var(--on-surface-variant); }
+  .text-on-primary { color: var(--on-primary); }
+  .bg-surface { background-color: var(--surface); }
+  .bg-surface-container-lowest { background-color: var(--surface-container-lowest); }
+  .bg-surface-container-low { background-color: var(--surface-container-low); }
+  .border-outline-variant { border-color: var(--outline-variant); }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.875rem 1.75rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 2px;
+    transition: opacity .2s, transform .2s;
+  }
+  .btn-primary:hover { opacity: 0.9; }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--primary);
+    padding: 0.8125rem 1.6875rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 2px;
+    border: 1px solid var(--primary);
+    transition: background-color .2s;
+  }
+  .btn-secondary:hover { background-color: var(--surface-container-low); }
 }
