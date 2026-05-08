@@ -58,7 +58,7 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                 problem: "Traditional consulting approaches to OE are costly and do not scale.",
+                 problem: "Traditional consulting approaches to OE were costly and did not scale. Large parts of the economy could not access OE benefits.",
                 pBody: "Expertise is limited by budget, availability, and external specialists. When the engagement ends, so does the capability.",
                 title: "Scaled access",
                 body: "Expert OE guidance available to every team — 24/7, inside Microsoft Teams, at a fraction of the cost.",
