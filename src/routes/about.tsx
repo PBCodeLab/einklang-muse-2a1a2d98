@@ -112,7 +112,7 @@ function AboutPage() {
             <div key={f.name} className="flex flex-col">
               <img src={f.img} alt={f.name} className="w-28 h-28 rounded-full object-cover mb-4" />
               <div className="t-h3">{f.name}</div>
-              <div className="t-body mb-1">{f.role}</div>
+              <div className="t-small mb-1">{f.role}</div>
               <div className="t-eyebrow text-on-surface-variant mb-3">{f.location}</div>
               <p className="t-body">{f.bio}</p>
             </div>
