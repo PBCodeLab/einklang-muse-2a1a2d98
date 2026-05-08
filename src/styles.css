@@ -161,39 +161,69 @@
 
 @layer components {
   /*
-   * Typography system — exactly 4 types used site-wide.
-   * Exception: the hero "30%+" number is a one-off display override.
+   * Editorial type scale — 6 steps + one-off hero stat.
+   *   t-display  Page H1 / hero
+   *   t-h2       Section headline
+   *   t-h3       Card / sub-section heading
+   *   t-body     Paragraph (17px)
+   *   t-small    Meta, caption, footnote
+   *   t-eyebrow  Label, nav, button text (uppercase)
+   *   t-stat     Stat numbers (own scale)
+   * Exception: hero "30%+" is a one-off display override.
    */
-  .txt-display, .txt-primary-headline {
+  .t-display {
     font-family: 'Inter Tight', 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.75rem, 4.2vw, 3.5rem);
+    font-weight: 600;
+    font-size: clamp(2.25rem, 5vw, 4rem);
     line-height: 1.05;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.03em;
     color: var(--primary);
   }
-  .txt-heading, .txt-section-title {
+  .t-h2 {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--primary);
+  }
+  .t-h3 {
     font-family: 'Inter Tight', 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
-    line-height: 1.25;
-    letter-spacing: -0.015em;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
     color: var(--primary);
   }
-  .txt-eyebrow, .txt-label-nav {
+  .t-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--on-surface-variant);
+  }
+  .t-small {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--on-surface-variant);
+  }
+  .t-eyebrow {
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
     text-transform: uppercase;
   }
-  .txt-body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.6;
-    letter-spacing: 0;
-    color: var(--on-surface-variant);
+  .t-stat {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--primary);
   }
 
   .text-on-surface-variant { color: var(--on-surface-variant); }
