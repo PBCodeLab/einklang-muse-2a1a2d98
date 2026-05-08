@@ -40,27 +40,7 @@ function Index() {
               30%+
             </div>
             <div className="txt-label-nav text-on-surface-variant mb-10">Productivity gain · avg. reported by clients</div>
-            <dl className="grid grid-cols-3 gap-6 border-t border-outline-variant pt-8">
-              {[
-                { v: "5:1", l: "ROI validated" },
-                { v: "160+", l: "Leaders certified" },
-                { v: "60 yrs", l: "OE expertise" },
-              ].map((s) => (
-                <div key={s.v}>
-                  <div className="text-2xl text-primary" style={{ fontWeight: 700, letterSpacing: "-0.03em" }}>{s.v}</div>
-                  <div className="text-xs text-on-surface-variant mt-1">{s.l}</div>
-                </div>
-              ))}
-            </dl>
           </div>
-        </div>
-      </section>
-
-      {/* Operating regions */}
-      <section className="border-y border-outline-variant bg-surface-container-lowest">
-        <div className={`${MAX} py-5 text-sm text-on-surface-variant text-center`}>
-          <span className="txt-label-nav text-primary mr-3">Operating in</span>
-          Switzerland (DACH) · Germany / Austria · Brazil · LatAm · EU / UK
         </div>
       </section>
 
@@ -224,7 +204,6 @@ function Index() {
           <p className="txt-body mb-10">See how Einklang can help your teams improve performance today, keep the gains, and identify where AI can redesign work for tomorrow.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a demo</a>
-            <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-secondary">Start a pilot</a>
           </div>
         </div>
       </section>
