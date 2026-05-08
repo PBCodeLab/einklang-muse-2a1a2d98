@@ -24,7 +24,7 @@ function Index() {
             <div className="txt-label-nav text-primary mb-5">The Platform</div>
             <h1 className="txt-primary-headline text-primary mb-8">
               Operational Excellence,<br />
-              <span className="italic font-normal text-on-surface-variant">finally scalable.</span>
+              <span className="text-on-surface-variant font-normal">finally scalable.</span>
             </h1>
             <p className="txt-body mb-10 max-w-2xl">
               The Einklang Agent gives every team access to proven improvement methods — keeps capability inside your organisation, not in a consultant's head — and turns every improvement project into a step toward AI-native ways of working.
@@ -211,7 +211,7 @@ function Index() {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="txt-primary-headline text-primary mb-8">
             Scale operational excellence across your organisation.<br />
-            <span className="italic font-normal text-on-surface-variant">One process at a time. By anyone, anywhere.</span>
+            <span className="text-on-surface-variant font-normal">One process at a time. By anyone, anywhere.</span>
           </h2>
           <p className="txt-body mb-10">See how Einklang can help your teams improve performance today, keep the gains, and identify where AI can redesign work for tomorrow.</p>
           <div className="flex flex-wrap justify-center gap-4">
