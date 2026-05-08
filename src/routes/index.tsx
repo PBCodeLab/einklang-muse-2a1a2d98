@@ -104,9 +104,9 @@ function Index() {
                     <span className="material-symbols-outlined text-[16px] block">arrow_downward</span>
                   </div>
                 </div>
-                <div className="bg-primary text-on-primary p-10 pt-12 h-full">
-                  <h4 className="txt-section-title text-on-primary mb-5">{c.title}</h4>
-                  <p className="text-base leading-relaxed text-on-primary/90">{c.body}</p>
+                <div className="bg-primary text-primary-foreground p-10 pt-12 h-full">
+                  <h4 className="txt-section-title text-primary-foreground mb-5">{c.title}</h4>
+                  <p className="text-base leading-relaxed text-primary-foreground/90">{c.body}</p>
                 </div>
               </div>
             ))}
