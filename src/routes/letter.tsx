@@ -16,7 +16,7 @@ function LetterPage() {
   return (
     <section className="max-w-3xl mx-auto px-6 lg:px-10 py-24">
       <div className="t-eyebrow text-primary mb-4">A letter</div>
-      <h1 className="txt-display mb-6">To our CEO clients.</h1>
+      <h1 className="t-display mb-6">To our CEO clients.</h1>
       <p className="t-body">
         Coming soon — a direct note from our founders on what AI-native operational excellence means for your organisation, and how we partner with you to get there.
       </p>

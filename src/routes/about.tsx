@@ -77,7 +77,7 @@ function AboutPage() {
       {/* Hero */}
       <section className="max-w-3xl mb-20">
         <div className="t-eyebrow text-primary mb-4">About Einklang</div>
-        <h1 className="txt-display mb-6">
+        <h1 className="t-display mb-6">
           Built by practitioners, for practitioners — with a clear purpose.
         </h1>
         <p className="t-body">
@@ -88,7 +88,7 @@ function AboutPage() {
       {/* Vision & Mission */}
       <section className="mb-20">
         <div className="t-eyebrow text-primary mb-3">Why we exist</div>
-        <h2 className="txt-display mb-8">Our vision & mission</h2>
+        <h2 className="t-h2 mb-8">Our vision & mission</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
             <div className="t-eyebrow text-primary mb-3">Vision</div>
@@ -106,7 +106,7 @@ function AboutPage() {
       {/* Founders */}
       <section className="mb-20">
         <div className="t-eyebrow text-primary mb-3">The team</div>
-        <h2 className="txt-display mb-8">Founders</h2>
+        <h2 className="t-h2 mb-8">Founders</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {founders.map((f) => (
             <div key={f.name} className="flex flex-col">
@@ -123,7 +123,7 @@ function AboutPage() {
       {/* Partners */}
       <section className="mb-20">
         <div className="t-eyebrow text-primary mb-3">Ecosystem</div>
-        <h2 className="txt-display mb-4">Partners & advisors</h2>
+        <h2 className="t-h2 mb-4">Partners & advisors</h2>
         <p className="t-body mb-8 max-w-2xl">We work with organisations that share our belief that operational excellence should be accessible to everyone.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {partners.map((p) => (
@@ -139,7 +139,7 @@ function AboutPage() {
       {/* Regions */}
       <section className="mb-20">
         <div className="t-eyebrow text-primary mb-3">Where we operate</div>
-        <h2 className="txt-display mb-4">DACH and LatAm — with global reach</h2>
+        <h2 className="t-h2 mb-4">DACH and LatAm — with global reach</h2>
         <p className="t-body mb-8 max-w-2xl">Headquartered in Zurich, with teams in São Paulo and Utrecht. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {regions.map((r) => (
@@ -154,7 +154,7 @@ function AboutPage() {
 
       {/* CTA */}
       <section className="border-t border-outline-variant pt-16 text-center">
-        <h2 className="txt-display mb-4">Want to know more about Einklang?</h2>
+        <h2 className="t-h2 mb-4">Want to know more about Einklang?</h2>
         <p className="t-body mb-8 max-w-xl mx-auto">Book a 30-minute call with Aslam — no commitment, just a conversation.</p>
         <a
           href="https://calendly.com/aslamjilani-einklangacademy/30min"

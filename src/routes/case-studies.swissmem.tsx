@@ -17,7 +17,7 @@ function Swissmem() {
     <article className="max-w-3xl mx-auto px-6 lg:px-10 py-20">
       <Link to="/case-studies" className="t-eyebrow text-on-surface-variant hover:text-primary">← All case studies</Link>
       <div className="t-eyebrow text-primary mt-10 mb-4">Industrial · Switzerland</div>
-      <h1 className="txt-display mb-8">Swissmem — 1,300 member companies.</h1>
+      <h1 className="t-display mb-8">Swissmem — 1,300 member companies.</h1>
 
       <div className="grid grid-cols-3 gap-6 border-y border-outline-variant py-8 mb-12">
         {[
@@ -26,7 +26,7 @@ function Swissmem() {
           { v: "3 yrs", l: "Co-development" },
         ].map((s) => (
           <div key={s.l}>
-            <div className="txt-display mb-1" style={{ fontSize: "1.875rem" }}>{s.v}</div>
+            <div className="t-stat mb-1">{s.v}</div>
             <div className="t-eyebrow text-on-surface-variant">{s.l}</div>
           </div>
         ))}

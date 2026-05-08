@@ -16,7 +16,7 @@ function Contact() {
   return (
     <section className="max-w-3xl mx-auto px-6 lg:px-10 py-24 text-center">
       <div className="t-eyebrow text-primary mb-4">Get in touch</div>
-      <h1 className="txt-display mb-6">Let's talk about scaling operational excellence.</h1>
+      <h1 className="t-display mb-6">Let's talk about scaling operational excellence.</h1>
       <p className="t-body mb-10">
         Book a 30-minute introduction with our team. We'll walk you through the Einklang Agent, show how it embeds inside Microsoft Teams, and discuss what a pilot could look like in your organisation.
       </p>

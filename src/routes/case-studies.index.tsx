@@ -16,7 +16,7 @@ function CaseStudiesIndex() {
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
       <div className="t-eyebrow text-primary mb-4">Case studies</div>
-      <h1 className="txt-display mb-6">Measurable impact, across real organisations.</h1>
+      <h1 className="t-display mb-6">Measurable impact, across real organisations.</h1>
       <p className="t-body max-w-2xl mb-16">From a global Swiss bank to Switzerland's industrial association — Einklang has been validated where the stakes are highest.</p>
 
       <div className="grid md:grid-cols-2 gap-8">

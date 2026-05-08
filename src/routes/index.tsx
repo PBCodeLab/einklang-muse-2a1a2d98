@@ -22,7 +22,7 @@ function Index() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <div className="t-eyebrow text-primary mb-5">The Platform</div>
-            <h1 className="txt-display mb-8">
+            <h1 className="t-display mb-8">
               Operational Excellence,<br />
               <span className="text-on-surface-variant" style={{ fontWeight: 400 }}>finally scalable.</span>
             </h1>
@@ -49,7 +49,7 @@ function Index() {
                 { v: "60 yrs", l: "OE expertise" },
               ].map((s) => (
                 <div key={s.v}>
-                  <div className="txt-display" style={{ fontSize: "1.75rem" }}>{s.v}</div>
+                  <div className="t-stat">{s.v}</div>
                   <div className="t-eyebrow text-on-surface-variant mt-1">{s.l}</div>
                 </div>
               ))}
@@ -71,7 +71,7 @@ function Index() {
         <div className={MAX}>
           <div className="max-w-3xl mb-20">
             <div className="t-eyebrow text-primary mb-4">The Transformation</div>
-            <h2 className="txt-display mb-6">OpEx methods work great — but only for a few. We change that.</h2>
+            <h2 className="t-h2 mb-6">OpEx methods work great — but only for a few. We change that.</h2>
             <p className="t-body">We bridge the gap between traditional improvement challenges and scalable, AI-driven solutions.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -120,7 +120,7 @@ function Index() {
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
             <div className="t-eyebrow text-primary mb-4">Why Einklang</div>
-            <h2 className="txt-display">Deep OE expertise, delivered through AI.</h2>
+            <h2 className="t-h2">Deep OE expertise, delivered through AI.</h2>
           </div>
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-6 t-body">
@@ -150,7 +150,7 @@ function Index() {
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
             <div className="t-eyebrow text-primary mb-4">Proven Results</div>
-            <h2 className="txt-display">Measurable impact, across real organisations.</h2>
+            <h2 className="t-h2">Measurable impact, across real organisations.</h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant mb-16">
             {[
@@ -160,7 +160,7 @@ function Index() {
               { v: "160+", l: "Leaders certified", s: "Across DACH" },
             ].map((s) => (
               <div key={s.l} className="bg-surface p-8">
-                <div className="txt-display mb-3">{s.v}</div>
+                <div className="t-stat mb-3">{s.v}</div>
                 <div className="t-h3 mb-1">{s.l}</div>
                 <div className="t-eyebrow text-on-surface-variant">{s.s}</div>
               </div>
@@ -188,7 +188,7 @@ function Index() {
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
             <div className="t-eyebrow text-primary mb-4">Enterprise Ready</div>
-            <h2 className="txt-display">Enterprise-ready by design.</h2>
+            <h2 className="t-h2">Enterprise-ready by design.</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -210,7 +210,7 @@ function Index() {
       {/* Final CTA */}
       <section className="bg-surface-container-low py-28 border-t border-outline-variant text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="txt-display mb-8">
+          <h2 className="t-h2 mb-8">
             Scale operational excellence across your organisation.<br />
             <span className="text-on-surface-variant" style={{ fontWeight: 400 }}>One process at a time. By anyone, anywhere.</span>
           </h2>
