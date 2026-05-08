@@ -9,14 +9,14 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logoUrl from "../assets/einklang-logo.png";
 
 function SiteHeader() {
   return (
     <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-        <Link to="/" className="font-semibold text-lg tracking-tight text-primary">
-          Einklang
-          <span className="text-on-surface-variant font-normal"> Academy</span>
+        <Link to="/" className="flex items-center" aria-label="Einklang Academy home">
+          <img src={logoUrl} alt="Einklang Academy" className="h-8 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm">
           <Link to="/" activeOptions={{ exact: true }} className="text-on-surface-variant hover:text-primary transition" activeProps={{ className: "text-primary" }}>Platform</Link>
