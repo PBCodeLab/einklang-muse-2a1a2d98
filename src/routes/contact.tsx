@@ -15,16 +15,16 @@ export const Route = createFileRoute("/contact")({
 function Contact() {
   return (
     <section className="max-w-3xl mx-auto px-6 lg:px-10 py-24 text-center">
-      <div className="txt-eyebrow text-primary mb-4">Get in touch</div>
-      <h1 className="txt-display mb-6">Let's talk about scaling operational excellence.</h1>
-      <p className="txt-body mb-10">
+      <div className="t-eyebrow text-primary mb-4">Get in touch</div>
+      <h1 className="t-display mb-6">Let's talk about scaling operational excellence.</h1>
+      <p className="t-body mb-10">
         Book a 30-minute introduction with our team. We'll walk you through the Einklang Agent, show how it embeds inside Microsoft Teams, and discuss what a pilot could look like in your organisation.
       </p>
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a demo</a>
         <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-secondary">Start a pilot</a>
       </div>
-      <div className="border-t border-outline-variant pt-8 txt-body">
+      <div className="border-t border-outline-variant pt-8 t-body">
         Operating in Switzerland (DACH) · Germany / Austria · Brazil · LatAm · EU / UK
       </div>
     </section>

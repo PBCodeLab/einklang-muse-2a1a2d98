@@ -15,22 +15,22 @@ export const Route = createFileRoute("/case-studies/")({
 function CaseStudiesIndex() {
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
-      <div className="txt-eyebrow text-primary mb-4">Case studies</div>
-      <h1 className="txt-display mb-6">Measurable impact, across real organisations.</h1>
-      <p className="txt-body max-w-2xl mb-16">From a global Swiss bank to Switzerland's industrial association — Einklang has been validated where the stakes are highest.</p>
+      <div className="t-eyebrow text-primary mb-4">Case studies</div>
+      <h1 className="t-display mb-6">Measurable impact, across real organisations.</h1>
+      <p className="t-body max-w-2xl mb-16">From a global Swiss bank to Switzerland's industrial association — Einklang has been validated where the stakes are highest.</p>
 
       <div className="grid md:grid-cols-2 gap-8">
         <Link to="/case-studies/swiss-bank" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
-          <div className="txt-eyebrow text-on-surface-variant mb-3">Banking</div>
-          <h2 className="txt-heading mb-3">Switzerland's largest global bank</h2>
-          <p className="txt-body mb-5">13 Orchestrators · 5:1 ROI · CHF 200k savings. AI-native audit capability embedded across Switzerland and the UK.</p>
-          <span className="txt-eyebrow text-primary group-hover:underline">Read the case study →</span>
+          <div className="t-eyebrow text-on-surface-variant mb-3">Banking</div>
+          <h2 className="t-h3 mb-3">Switzerland's largest global bank</h2>
+          <p className="t-body mb-5">13 Orchestrators · 5:1 ROI · CHF 200k savings. AI-native audit capability embedded across Switzerland and the UK.</p>
+          <span className="t-eyebrow text-primary group-hover:underline">Read the case study →</span>
         </Link>
         <Link to="/case-studies/swissmem" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
-          <div className="txt-eyebrow text-on-surface-variant mb-3">Industrial</div>
-          <h2 className="txt-heading mb-3">Swissmem — 1,300 member companies</h2>
-          <p className="txt-body mb-5">160+ leaders certified · CHF 3.8m+ impact. Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
-          <span className="txt-eyebrow text-primary group-hover:underline">Read the case study →</span>
+          <div className="t-eyebrow text-on-surface-variant mb-3">Industrial</div>
+          <h2 className="t-h3 mb-3">Swissmem — 1,300 member companies</h2>
+          <p className="t-body mb-5">160+ leaders certified · CHF 3.8m+ impact. Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
+          <span className="t-eyebrow text-primary group-hover:underline">Read the case study →</span>
         </Link>
       </div>
     </section>

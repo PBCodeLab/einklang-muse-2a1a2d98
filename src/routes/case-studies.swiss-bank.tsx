@@ -15,9 +15,9 @@ export const Route = createFileRoute("/case-studies/swiss-bank")({
 function SwissBank() {
   return (
     <article className="max-w-3xl mx-auto px-6 lg:px-10 py-20">
-      <Link to="/case-studies" className="txt-eyebrow text-on-surface-variant hover:text-primary">← All case studies</Link>
-      <div className="txt-eyebrow text-primary mt-10 mb-4">Banking · DACH & UK</div>
-      <h1 className="txt-display mb-8">Switzerland's largest global bank.</h1>
+      <Link to="/case-studies" className="t-eyebrow text-on-surface-variant hover:text-primary">← All case studies</Link>
+      <div className="t-eyebrow text-primary mt-10 mb-4">Banking · DACH & UK</div>
+      <h1 className="t-display mb-8">Switzerland's largest global bank.</h1>
 
       <div className="grid grid-cols-3 gap-6 border-y border-outline-variant py-8 mb-12">
         {[
@@ -26,13 +26,13 @@ function SwissBank() {
           { v: "CHF 200k", l: "Savings (pilot)" },
         ].map((s) => (
           <div key={s.l}>
-            <div className="txt-display mb-1" style={{ fontSize: "1.875rem" }}>{s.v}</div>
-            <div className="txt-eyebrow text-on-surface-variant">{s.l}</div>
+            <div className="t-stat mb-1">{s.v}</div>
+            <div className="t-eyebrow text-on-surface-variant">{s.l}</div>
           </div>
         ))}
       </div>
 
-      <div className="space-y-6 txt-body">
+      <div className="space-y-6 t-body">
         <p>Switzerland's largest global bank partnered with Einklang to embed an AI-native audit capability across teams in Switzerland and the United Kingdom — a domain where regulatory rigour and methodological discipline cannot be compromised.</p>
         <p>The pilot focused on 13 orchestrators — practitioners trained to run improvement and audit workflows alongside the Einklang Agent inside Microsoft Teams. Within months, the engagement validated a 5:1 return on investment and delivered CHF 200k in measured savings on the pilot scope alone.</p>
         <p>Crucially, the capability stayed inside the bank. The Agent codified the bank's own playbooks and the orchestrators' judgement was strengthened, not replaced. The pilot is now scaling institutionally.</p>
