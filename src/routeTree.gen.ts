@@ -9,9 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
+import { Route as CaseStudiesSwissmemRouteImport } from './routes/case-studies.swissmem'
+import { Route as CaseStudiesSwissBankRouteImport } from './routes/case-studies.swiss-bank'
 
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
   id: '/case-studies',
   path: '/case-studies',
@@ -22,35 +31,87 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => CaseStudiesRoute,
+} as any)
+const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
+  id: '/swissmem',
+  path: '/swissmem',
+  getParentRoute: () => CaseStudiesRoute,
+} as any)
+const CaseStudiesSwissBankRoute = CaseStudiesSwissBankRouteImport.update({
+  id: '/swiss-bank',
+  path: '/swiss-bank',
+  getParentRoute: () => CaseStudiesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/case-studies': typeof CaseStudiesRoute
+  '/case-studies': typeof CaseStudiesRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
+  '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/case-studies': typeof CaseStudiesRoute
+  '/contact': typeof ContactRoute
+  '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
+  '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/case-studies': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/case-studies': typeof CaseStudiesRoute
+  '/case-studies': typeof CaseStudiesRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
+  '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/case-studies'
+  fullPaths:
+    | '/'
+    | '/case-studies'
+    | '/contact'
+    | '/case-studies/swiss-bank'
+    | '/case-studies/swissmem'
+    | '/case-studies/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/case-studies'
-  id: '__root__' | '/' | '/case-studies'
+  to:
+    | '/'
+    | '/contact'
+    | '/case-studies/swiss-bank'
+    | '/case-studies/swissmem'
+    | '/case-studies'
+  id:
+    | '__root__'
+    | '/'
+    | '/case-studies'
+    | '/contact'
+    | '/case-studies/swiss-bank'
+    | '/case-studies/swissmem'
+    | '/case-studies/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CaseStudiesRoute: typeof CaseStudiesRoute
+  CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
+  ContactRoute: typeof ContactRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-studies': {
       id: '/case-studies'
       path: '/case-studies'
@@ -65,13 +126,61 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/case-studies/': {
+      id: '/case-studies/'
+      path: '/'
+      fullPath: '/case-studies/'
+      preLoaderRoute: typeof CaseStudiesIndexRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
+    '/case-studies/swissmem': {
+      id: '/case-studies/swissmem'
+      path: '/swissmem'
+      fullPath: '/case-studies/swissmem'
+      preLoaderRoute: typeof CaseStudiesSwissmemRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
+    '/case-studies/swiss-bank': {
+      id: '/case-studies/swiss-bank'
+      path: '/swiss-bank'
+      fullPath: '/case-studies/swiss-bank'
+      preLoaderRoute: typeof CaseStudiesSwissBankRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
   }
 }
 
+interface CaseStudiesRouteChildren {
+  CaseStudiesSwissBankRoute: typeof CaseStudiesSwissBankRoute
+  CaseStudiesSwissmemRoute: typeof CaseStudiesSwissmemRoute
+  CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
+}
+
+const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
+  CaseStudiesSwissBankRoute: CaseStudiesSwissBankRoute,
+  CaseStudiesSwissmemRoute: CaseStudiesSwissmemRoute,
+  CaseStudiesIndexRoute: CaseStudiesIndexRoute,
+}
+
+const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
+  CaseStudiesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CaseStudiesRoute: CaseStudiesRoute,
+  CaseStudiesRoute: CaseStudiesRouteWithChildren,
+  ContactRoute: ContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
