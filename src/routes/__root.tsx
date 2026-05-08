@@ -25,16 +25,16 @@ function SiteHeader() {
         </Link>
         <div className="flex items-center gap-8">
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/solutions" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Solutions</Link>
-            <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Select Cases</Link>
-            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Letter to our CEO clients</Link>
-            <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Who we are</Link>
+            <Link to="/solutions" className="txt-eyebrow text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-eyebrow text-primary underline underline-offset-4" }}>Solutions</Link>
+            <Link to="/case-studies" className="txt-eyebrow text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-eyebrow text-primary underline underline-offset-4" }}>Select Cases</Link>
+            <Link to="/letter" className="txt-eyebrow text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-eyebrow text-primary underline underline-offset-4" }}>Letter to our CEO clients</Link>
+            <Link to="/about" className="txt-eyebrow text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-eyebrow text-primary underline underline-offset-4" }}>Who we are</Link>
           </nav>
           <a
             href="https://calendly.com/aslamjilani-einklangacademy/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-5 py-2 text-sm font-bold hover:opacity-90 transition"
+            className="txt-eyebrow inline-flex items-center justify-center rounded bg-primary text-on-primary px-5 py-2 hover:opacity-90 transition"
           >
             Book a demo
           </a>
@@ -49,21 +49,21 @@ function SiteFooter() {
     <footer className="border-t border-outline-variant bg-surface-container-lowest mt-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <div className="font-semibold text-primary text-lg mb-3">Einklang Academy</div>
-          <p className="txt-body text-sm">Operational excellence, finally scalable. The Einklang Agent for AI-native ways of working.</p>
+          <div className="txt-heading mb-3">Einklang Academy</div>
+          <p className="txt-body">Operational excellence, finally scalable. The Einklang Agent for AI-native ways of working.</p>
         </div>
         <div>
-          <div className="txt-label-nav text-primary mb-3">Operating in</div>
-          <p className="text-sm text-on-surface-variant leading-relaxed">
+          <div className="txt-eyebrow text-primary mb-3">Operating in</div>
+          <p className="txt-body">
             Switzerland (DACH) · Germany / Austria · Brazil · LatAm · EU / UK
           </p>
         </div>
         <div>
-          <div className="txt-label-nav text-primary mb-3">Get in touch</div>
-          <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline underline-offset-4">Book a 30-min demo</a>
+          <div className="txt-eyebrow text-primary mb-3">Get in touch</div>
+          <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="txt-body text-primary underline underline-offset-4">Book a 30-min demo</a>
         </div>
       </div>
-      <div className="border-t border-outline-variant py-6 text-center text-xs text-on-surface-variant">
+      <div className="border-t border-outline-variant py-6 text-center txt-eyebrow text-on-surface-variant">
         © {new Date().getFullYear()} Einklang Academy. All rights reserved.
       </div>
     </footer>

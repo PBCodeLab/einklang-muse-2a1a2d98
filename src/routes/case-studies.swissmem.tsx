@@ -15,9 +15,9 @@ export const Route = createFileRoute("/case-studies/swissmem")({
 function Swissmem() {
   return (
     <article className="max-w-3xl mx-auto px-6 lg:px-10 py-20">
-      <Link to="/case-studies" className="txt-label-nav text-on-surface-variant hover:text-primary">← All case studies</Link>
-      <div className="txt-label-nav text-primary mt-10 mb-4">Industrial · Switzerland</div>
-      <h1 className="txt-primary-headline text-primary mb-8">Swissmem — 1,300 member companies.</h1>
+      <Link to="/case-studies" className="txt-eyebrow text-on-surface-variant hover:text-primary">← All case studies</Link>
+      <div className="txt-eyebrow text-primary mt-10 mb-4">Industrial · Switzerland</div>
+      <h1 className="txt-display mb-8">Swissmem — 1,300 member companies.</h1>
 
       <div className="grid grid-cols-3 gap-6 border-y border-outline-variant py-8 mb-12">
         {[
@@ -26,8 +26,8 @@ function Swissmem() {
           { v: "3 yrs", l: "Co-development" },
         ].map((s) => (
           <div key={s.l}>
-            <div className="text-3xl text-primary mb-1" style={{ fontWeight: 800, letterSpacing: "-0.03em" }}>{s.v}</div>
-            <div className="text-xs text-on-surface-variant">{s.l}</div>
+            <div className="txt-display mb-1" style={{ fontSize: "1.875rem" }}>{s.v}</div>
+            <div className="txt-eyebrow text-on-surface-variant">{s.l}</div>
           </div>
         ))}
       </div>
