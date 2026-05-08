@@ -15,8 +15,13 @@ function SiteHeader() {
   return (
     <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center" aria-label="Einklang Academy home">
-          <img src={logoUrl} alt="Einklang Academy" className="h-12 md:h-14 w-auto" />
+        <Link to="/" className="flex items-center shrink-0" aria-label="Einklang Academy home">
+          <img
+            src={logoUrl}
+            alt="Einklang Academy"
+            className="h-12 md:h-14 w-auto shrink-0 object-contain"
+            style={{ mixBlendMode: "multiply" }}
+          />
         </Link>
         <div className="flex items-center gap-8">
           <nav className="hidden md:flex items-center gap-8">
