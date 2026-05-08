@@ -1,36 +1,33 @@
-## 1. Logo — never squeeze on iPad
+## Stylize founder portraits — pencil sketch, greyscale + green accent
 
-In `src/routes/__root.tsx`, the logo `<img>` currently uses `h-12 md:h-14 w-auto`. On iPad widths the parent flex row shrinks it. Fix:
+Yes, this is something I can do professionally in-tool. I'll use the image-edit model (Nano banana) to restyle each of the four existing founder headshots so they read as a coherent set, matching the site's calm, editorial tone.
 
-- Add `shrink-0` to both the `<Link>` wrapper and the `<img>` so flexbox cannot squeeze it.
-- Keep `w-auto` and an explicit height; add `object-contain` as a guard so aspect ratio is always preserved.
+### Approach
 
-## 2. Logo — match header background (remove white box)
+For each of the four existing portraits in `src/assets/team/` (Aslam, Andre, Diego, Philipp), run an image edit with a single shared prompt so the set feels like one series, not four separate experiments. Save as new files (`*-sketch.jpeg`) so we keep originals as a fallback and can A/B if needed.
 
-The logo PNG ships with a white background; the header uses `--background` (warm off-white). Apply `style={{ mixBlendMode: "multiply" }}` to the `<img>` so the white pixels disappear and the dark mark blends cleanly into the header. Zero-cost, reversible, no asset regeneration.
+### Style brief (applied identically to all four)
 
-## 3. Who we are — real content + founder photos
+- Hand-drawn graphite pencil portrait, soft cross-hatching, visible paper grain
+- Greyscale base — warm off-white paper tone (matches site `--background`)
+- Single accent: muted sage/forest green (pulled from the site's primary token in `src/styles.css`) used sparingly — e.g. a subtle wash on clothing or a thin underline shape, not on skin
+- Bust framing, neutral background, soft vignette
+- Consistent line weight, lighting direction, and contrast across all four so they sit as a row
 
-Replace the stub in `src/routes/about.tsx` with the real content from einklang-academy.com/en/about, using existing typography tokens (`txt-label-nav`, `txt-primary-headline`, `txt-body`).
+### Files
 
-### Founder photos
-Download the four headshots from the source site into `src/assets/team/` and import them as ES modules so Vite fingerprints them:
-- `aslam.jpeg` ← https://einklang-academy.com/wp-content/uploads/2026/05/Aslam.jpeg
-- `andre.jpeg` ← https://einklang-academy.com/wp-content/uploads/2026/05/Andre-short-2.jpeg
-- `diego.jpeg` ← https://einklang-academy.com/wp-content/uploads/2026/05/Diego.jpeg
-- `philipp.jpeg` ← https://einklang-academy.com/wp-content/uploads/2026/05/Philipp.jpeg
+1. Generate four new images via `imagegen--edit_image`:
+   - `src/assets/team/aslam-sketch.jpeg`
+   - `src/assets/team/andre-sketch.jpeg`
+   - `src/assets/team/diego-sketch.jpeg`
+   - `src/assets/team/philipp-sketch.jpeg`
+2. Update imports in `src/routes/about.tsx` to point at the `-sketch` versions. No layout changes — same `w-28 h-28 rounded-full object-cover` treatment.
+3. QA: view each output, confirm consistency across the set; iterate the prompt if any one drifts (e.g. too dark, wrong green, photographic instead of drawn).
 
-Each founder card: round photo (`w-28 h-28 rounded-full object-cover`) on top, then name · role · location · bio.
+### Out of scope
 
-### Page sections (in order)
-1. **Hero** — eyebrow "About Einklang" · H1 "Built by practitioners, for practitioners — with a clear purpose." · lead paragraph from source.
-2. **Why we exist — Our vision & mission** (2-col grid): Vision "OE for everyone" + Mission "Embed AI into how work improves", with the source descriptions verbatim.
-3. **The team — Founders** (responsive grid: 1 col mobile, 2 col md, 4 col lg) — Aslam Jilani (CEO & Founder, Zurich), Andre Andreazzi (LatAm Lead & Co-Founder, São Paulo), Diego Castillo (CTO & Co-Founder, Utrecht), Philipp Bubenzer (Co-Founder & Academic Lead, HEG-FR / ETH Zurich), with source bios.
-4. **Ecosystem — Partners & advisors**: intro line + 3 cards (Swissmem, Brilliant Working Ltd, kyro) verbatim.
-5. **Where we operate — DACH and LatAm, with global reach**: intro + 3 cards (Switzerland, Brazil, EU/UK) verbatim.
-6. **CTA**: "Want to know more about Einklang?" · "Book a 30-minute call with Aslam — no commitment, just a conversation." · primary "Book a call" button → existing Calendly URL.
+Originals stay on disk untouched. No changes to partner/region cards, header, or other routes.
 
-Also update the route's `head()` meta: title "Who we are — Einklang Academy" + matching description.
+### Honest caveat
 
-## Out of scope
-- Header `Book a demo` button, footer, other routes.
+AI image edits on real faces are good but not perfect — likeness usually holds at thumbnail size (which is how they're used here, 112px round). If any single result loses likeness badly, I'll re-run that one with a tighter prompt rather than ship it.
