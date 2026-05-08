@@ -58,7 +58,7 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                problem: "Consulting doesn't scale",
+                problem: "OE methods work — for some time, for a few. We change that.",
                 pBody: "Expertise is limited by budget, availability, and external specialists. When the engagement ends, so does the capability.",
                 title: "Scaled access",
                 body: "Expert OE guidance available to every team — 24/7, inside Microsoft Teams, at a fraction of the cost.",
