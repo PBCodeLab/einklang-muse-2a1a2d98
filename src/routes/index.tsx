@@ -58,8 +58,8 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                 problem: "Traditional consulting approaches to OE were costly and did not scale. Large parts of the economy could not access OE benefits.",
-                pBody: "Expertise is limited by budget, availability, and external specialists. When the engagement ends, so does the capability.",
+                 problem: "Consulting is costly and does not scale.",
+                pBody: "Currently, OE methods are implemented through consulting engagements. As this is costly, only few companies have profited from these proven methods. Large parts of the economy have not leveraged the potential or OE methods to dramatically increase productivity and efficiency.",
                 title: "Scaled access",
                 body: "Expert OE guidance available to every team — 24/7, inside Microsoft Teams, at a fraction of the cost.",
               },
