@@ -48,19 +48,25 @@ function AgentPage() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Einklang Agent</div>
-        <div className="flex items-start gap-6 md:gap-8 mb-8">
-          <img
-            src={teamsLogo}
-            alt="Microsoft Teams logo"
-            width={96}
-            height={96}
-            className="w-16 h-16 md:w-24 md:h-24 shrink-0 mt-2"
-          />
+        <div className="flex items-start justify-between gap-6 md:gap-10 mb-4">
           <h1 className="txt-primary-headline text-primary">
             <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
             <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams.</span>
           </h1>
+          <div className="flex flex-col items-center shrink-0 mt-2">
+            <img
+              src={teamsLogo}
+              alt="Microsoft Teams logo"
+              width={96}
+              height={96}
+              className="w-16 h-16 md:w-24 md:h-24"
+            />
+            <span className="txt-label-nav text-on-surface-variant mt-2 text-center">One deployment option</span>
+          </div>
         </div>
+        <p className="text-sm text-on-surface-variant mb-8 max-w-3xl">
+          Microsoft Teams is one deployment option. The Einklang Agent is also available platform-independent — directly in your browser or as a standalone web app.
+        </p>
         <p className="txt-body max-w-3xl mb-10">
           Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
         </p>
