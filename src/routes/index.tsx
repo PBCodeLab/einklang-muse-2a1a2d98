@@ -111,7 +111,7 @@ function Index() {
             <div className="grid sm:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
               {[
                 { t: "60 years cumulative OE", b: "Across manufacturing, banking, consulting, and technology. Hundreds of OE programmes led from first principles." },
-                { t: "Method-first, not tool-first", b: "Built around proven OE methodology (Lean, Six Sigma, VSM, DMAIC), not around what AI can produce." },
+                { t: "Method-first, not tool-first", b: "Built around proven OE methodology (Lean, Six Sigma, VSM, DMAIC), not generalized AI output." },
                 { t: "Sector-specific intelligence", b: "OE in a Swiss bank looks different from OE in a manufacturer. The Agent understands the difference." },
                 { t: "Built to transfer capability", b: "Every interaction builds the practitioner's own judgement, not dependency on the tool." },
               ].map((f) => (
