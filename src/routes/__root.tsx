@@ -25,10 +25,10 @@ function SiteHeader() {
         </Link>
         <div className="flex items-center gap-8">
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/solutions" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Solutions</Link>
-            <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Select Cases</Link>
-            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>TO OUR CEO CLIENTS</Link>
-            <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Who we are</Link>
+            <Link to="/solutions" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Products</Link>
+            <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Cases</Link>
+            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>AI Strategy</Link>
+            <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Company</Link>
           </nav>
           <a
             href="https://calendly.com/aslamjilani-einklangacademy/30min"
