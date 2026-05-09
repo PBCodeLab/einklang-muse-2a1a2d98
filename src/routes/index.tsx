@@ -41,8 +41,6 @@ function Index() {
         </div>
       </section>
 
-      <LogoMarquee />
-
       {/* Transformation */}
       <section className="bg-surface-container-lowest py-28">
         <div className={MAX}>
