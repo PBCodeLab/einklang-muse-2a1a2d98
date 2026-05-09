@@ -41,9 +41,9 @@ function CustomPage() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Custom Agents</div>
-        <h1 className="txt-primary-headline text-primary mb-8 max-w-4xl">
-          Your methodology. Your knowledge.<br />
-          <span className="text-on-surface-variant font-normal">Embedded in AI.</span>
+        <h1 className="txt-primary-headline text-primary mb-8">
+          <span className="md:whitespace-nowrap block">Your methodology. Your knowledge.</span>
+          <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">Embedded in AI.</span>
         </h1>
         <p className="txt-body max-w-3xl mb-10">
           Clients have appreciated our Einklang agent so much they ask us to develop their specific methodologies into agentic AI. While we focus on scaling OE expertise worldwide, we have taken on custom development mandates when there are mutual learning benefits. A Custom Agent is a domain-specific AI built on your organisation's proprietary methodology — not a generic chatbot. It scales your expertise across teams, geographies, and time zones, without scaling your headcount.
