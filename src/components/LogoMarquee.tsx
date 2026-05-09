@@ -12,7 +12,7 @@ const LOGOS = [
   { name: "PwC", src: pwc, h: "h-10 md:h-11" },
   { name: "Pilatus", src: pilatus, h: "h-[13px] md:h-[15px]" },
   { name: "Swissmem", src: swissmem, h: "h-10 md:h-11" },
-  { name: "Komax", src: komax, h: "h-7 md:h-8" },
+  { name: "Komax", src: komax, h: "h-6 md:h-7", center: true },
   { name: "ABB", src: abb, h: "h-10 md:h-12" },
   { name: "Accelleron", src: accelleron, h: "h-6 md:h-7" },
   { name: "Hitachi", src: hitachi, h: "h-9 md:h-10" },
