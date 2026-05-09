@@ -50,7 +50,7 @@ function Index() {
           <div className="max-w-3xl mb-20">
             <div className="txt-label-nav text-primary mb-4">The Transformation</div>
             <h2 className="txt-primary-headline text-primary mb-6">
-              OpEx methods work — for a few.<br />
+              OE methods work. Few have benefitted.<br />
               <span className="text-on-surface-variant font-normal">We democratize OE.</span>
             </h2>
             <p className="txt-body">We bridge the gap between traditional improvement challenges and scalable, AI-driven solutions.</p>
