@@ -153,7 +153,6 @@ function Index() {
               <div className="txt-label-nav text-on-surface-variant mb-3">Case study</div>
               <h3 className="txt-section-title text-primary mb-3">Switzerland's largest global bank</h3>
               <p className="txt-body text-base mb-5 whitespace-pre-line">13 Orchestrators · 5:1 ROI
-
 AI-native audit capability embedded across Switzerland and the UK.</p>
               <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
             </Link>
