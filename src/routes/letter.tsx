@@ -18,7 +18,7 @@ function LetterPage() {
       <div className="txt-label-nav text-primary mb-4">A letter</div>
       <h1 className="txt-primary-headline text-primary mb-6">TO OUR CEO CLIENTS</h1>
       <p className="txt-body">
-        Coming soon — a direct note from our founders on what AI-native operational excellence means for your organisation, and how we partner with you to get there.
+        Coming soon. A direct note from our founders on what AI-native operational excellence means for your organisation, and how we partner with you to get there.
       </p>
     </section>
   );
