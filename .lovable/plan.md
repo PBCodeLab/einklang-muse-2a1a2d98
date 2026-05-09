@@ -1,44 +1,22 @@
-## Placement
-Insert a new "logo marquee" band in `src/routes/index.tsx`, **immediately after the Hero `<section>` and before the Transformation `<section>`**. This puts social proof in the first scroll, where it has the biggest credibility impact.
+## Changes
 
-## Visual design
-- Full-width band, `bg-surface-container-lowest`, top + bottom border `border-outline-variant`.
-- Vertical padding ~`py-10`.
-- Small uppercase label centered above: "Trusted by teams at" (`txt-label-nav text-on-surface-variant`).
-- Logos: ~36–44px tall, horizontal row, evenly spaced (~64px gap).
-- All logos rendered greyscale via `filter grayscale opacity-60`, hover lifts to `opacity-100` (subtle, even though the marquee keeps moving).
-- Soft fade masks on the left + right edges (CSS `mask-image: linear-gradient`) so logos don't hard-cut at the viewport edge — matches the muted website palette.
+**1. Move the marquee.** Remove `<LogoMarquee />` from between the Hero and Transformation sections. Re-render it inside the "Proven Results" section in `src/routes/index.tsx`, placed directly under the 3-stat grid (30%+ / 5:1 / 160+) and above the two case-study cards. This keeps the social-proof story tight: stats → who → case studies.
 
-## Motion
-- Continuous right-to-left scroll using a CSS `@keyframes marquee` animation (translateX 0 → -50%).
-- Track contains the logo list duplicated twice so the loop is seamless.
-- Duration ~40s linear infinite; pauses on hover.
-- Respects `prefers-reduced-motion` (animation disabled, logos shown statically wrapped).
+**2. Use real logos instead of wordmarks.**
+- Source SVGs (preferred) or transparent PNGs for: UBS, PwC, Pilatus, Swissmem, Komax, ABB, Accelleron, Hitachi.
+- Acquisition order I'll try, stopping at the first that returns a clean file per brand:
+  1. Wikimedia Commons (free SVGs for ABB, Hitachi, UBS, PwC, Pilatus, Swissmem, Accelleron typically available)
+  2. simple-icons npm package (covers some of these as monochrome SVGs)
+  3. Each company's official press/brand page via `fetch_website`
+- Save under `src/assets/logos/{name}.svg` (or `.png`).
+- Render in `LogoMarquee.tsx` as `<img src={…} alt="UBS" className="h-6 md:h-7 w-auto opacity-70 grayscale hover:opacity-100" />`. The `grayscale` filter + opacity guarantees the muted look even for color logos. Heights tuned per logo if some look visually larger/smaller than others.
 
-Animation keyframes added to `src/styles.css` (the project uses Tailwind v4 via styles.css, not a config file):
-```css
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.animate-marquee { animation: marquee 40s linear infinite; }
-.animate-marquee:hover { animation-play-state: paused; }
-@media (prefers-reduced-motion: reduce) { .animate-marquee { animation: none; } }
-```
-
-## Logos / assets
-Companies: UBS, PwC, Pilatus, Swissmem, Komax, ABB, Accelleron, Hitachi.
-
-We don't have these logo files in the repo. Two options:
-1. **Generate stylized monochrome wordmark SVGs** for each (safe, brand-neutral grey text in the website font). Fast, no licensing risk, looks intentional.
-2. **Use the official logos** (PNG/SVG sourced from each brand). Stronger recognition, but technically requires permission for marketing use — and we don't have the files locally yet.
-
-I recommend **option 1** as the default (cleanly fits the muted aesthetic, avoids legal ambiguity), and we can swap in real logos later by dropping files into `src/assets/logos/`.
-
-Component: a small `<LogoMarquee />` in `src/components/LogoMarquee.tsx` that takes the array of company names and renders the duplicated track.
-
-## Files touched
-- `src/components/LogoMarquee.tsx` (new) — marquee component.
-- `src/assets/logos/*.svg` (new, 8 files) — greyscale wordmarks.
-- `src/styles.css` — add `@keyframes marquee` + utility class.
-- `src/routes/index.tsx` — import and render `<LogoMarquee />` between Hero and Transformation.
+**3. Fallback.** If a particular logo can't be sourced cleanly (vector unavailable, PNG too low-res, or you'd prefer not to use it for legal reasons), I'll keep its stylized wordmark in the same slot so the band stays full.
 
 ## Open question
-Do you want stylized text wordmarks (option 1, ship now) or should I hold and ask you to upload the real client logos (option 2, more recognizable)?
+Confirm you're OK proceeding with real logos (your assumption being these are real client/training participants and standard B2B "trusted by" usage is acceptable). If you'd rather avoid any specific brand, name them and I'll keep wordmarks for those.
+
+## Files touched
+- `src/routes/index.tsx` — remove `<LogoMarquee />` from hero area, add it inside the Proven Results section.
+- `src/components/LogoMarquee.tsx` — replace text spans with `<img>` tags pointing at imported logo files.
+- `src/assets/logos/*.svg|png` — new files (8).
