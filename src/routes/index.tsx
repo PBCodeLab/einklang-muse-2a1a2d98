@@ -159,7 +159,7 @@ AI-native audit capability embedded across Switzerland and the UK.</p>
             <Link to="/case-studies/swissmem" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
               <div className="txt-label-nav text-on-surface-variant mb-3">Case study</div>
               <h3 className="txt-section-title text-primary mb-3">Swissmem · 1,300 member companies</h3>
-              <p className="txt-body text-base mb-5 whitespace-pre-line">160+ leaders certified.
+              <p className="txt-body text-base mb-5 whitespace-pre-line">160+ leaders certified. 
 Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
               <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
             </Link>
