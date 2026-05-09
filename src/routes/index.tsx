@@ -31,6 +31,21 @@ function Index() {
               Scale operational excellence (OE) across your organization: The <strong className="font-semibold">Einklang Agent</strong> gives every team member access to proven OE improvement methods, it develops and keeps OE capability inside your organization, and turns every improvement project into a step toward AI-native ways of working.{"\n\n"}
               With Einklang, raise OE across your organization and evolve it towards AI maturity.
             </p>
+            <div className="flex flex-wrap gap-3 mb-10">
+              <Link
+                to="/products/agent"
+                className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
+              >
+                Explore the Agent
+              </Link>
+              <Link
+                to="/products/agent"
+                hash="pricing"
+                className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
+              >
+                Agent Pricing
+              </Link>
+            </div>
           </div>
           <div className="lg:col-span-5 lg:pl-12 lg:border-l border-outline-variant">
             <div className="text-primary leading-[0.9] text-[112px] md:text-[160px] mb-2" style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 800, letterSpacing: "-0.06em" }}>
