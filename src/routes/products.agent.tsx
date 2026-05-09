@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import teamsLogo from "@/assets/teams-logo.png";
-import browsersLogo from "@/assets/browsers.png";
+import browsersLogo from "@/assets/browsers-2x2.png";
 
 export const Route = createFileRoute("/products/agent")({
   head: () => ({
@@ -72,10 +72,10 @@ function AgentPage() {
               <img
                 src={browsersLogo}
                 alt="Chrome, Safari, Firefox, Edge browser logos"
-                width={1536}
+                width={512}
                 height={512}
                 loading="lazy"
-                className="w-20 h-auto shrink-0"
+                className="w-12 h-12 shrink-0"
               />
               <div>
                 <div className="txt-label-nav text-primary">Any browser</div>
