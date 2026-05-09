@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import teamsLogo from "@/assets/teams-logo.png";
+import stickerWatercolor from "@/assets/sticker-watercolor.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,22 +22,39 @@ function Index() {
     <>
       {/* Hero */}
       <section className={`${MAX} pt-20 pb-24 relative`}>
-        {/* Sticker badge */}
+        {/* Sticker badge — watercolor */}
         <Link
           to="/products/agent"
           aria-label="Now available in Microsoft Teams"
-          className="hidden md:flex absolute top-6 right-4 lg:right-8 z-10 w-32 h-32 lg:w-36 lg:h-36 items-center justify-center rotate-[14deg] hover:rotate-0 transition-transform duration-300 drop-shadow-lg"
+          className="hidden md:block absolute top-4 right-2 lg:right-6 z-10 w-44 h-44 lg:w-52 lg:h-52 rotate-[8deg] hover:rotate-0 transition-transform duration-500"
         >
-          <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full text-primary" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M100 4 L116 18 L134 10 L144 27 L164 24 L168 44 L186 50 L184 70 L198 84 L188 100 L198 116 L184 130 L186 150 L168 156 L164 176 L144 173 L134 190 L116 182 L100 196 L84 182 L66 190 L56 173 L36 176 L32 156 L14 150 L16 130 L2 116 L12 100 L2 84 L16 70 L14 50 L32 44 L36 24 L56 27 L66 10 L84 18 Z"
-            />
-          </svg>
-          <div className="relative flex flex-col items-center justify-center text-on-primary text-center px-3">
-            <img src={teamsLogo} alt="" width={28} height={28} className="w-7 h-7 mb-1" />
-            <span className="text-[10px] font-bold uppercase tracking-wider leading-none mb-0.5">New</span>
-            <span className="text-[11px] lg:text-xs font-bold leading-tight">Now available<br />in MS Teams!</span>
+          <img
+            src={stickerWatercolor}
+            alt=""
+            width={768}
+            height={768}
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+          <img
+            src={teamsLogo}
+            alt=""
+            width={128}
+            height={128}
+            className="absolute -top-3 -left-3 w-16 h-16 lg:w-20 lg:h-20 drop-shadow-md rotate-[-12deg]"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8 pt-4">
+            <span
+              className="text-[10px] uppercase tracking-[0.3em] text-primary/80 mb-1"
+              style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 600 }}
+            >
+              New
+            </span>
+            <span
+              className="text-base lg:text-lg leading-tight text-primary italic"
+              style={{ fontFamily: "Georgia, 'Cormorant Garamond', serif", fontWeight: 500 }}
+            >
+              Now available<br />in <span className="not-italic font-semibold">MS&nbsp;Teams</span>
+            </span>
           </div>
         </Link>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
