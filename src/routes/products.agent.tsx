@@ -49,11 +49,16 @@ function AgentPage() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Einklang Agent</div>
-        <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-10 mb-4">
-          <h1 className="txt-primary-headline text-primary">
-            <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
-            <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams or any browser.</span>
-          </h1>
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-10 mb-8">
+          <div className="flex-1 min-w-0">
+            <h1 className="txt-primary-headline text-primary mb-8">
+              <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
+              <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams or any browser.</span>
+            </h1>
+            <p className="txt-body max-w-3xl">
+              Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
+            </p>
+          </div>
           <div className="flex flex-col gap-4 shrink-0 w-full md:w-auto">
             <div className="border border-outline-variant bg-surface px-5 py-4 flex items-center gap-4 md:w-64">
               <img
@@ -84,9 +89,6 @@ function AgentPage() {
             </div>
           </div>
         </div>
-        <p className="txt-body max-w-3xl mb-10">
-          Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
-        </p>
         <div className="flex flex-wrap gap-4 mb-8">
           <a
             href={CALENDLY}
