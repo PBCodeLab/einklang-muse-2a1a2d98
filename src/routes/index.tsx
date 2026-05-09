@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { LogoMarquee } from "@/components/LogoMarquee";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,6 +40,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <LogoMarquee />
 
       {/* Transformation */}
       <section className="bg-surface-container-lowest py-28">
