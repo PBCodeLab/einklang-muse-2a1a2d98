@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LogoMarquee } from "@/components/LogoMarquee";
-import teamsLogo from "@/assets/teams-logo.png";
 import stickerWatercolor from "@/assets/sticker-watercolor.png";
 
 export const Route = createFileRoute("/")({
