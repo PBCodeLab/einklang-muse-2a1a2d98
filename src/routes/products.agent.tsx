@@ -55,8 +55,7 @@ function AgentPage() {
           Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
         </p>
         <div className="flex flex-wrap gap-4 mb-8">
-          <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a pilot</a>
-          <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded border border-outline-variant px-5 py-2.5 text-sm font-bold text-primary hover:bg-surface-container-low transition">Book a demo</a>
+          <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Book a demo</a>
         </div>
         <div className="txt-label-nav text-on-surface-variant">Microsoft Teams &amp; Copilot · EU GDPR · Swiss data protection</div>
       </section>
