@@ -50,8 +50,8 @@ function Index() {
           <div className="max-w-3xl mb-20">
             <div className="txt-label-nav text-primary mb-4">The Transformation</div>
             <h2 className="txt-primary-headline text-primary mb-6">
-              OE methods work. Few had access.<br />
-              <span className="text-on-surface-variant font-normal">We democratize OE.</span>
+              OE methods work, but few had access.<br />
+              <span className="text-on-surface-variant font-normal">We change that.</span>
             </h2>
             <p className="txt-body">We bridge the gap between traditional improvement challenges and scalable, AI-driven solutions.</p>
           </div>
