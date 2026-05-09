@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/products/agent")({
   head: () => ({
@@ -166,7 +166,6 @@ function AgentPage() {
           <p className="txt-body mb-10">Start with a no-commitment pilot. We'll deploy it in your Teams tenant and measure the impact together.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a pilot</a>
-            <Link to="/products/academy" className="inline-flex items-center justify-center rounded border border-outline-variant px-5 py-2.5 text-sm font-bold text-primary hover:bg-surface-container-low transition">Explore the Academy</Link>
           </div>
         </div>
       </section>
