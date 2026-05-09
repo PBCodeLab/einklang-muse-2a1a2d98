@@ -41,9 +41,9 @@ const founders = [
   {
     img: philipp,
     name: "Philipp Bubenzer",
-    role: "Co-Founder & Academic Lead",
+    role: "Co-Founder & Chief Innovation Officer",
     location: "HEG-FR / ETH Zurich",
-    bio: "25+ years in Deep Tech. Professor at HEG-FR and researcher at ETH Zurich. Specialist in innovation management and scaling. Brings the academic rigour that underpins Einklang's methodology and certification framework.",
+    bio: "Co-Founder & Chief Innovation Officer",
   },
 ];
 
