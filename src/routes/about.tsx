@@ -113,7 +113,7 @@ function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {founders.map((f) => (
             <div key={f.name} className="flex flex-col">
-              <img src={f.img} alt={f.name} className="w-44 h-44 rounded-full object-cover mb-4" />
+              <img src={f.img} alt={f.name} className="w-44 h-44 rounded object-cover mb-4" />
               <div className="font-semibold text-primary text-lg">{f.name}</div>
               <div className="text-sm text-on-surface-variant mb-1">{f.role}</div>
               <div className="text-xs text-on-surface-variant mb-3">{f.location}</div>
