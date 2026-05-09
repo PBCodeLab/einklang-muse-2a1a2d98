@@ -41,7 +41,7 @@ const founders = [
   {
     img: philipp,
     name: "Philipp Bubenzer",
-    role: "Co-Founder & Chief Innovation Officer",
+    role: "Co-Founder | Growth lead",
     location: "Switzerland",
     bio: "20 years experience building deep tech ventures and advising corporates and governments. WHU doctorate, scholar at HEG-FR and ETH Zurich. Leads GTM strategy and product innovation at Einklang.",
   },
