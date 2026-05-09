@@ -27,9 +27,8 @@ function Index() {
               <span className="text-on-surface-variant font-normal">finally scalable.</span>
             </h1>
             <p className="txt-body mb-10 max-w-2xl whitespace-pre-line">
-              Scale operational excellence across your organisation. By anyone, anywhere.
-
-              Einklang agents give every team access to proven improvement methods, develops and keeps capability inside your organization, and turns every improvement project into a step toward AI-native ways of working.
+              Scale operational excellence (OE) across your organization. By anyone, anywhere.
+              Einklang agents give every team access to proven OE improvement methods, develops and keeps OE capability inside your organization, and turns every improvement project into a step toward AI-native ways of working.
 
               Strategy and execution, connected by AI.
             </p>
