@@ -14,27 +14,27 @@ import logoUrl from "../assets/einklang-logo.png";
 function SiteHeader() {
   return (
     <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
         <Link to="/" className="flex items-center shrink-0" aria-label="Einklang Academy home">
           <img
             src={logoUrl}
             alt="Einklang Academy"
-            className="h-12 md:h-14 w-auto shrink-0 object-contain"
+            className="h-9 sm:h-10 md:h-12 lg:h-14 w-auto shrink-0 object-contain"
             style={{ mixBlendMode: "multiply" }}
           />
         </Link>
-        <div className="flex items-center gap-8">
-          <nav className="hidden md:flex items-center gap-8">
-            <Link to="/solutions" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Products</Link>
-            <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Cases</Link>
-            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>AI Strategy</Link>
-            <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4" }}>Company</Link>
+        <div className="flex items-center gap-3 md:gap-5 lg:gap-8">
+          <nav className="hidden sm:flex items-center gap-3 md:gap-5 lg:gap-8">
+            <Link to="/solutions" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Products</Link>
+            <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Cases</Link>
+            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>AI Strategy</Link>
+            <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Company</Link>
           </nav>
           <a
             href="https://calendly.com/aslamjilani-einklangacademy/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-5 py-2 text-sm font-bold hover:opacity-90 transition"
+            className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
           >
             Book a demo
           </a>
