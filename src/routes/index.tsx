@@ -43,7 +43,7 @@ function Index() {
                 hash="pricing"
                 className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
               >
-                Discover Agent pricing
+                Discover pricing of the Agent
               </Link>
             </div>
           </div>
