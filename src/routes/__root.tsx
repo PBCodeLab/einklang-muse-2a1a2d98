@@ -49,7 +49,12 @@ function SiteFooter() {
     <footer className="border-t border-outline-variant bg-surface-container-lowest mt-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <div className="font-semibold text-primary text-lg mb-3">Einklang.AI</div>
+          <img
+            src={logoUrl}
+            alt="Einklang.AI"
+            className="h-10 md:h-12 w-auto mb-4 object-contain"
+            style={{ mixBlendMode: "multiply" }}
+          />
           <p className="txt-body text-sm">Operational excellence, finally scalable. The Einklang Agent for AI-native ways of working.</p>
         </div>
         <div>
