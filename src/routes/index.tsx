@@ -135,11 +135,10 @@ function Index() {
               <span className="text-on-surface-variant font-normal">across real organisations.</span>
             </h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-outline-variant border border-outline-variant mb-16">
             {[
               { v: "30%+", l: "Productivity gain", s: "Average reported by clients" },
               { v: "5:1", l: "Return on investment", s: "Validated · Swiss global bank pilot" },
-              { v: "CHF 3.8m+", l: "Measured impact", s: "Across Swissmem member companies" },
               { v: "160+", l: "Leaders certified", s: "Across DACH" },
             ].map((s) => (
               <div key={s.l} className="bg-surface p-8">
