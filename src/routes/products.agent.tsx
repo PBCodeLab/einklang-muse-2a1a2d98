@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import teamsLogo from "@/assets/teams-logo.png";
 
 export const Route = createFileRoute("/products/agent")({
   head: () => ({
@@ -47,10 +48,19 @@ function AgentPage() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Einklang Agent</div>
-        <h1 className="txt-primary-headline text-primary mb-8">
-          <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
-          <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams.</span>
-        </h1>
+        <div className="flex items-start gap-6 md:gap-8 mb-8">
+          <img
+            src={teamsLogo}
+            alt="Microsoft Teams logo"
+            width={96}
+            height={96}
+            className="w-16 h-16 md:w-24 md:h-24 shrink-0 mt-2"
+          />
+          <h1 className="txt-primary-headline text-primary">
+            <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
+            <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams.</span>
+          </h1>
+        </div>
         <p className="txt-body max-w-3xl mb-10">
           Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
         </p>
