@@ -81,7 +81,8 @@ function AboutPage() {
       <section className="max-w-3xl mb-20">
         <div className="txt-label-nav text-primary mb-4">About Einklang</div>
         <h1 className="txt-primary-headline text-primary mb-6">
-          Built by practitioners, for practitioners, with a clear purpose.
+          <span className="whitespace-nowrap">Built by practitioners, for practitioners,</span><br />
+          <span className="text-on-surface-variant font-normal">with a clear purpose.</span>
         </h1>
         <p className="txt-body text-lg">
           We started Einklang because we saw the same problem everywhere: world-class operational excellence methodology locked inside expensive consulting engagements, inaccessible to the organisations that need it most.
