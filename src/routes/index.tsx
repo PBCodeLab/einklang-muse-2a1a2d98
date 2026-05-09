@@ -20,7 +20,25 @@ function Index() {
   return (
     <>
       {/* Hero */}
-      <section className={`${MAX} pt-20 pb-24`}>
+      <section className={`${MAX} pt-20 pb-24 relative`}>
+        {/* Sticker badge */}
+        <Link
+          to="/products/agent"
+          aria-label="Now available in Microsoft Teams"
+          className="hidden md:flex absolute top-6 right-4 lg:right-8 z-10 w-32 h-32 lg:w-36 lg:h-36 items-center justify-center rotate-[14deg] hover:rotate-0 transition-transform duration-300 drop-shadow-lg"
+        >
+          <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full text-primary" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M100 4 L116 18 L134 10 L144 27 L164 24 L168 44 L186 50 L184 70 L198 84 L188 100 L198 116 L184 130 L186 150 L168 156 L164 176 L144 173 L134 190 L116 182 L100 196 L84 182 L66 190 L56 173 L36 176 L32 156 L14 150 L16 130 L2 116 L12 100 L2 84 L16 70 L14 50 L32 44 L36 24 L56 27 L66 10 L84 18 Z"
+            />
+          </svg>
+          <div className="relative flex flex-col items-center justify-center text-on-primary text-center px-3">
+            <img src={teamsLogo} alt="" width={28} height={28} className="w-7 h-7 mb-1" />
+            <span className="text-[10px] font-bold uppercase tracking-wider leading-none mb-0.5">New</span>
+            <span className="text-[11px] lg:text-xs font-bold leading-tight">Now available<br />in MS Teams!</span>
+          </div>
+        </Link>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <div className="txt-label-nav text-primary mb-5">The Platform</div>
@@ -58,18 +76,6 @@ function Index() {
             </div>
           </div>
           <div className="lg:col-span-5 lg:pl-12 lg:border-l border-outline-variant">
-            <Link
-              to="/products/agent"
-              aria-label="Now available in Microsoft Teams"
-              className="group relative inline-flex items-center gap-3 bg-surface border border-outline-variant rounded-md pl-3 pr-4 py-2 mb-8 shadow-md hover:shadow-lg transition-all -rotate-2 hover:rotate-0 origin-left"
-            >
-              <span className="absolute -top-1.5 -left-1.5 w-2.5 h-2.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
-              <img src={teamsLogo} alt="" width={28} height={28} className="w-7 h-7 shrink-0" />
-              <span className="flex flex-col leading-tight">
-                <span className="txt-label-nav text-primary">New</span>
-                <span className="text-sm font-semibold text-primary">Now available in MS Teams!</span>
-              </span>
-            </Link>
             <div className="text-primary leading-[0.9] text-[112px] md:text-[160px] mb-2" style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 800, letterSpacing: "-0.06em" }}>
               30%+
             </div>
