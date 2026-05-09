@@ -86,7 +86,7 @@ function SiteFooter() {
         <div>
           <div className="txt-label-nav text-primary mb-3">Operating in</div>
           <p className="text-sm text-on-surface-variant leading-relaxed">
-            DACH · LatAm · UK
+            DACH · LATAM · UK
           </p>
         </div>
         <div>
