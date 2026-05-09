@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import teamsLogo from "@/assets/teams-logo.png";
+import browsersLogo from "@/assets/browsers.png";
 
 export const Route = createFileRoute("/products/agent")({
   head: () => ({
@@ -48,27 +49,53 @@ function AgentPage() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Einklang Agent</div>
-        <div className="flex items-start justify-between gap-6 md:gap-10 mb-4">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-10 mb-4">
           <h1 className="txt-primary-headline text-primary">
             <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
             <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams or any browser.</span>
           </h1>
-          <div className="flex flex-col items-center shrink-0 mt-2">
-            <img
-              src={teamsLogo}
-              alt="Microsoft Teams logo"
-              width={96}
-              height={96}
-              className="w-16 h-16 md:w-24 md:h-24"
-            />
-            <span className="txt-label-nav text-on-surface-variant mt-2 text-center">One deployment option</span>
+          <div className="flex flex-col gap-4 shrink-0 w-full md:w-auto">
+            <div className="border border-outline-variant bg-surface px-5 py-4 flex items-center gap-4 md:w-64">
+              <img
+                src={teamsLogo}
+                alt="Microsoft Teams logo"
+                width={64}
+                height={64}
+                className="w-12 h-12 shrink-0"
+              />
+              <div>
+                <div className="txt-label-nav text-primary">Microsoft Teams</div>
+                <div className="text-xs text-on-surface-variant">Deploy inside your tenant</div>
+              </div>
+            </div>
+            <div className="border border-outline-variant bg-surface px-5 py-4 flex items-center gap-4 md:w-64">
+              <img
+                src={browsersLogo}
+                alt="Chrome, Safari, Firefox, Edge browser logos"
+                width={1536}
+                height={512}
+                loading="lazy"
+                className="w-20 h-auto shrink-0"
+              />
+              <div>
+                <div className="txt-label-nav text-primary">Any browser</div>
+                <div className="text-xs text-on-surface-variant">Platform-independent web app</div>
+              </div>
+            </div>
           </div>
         </div>
         <p className="txt-body max-w-3xl mb-10">
           Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
         </p>
         <div className="flex flex-wrap gap-4 mb-8">
-          <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Book a demo</a>
+          <a
+            href={CALENDLY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
+          >
+            Book a demo
+          </a>
         </div>
         <div className="txt-label-nav text-on-surface-variant">Microsoft Teams &amp; Copilot · EU GDPR · Swiss data protection</div>
       </section>
