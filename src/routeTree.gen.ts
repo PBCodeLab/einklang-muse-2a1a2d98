@@ -17,6 +17,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as ProductsAgentRouteImport } from './routes/products.agent'
+import { Route as ProductsAcademyRouteImport } from './routes/products.academy'
 import { Route as CaseStudiesSwissmemRouteImport } from './routes/case-studies.swissmem'
 import { Route as CaseStudiesSwissBankRouteImport } from './routes/case-studies.swiss-bank'
 
@@ -60,6 +61,11 @@ const ProductsAgentRoute = ProductsAgentRouteImport.update({
   path: '/products/agent',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductsAcademyRoute = ProductsAcademyRouteImport.update({
+  id: '/products/academy',
+  path: '/products/academy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
   id: '/swissmem',
   path: '/swissmem',
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/solutions': typeof SolutionsRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/products/academy': typeof ProductsAcademyRoute
   '/products/agent': typeof ProductsAgentRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/solutions': typeof SolutionsRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/products/academy': typeof ProductsAcademyRoute
   '/products/agent': typeof ProductsAgentRoute
   '/case-studies': typeof CaseStudiesIndexRoute
 }
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/solutions': typeof SolutionsRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/products/academy': typeof ProductsAcademyRoute
   '/products/agent': typeof ProductsAgentRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/products/academy'
     | '/products/agent'
     | '/case-studies/'
   fileRoutesByTo: FileRoutesByTo
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/products/academy'
     | '/products/agent'
     | '/case-studies'
   id:
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/products/academy'
     | '/products/agent'
     | '/case-studies/'
   fileRoutesById: FileRoutesById
@@ -152,6 +164,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   LetterRoute: typeof LetterRoute
   SolutionsRoute: typeof SolutionsRoute
+  ProductsAcademyRoute: typeof ProductsAcademyRoute
   ProductsAgentRoute: typeof ProductsAgentRoute
 }
 
@@ -213,6 +226,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsAgentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products/academy': {
+      id: '/products/academy'
+      path: '/products/academy'
+      fullPath: '/products/academy'
+      preLoaderRoute: typeof ProductsAcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-studies/swissmem': {
       id: '/case-studies/swissmem'
       path: '/swissmem'
@@ -253,6 +273,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   LetterRoute: LetterRoute,
   SolutionsRoute: SolutionsRoute,
+  ProductsAcademyRoute: ProductsAcademyRoute,
   ProductsAgentRoute: ProductsAgentRoute,
 }
 export const routeTree = rootRouteImport
