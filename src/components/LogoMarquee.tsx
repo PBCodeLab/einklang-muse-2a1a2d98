@@ -15,7 +15,7 @@ const LOGOS = [
   { name: "Komax", src: komax, h: "h-4 md:h-5", center: true },
   { name: "ABB", src: abb, h: "h-10 md:h-12" },
   { name: "Accelleron", src: accelleron, h: "h-6 md:h-7" },
-  { name: "Hitachi", src: hitachi, h: "h-16 md:h-20" },
+  { name: "Hitachi", src: hitachi, h: "h-24 md:h-28" },
 ];
 
 function LogoRow() {
