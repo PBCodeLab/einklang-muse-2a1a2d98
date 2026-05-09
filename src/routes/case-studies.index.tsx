@@ -32,6 +32,12 @@ function CaseStudiesIndex() {
           <p className="txt-body text-base mb-5">160+ leaders certified · CHF 3.8m+ impact. Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
           <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
         </Link>
+        <Link to="/case-studies/sara" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
+          <div className="txt-label-nav text-on-surface-variant mb-3">Consulting</div>
+          <h2 className="txt-section-title text-primary mb-3">Sara by Brilliant Working</h2>
+          <p className="txt-body text-base mb-5">A custom AI agent for Baringa Management Consulting — the Brilliant Working methodology, embedded in AI and deployed via secure Azure architecture.</p>
+          <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
+        </Link>
       </div>
     </section>
   );
