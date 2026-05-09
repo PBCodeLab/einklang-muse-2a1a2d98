@@ -47,9 +47,9 @@ function AgentPage() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Einklang Agent</div>
-        <h1 className="txt-primary-headline text-primary mb-8 max-w-4xl">
-          Your AI-powered OE advisor,<br />
-          <span className="text-on-surface-variant font-normal">inside Microsoft Teams.</span>
+        <h1 className="txt-primary-headline text-primary mb-8">
+          <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
+          <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams.</span>
         </h1>
         <p className="txt-body max-w-3xl mb-10">
           Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
