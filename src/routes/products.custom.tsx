@@ -93,7 +93,7 @@ function CustomPage() {
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">Who it's for</div>
-            <h2 className="txt-primary-headline text-primary mb-4">Built for organisations with deep domain knowledge to scale.</h2>
+            <h2 className="txt-primary-headline text-primary mb-4">For organizations desiring to scale their proven methods. Reliably.</h2>
             <p className="txt-body">A Custom Agent makes most sense when you have a proprietary methodology, a large practitioner base, or a consulting practice that relies on consistent application of a framework.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-px bg-outline-variant border border-outline-variant mb-8">
