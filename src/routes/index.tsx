@@ -149,10 +149,7 @@ function Index() {
               </div>
             ))}
           </div>
-          <div className="mb-16">
-            <LogoMarquee />
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Link to="/case-studies/swiss-bank" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
               <div className="txt-label-nav text-on-surface-variant mb-3">Case study</div>
               <h3 className="txt-section-title text-primary mb-3">Switzerland's largest global bank</h3>
@@ -167,6 +164,9 @@ AI-native audit capability embedded across Switzerland and the UK.</p>
 Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
               <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
             </Link>
+          </div>
+          <div>
+            <LogoMarquee />
           </div>
         </div>
       </section>
