@@ -51,7 +51,7 @@ function AgentPage() {
         <div className="flex items-start justify-between gap-6 md:gap-10 mb-4">
           <h1 className="txt-primary-headline text-primary">
             <span className="md:whitespace-nowrap block">Your AI-powered OE advisor,</span>
-            <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams.</span>
+            <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">inside Microsoft Teams or any browser.</span>
           </h1>
           <div className="flex flex-col items-center shrink-0 mt-2">
             <img
