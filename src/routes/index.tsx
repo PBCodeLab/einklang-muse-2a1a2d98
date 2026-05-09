@@ -59,7 +59,7 @@ function Index() {
             {[
               {
                 problem: "OE consulting is costly and doesn't scale.",
-                pBody: "Today, OE methods are delivered through consulting projects. Because this approach is expensive and time-consuming, many companies simply cannot afford such lengthy consulting engagements. As a result, much of the economy has not yet used OE methods to significantly improve productivity and efficiency.",
+                pBody: "Today, OE methods are mostly delivered through consulting. Because this approach is expensive and time-consuming, many companies simply could not afford it. Much of the economy has not yet profited from OE methods potential to boost productivity and efficiency.",
                 title: "Scaled access",
                 body: "Einklang agents make expert OE guidance available to every team — 24/7, inside Microsoft Teams and other platforms, at a fraction of the cost of consulting engagements.",
               },
