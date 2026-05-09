@@ -34,7 +34,7 @@ function Swissmem() {
 
       <div className="space-y-6 txt-body">
         <p>Swissmem represents 1,300 member companies that form the backbone of Switzerland's mechanical, electrical and metalworking industries. Together with Swissmem, Einklang spent three years co-developing operational-excellence programmes tailored to the realities of mid-sized industrial operations.</p>
-        <p>Across that engagement, more than 160 leaders earned certification and the programmes generated more than CHF 3.8m in measured impact across participating companies — improvements that sustain because the methods now live with the practitioners themselves.</p>
+        <p>Across that engagement, more than 160 leaders earned certification and the programmes generated more than CHF 3.8m in measured impact across participating companies. Improvements that sustain because the methods now live with the practitioners themselves.</p>
         <p>The next chapter is scaling these programmes through the Einklang Agent, bringing the same rigour to every team without requiring an on-site consultant.</p>
       </div>
     </article>
