@@ -66,7 +66,7 @@ function Index() {
               <span className="text-on-surface-variant font-normal lg:whitespace-nowrap block">Our Agent changes that.</span>
             </h2>
             <p className="txt-body whitespace-pre-line">
-              Behind many of the world’s most admired organizations — from Toyota to Porsche’s comeback, GE under Jack Welch, and modern leaders like Intel, Nike and Amazon — lies a simple truth: They consistently apply Operational Excellence methods.{"\n\n"}
+              Behind many of the world’s most admired organizations — from Toyota to Porsche’s comeback, GE under Jack Welch, and modern leaders like Intel, Nike and Amazon — lies a simple truth: They consistently apply certain Operational Excellence methods.{"\n\n"}
               Yet for decades, these methods have mostly been available to companies that could afford expert consultants and large transformation programs. Even then, adoption often faded once experts left and teams returned to old routines under daily pressure.{"\n\n"}
               We overcome these accessibility, affordability and sustainability challenges with scalable, AI-driven OE solutions.
             </p>
