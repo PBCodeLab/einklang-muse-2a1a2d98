@@ -149,7 +149,7 @@ function Index() {
               </div>
             ))}
           </div>
-          <div className="-mx-6 lg:-mx-10 mb-16">
+          <div className="mb-16">
             <LogoMarquee />
           </div>
           <div className="grid md:grid-cols-2 gap-8">
