@@ -55,7 +55,7 @@ function SiteFooter() {
             className="h-10 md:h-12 w-auto mb-4 object-contain"
             style={{ mixBlendMode: "multiply" }}
           />
-          <p className="txt-body text-sm">Operational excellence, finally scalable. The Einklang Agent developing OE across the for AI-native ways of working.</p>
+          <p className="txt-body text-sm whitespace-pre-line">Operational excellence,{"\n"}finally scalable.</p>
         </div>
         <div>
           <div className="txt-label-nav text-primary mb-3">Operating in</div>
