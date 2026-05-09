@@ -60,7 +60,7 @@ function SiteFooter() {
         <div>
           <div className="txt-label-nav text-primary mb-3">Operating in</div>
           <p className="text-sm text-on-surface-variant leading-relaxed">
-            Switzerland (DACH) · Germany / Austria · LatAm · EU / UK
+            DACH · LatAm · UK
           </p>
         </div>
         <div>
