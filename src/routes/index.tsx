@@ -42,18 +42,10 @@ function Index() {
             height={128}
             className="absolute -top-3 -left-3 w-16 h-16 lg:w-20 lg:h-20 drop-shadow-md rotate-[-12deg]"
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8 pt-4">
-            <span
-              className="text-[10px] uppercase tracking-[0.3em] text-primary/80 mb-1"
-              style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 600 }}
-            >
-              New
-            </span>
-            <span
-              className="text-base lg:text-lg leading-tight text-primary italic"
-              style={{ fontFamily: "Georgia, 'Cormorant Garamond', serif", fontWeight: 500 }}
-            >
-              Now available<br />in <span className="not-italic font-semibold">MS&nbsp;Teams</span>
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-10">
+            <span className="txt-label-nav text-primary mb-2">New</span>
+            <span className="text-sm lg:text-base leading-snug text-primary font-semibold">
+              Now available<br />in MS Teams
             </span>
           </div>
         </Link>
