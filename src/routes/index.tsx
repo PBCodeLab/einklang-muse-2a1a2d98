@@ -96,11 +96,11 @@ function Index() {
       {/* Why Einklang */}
       <section className="py-28 border-t border-outline-variant">
         <div className={MAX}>
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-5xl mb-16">
             <div className="txt-label-nav text-primary mb-4">Why Einklang</div>
             <h2 className="txt-primary-headline text-primary">
-              Decades of OE experience,<br />
-              <span className="text-on-surface-variant font-normal">delivered through AI.</span>
+              <span className="lg:whitespace-nowrap block">Decades of OE experience,</span>
+              <span className="text-on-surface-variant font-normal lg:whitespace-nowrap block">delivered through AI.</span>
             </h2>
           </div>
           <div className="grid lg:grid-cols-2 gap-16">
@@ -129,11 +129,11 @@ function Index() {
       {/* Proven results */}
       <section className="py-28 bg-surface-container-low border-t border-outline-variant">
         <div className={MAX}>
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-5xl mb-16">
             <div className="txt-label-nav text-primary mb-4">Proven Results</div>
             <h2 className="txt-primary-headline text-primary">
-              Measurable impact,<br />
-              <span className="text-on-surface-variant font-normal">across industry and service sectors.</span>
+              <span className="lg:whitespace-nowrap block">Measurable impact,</span>
+              <span className="text-on-surface-variant font-normal lg:whitespace-nowrap block">across industry and service sectors.</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-outline-variant border border-outline-variant mb-16">
