@@ -98,7 +98,7 @@ function AgentPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-surface-container-low border-t border-outline-variant">
+      <section id="pricing" className="py-24 bg-surface-container-low border-t border-outline-variant scroll-mt-24">
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">Pricing</div>
