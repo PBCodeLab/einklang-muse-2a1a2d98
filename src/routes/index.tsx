@@ -200,7 +200,7 @@ Three years co-developing OE programmes across the Swiss industrial ecosystem.</
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="txt-primary-headline text-primary mb-8 text-3xl md:text-4xl">
             Scale operational excellence across your organisation.<br />
-            <span className="text-on-surface-variant font-normal">One process at a time. By anyone, anywhere.</span>
+            <span className="text-on-surface-variant font-normal">By anyone, anywhere.</span>
           </h2>
           <p className="txt-body mb-10">See how Einklang can help your teams improve performance today, keep the gains, and identify where AI can redesign work for tomorrow.</p>
           <div className="flex flex-wrap justify-center gap-4">
