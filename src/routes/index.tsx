@@ -104,7 +104,7 @@ function Index() {
           </div>
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-6 txt-body">
-              <p>Most AI tools for business are built by technologists. Einklang is different. Built by operational excellence practitioners with decades of experience across manufacturing, banking, consulting, and technology.</p>
+              <p>Most AI tools for business are still built by technologists. Einklang is different. Built by operational excellence practitioners with decades of leadership experience across manufacturing, banking, consulting, and technology. <Link to="/about" className="text-primary hover:underline">Learn more about the team.</Link></p>
               <p>Knowing which method to apply to which problem (when to use a DMAIC cycle versus a rapid kaizen, how to map a value stream in financial services versus a production line) is the difference between OE that creates lasting change and OE that produces a report.</p>
               <p>This domain knowledge powers the Einklang Agent. It is not a generic chatbot. It is an AI that knows what good looks like in operational excellence.</p>
             </div>
