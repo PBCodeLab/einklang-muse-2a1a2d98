@@ -134,7 +134,7 @@ function Index() {
             <div className="txt-label-nav text-primary mb-4">Proven Results</div>
             <h2 className="txt-primary-headline text-primary">
               Measurable impact,<br />
-              <span className="text-on-surface-variant font-normal">across sectors.</span>
+              <span className="text-on-surface-variant font-normal">across industry and service sectors.</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-outline-variant border border-outline-variant mb-16">
