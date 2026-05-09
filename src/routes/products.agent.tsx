@@ -141,27 +141,6 @@ function AgentPage() {
         </div>
       </section>
 
-      <section className="py-24 border-t border-outline-variant">
-        <div className={MAX}>
-          <div className="max-w-2xl mb-14">
-            <div className="txt-label-nav text-primary mb-4">Proven ROI</div>
-            <h2 className="txt-primary-headline text-primary">What clients report after 6 months.</h2>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-px bg-outline-variant border border-outline-variant">
-            {[
-              { v: "30%", l: "Average cost reduction reported by clients" },
-              { v: "5:1", l: "ROI on pilot — Switzerland's largest global bank" },
-              { v: "<1 wk", l: "Time to first practitioner using it independently" },
-            ].map((s) => (
-              <div key={s.l} className="bg-surface p-8 text-center">
-                <div className="text-4xl md:text-5xl text-primary mb-3" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{s.v}</div>
-                <div className="text-sm text-on-surface-variant">{s.l}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-24 bg-surface-container-lowest border-t border-outline-variant">
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
