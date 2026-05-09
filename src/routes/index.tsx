@@ -143,7 +143,7 @@ function Index() {
               { v: "5:1", l: "Return on investment", s: "Validated · Swiss global bank pilot" },
               { v: "160+", l: "Leaders certified", s: "Across DACH" },
             ].map((s) => (
-              <div key={s.l} className="bg-surface p-8">
+              <div key={s.l} className="bg-surface p-8 text-center">
                 <div className="text-4xl md:text-5xl text-primary mb-3" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{s.v}</div>
                 <div className="text-sm font-medium text-primary mb-1">{s.l}</div>
                 <div className="text-xs text-on-surface-variant">{s.s}</div>
