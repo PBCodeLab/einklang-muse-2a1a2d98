@@ -58,7 +58,7 @@ function CustomPage() {
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">What it is</div>
-            <h2 className="txt-primary-headline text-primary mb-4">Not a chatbot — a domain-specific AI orchestration layer.</h2>
+            <h2 className="txt-primary-headline text-primary mb-4">Not a chatbot — a domain-specific AI companion.</h2>
             <p className="txt-body">Combines your methodology, your context, and LLM intelligence into a single AI that knows your framework as deeply as your best practitioner — available 24/7 to everyone in your organisation.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-px bg-outline-variant border border-outline-variant mb-12">
