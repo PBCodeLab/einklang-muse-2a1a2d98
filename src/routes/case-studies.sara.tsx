@@ -20,9 +20,9 @@ function SaraCaseStudy() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Case study</div>
-        <h1 className="txt-primary-headline text-primary mb-8 max-w-4xl">
-          Sara by Brilliant Working —<br />
-          <span className="text-on-surface-variant font-normal">from methodology support to a scalable AI platform.</span>
+        <h1 className="txt-primary-headline text-primary mb-8">
+          <span className="md:whitespace-nowrap block">Sara by Brilliant Working —</span>
+          <span className="text-on-surface-variant font-normal lg:whitespace-nowrap block">from methodology support to a scalable AI platform.</span>
         </h1>
         <p className="txt-body max-w-3xl mb-10">
           Einklang built a fully custom AI agent for Baringa Management Consulting — trained on the Brilliant Working methodology and deployed across client engagements via secure Microsoft Azure architecture.
