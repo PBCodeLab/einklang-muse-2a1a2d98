@@ -26,7 +26,7 @@ function Index() {
         <Link
           to="/products/agent"
           aria-label="Now available in Microsoft Teams"
-          className="hidden md:block absolute top-4 right-2 lg:right-6 z-10 w-44 h-44 lg:w-52 lg:h-52 rotate-[8deg] hover:rotate-0 transition-transform duration-500"
+          className="hidden md:block absolute top-2 right-2 lg:right-6 z-10 w-48 h-48 lg:w-56 lg:h-56 rotate-[6deg] hover:rotate-0 transition-transform duration-500"
         >
           <img
             src={stickerWatercolor}
@@ -35,15 +35,8 @@ function Index() {
             height={768}
             className="absolute inset-0 w-full h-full object-contain"
           />
-          <img
-            src={teamsLogo}
-            alt=""
-            width={128}
-            height={128}
-            className="absolute -top-3 -left-3 w-16 h-16 lg:w-20 lg:h-20 drop-shadow-md rotate-[-12deg]"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-10">
-            <span className="txt-label-nav text-primary mb-2">New</span>
+          <div className="absolute inset-x-0 bottom-[18%] top-[44%] flex flex-col items-center justify-center text-center px-8">
+            <span className="txt-label-nav text-primary mb-1.5">New</span>
             <span className="text-sm lg:text-base leading-snug text-primary font-semibold">
               Now available<br />in MS Teams
             </span>
