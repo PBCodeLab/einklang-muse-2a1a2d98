@@ -51,7 +51,7 @@ function CustomPage() {
         <div className="flex flex-wrap gap-4 mb-8">
           <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Book a discovery call</a>
         </div>
-        <div className="txt-label-nav text-on-surface-variant">Sara reference implementation · Secure Azure architecture · Microsoft Teams · EU GDPR</div>
+        <div className="txt-label-nav text-on-surface-variant uppercase">Secure Azure architecture · Microsoft Teams · EU GDPR</div>
       </section>
 
       <section className="bg-surface-container-lowest py-24 border-t border-outline-variant">
