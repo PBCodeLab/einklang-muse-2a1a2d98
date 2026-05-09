@@ -43,20 +43,20 @@ const founders = [
     name: "Philipp Bubenzer",
     role: "Co-Founder & Academic Lead",
     location: "HEG-FR / ETH Zurich",
-    bio: "25+ years in Deep Tech. Professor at HEG-FR and researcher at ETH Zurich. Specialist in innovation management and scaling — brings the academic rigour that underpins Einklang's methodology and certification framework.",
+    bio: "25+ years in Deep Tech. Professor at HEG-FR and researcher at ETH Zurich. Specialist in innovation management and scaling. Brings the academic rigour that underpins Einklang's methodology and certification framework.",
   },
 ];
 
 const partners = [
   {
     name: "Swissmem",
-    role: "Strategic partner — Swiss industry",
+    role: "Strategic partner · Swiss industry",
     desc: "Switzerland's leading industrial association with 1,300 member companies. 160+ leaders certified through Einklang, with CHF 3.8m in measured impact across the membership.",
   },
   {
     name: "Brilliant Working Ltd",
     role: "Reference implementation partner",
-    desc: "The organisation behind the Brilliant Working methodology. Einklang built Sara — a fully custom AI agent trained on their proprietary framework — as the reference Customer Agent implementation.",
+    desc: "The organisation behind the Brilliant Working methodology. Einklang built Sara (a fully custom AI agent trained on their proprietary framework) as the reference Customer Agent implementation.",
   },
   {
     name: "kyro",
@@ -66,9 +66,9 @@ const partners = [
 ];
 
 const regions = [
-  { flag: "🇨🇭", name: "Switzerland — DACH anchor", desc: "Headquarters in Zurich. Swissmem partnership. Swiss industrial sector focus." },
-  { flag: "🇧🇷", name: "Brazil — LatAm growth market", desc: "Andre Andreazzi leads from São Paulo. Active pipeline from Swiss Consulate São Paulo and LATC Mannheim 2026." },
-  { flag: "🇬🇧", name: "EU / UK — adjacent market", desc: "Brilliant Working Ltd reference case. Growing pipeline across European enterprise clients." },
+  { flag: "🇨🇭", name: "Switzerland · DACH anchor", desc: "Headquarters in Zurich. Swissmem partnership. Swiss industrial sector focus." },
+  { flag: "🇧🇷", name: "Brazil · LatAm growth market", desc: "Andre Andreazzi leads from São Paulo. Active pipeline from Swiss Consulate São Paulo and LATC Mannheim 2026." },
+  { flag: "🇬🇧", name: "EU / UK · adjacent market", desc: "Brilliant Working Ltd reference case. Growing pipeline across European enterprise clients." },
 ];
 
 function AboutPage() {
@@ -78,7 +78,7 @@ function AboutPage() {
       <section className="max-w-3xl mb-20">
         <div className="txt-label-nav text-primary mb-4">About Einklang</div>
         <h1 className="txt-primary-headline text-primary mb-6">
-          Built by practitioners, for practitioners — with a clear purpose.
+          Built by practitioners, for practitioners, with a clear purpose.
         </h1>
         <p className="txt-body text-lg">
           We started Einklang because we saw the same problem everywhere: world-class operational excellence methodology locked inside expensive consulting engagements, inaccessible to the organisations that need it most.
@@ -93,7 +93,7 @@ function AboutPage() {
           <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
             <div className="txt-label-nav text-primary mb-3">Vision</div>
             <h3 className="text-xl font-semibold text-primary mb-3">OE for everyone</h3>
-            <p className="txt-body">A world where every organisation — from a São Paulo SME to a Swiss industrial group — can access and apply world-class operational excellence methodology.</p>
+            <p className="txt-body">A world where every organisation, from a São Paulo SME to a Swiss industrial group, can access and apply world-class operational excellence methodology.</p>
           </div>
           <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
             <div className="txt-label-nav text-primary mb-3">Mission</div>
@@ -139,7 +139,7 @@ function AboutPage() {
       {/* Regions */}
       <section className="mb-20">
         <div className="txt-label-nav text-primary mb-3">Where we operate</div>
-        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">DACH and LatAm — with global reach</h2>
+        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">DACH and LatAm, with global reach</h2>
         <p className="txt-body mb-8 max-w-2xl">Headquartered in Zurich, with teams in São Paulo and Utrecht. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {regions.map((r) => (
@@ -155,7 +155,7 @@ function AboutPage() {
       {/* CTA */}
       <section className="border-t border-outline-variant pt-16 text-center">
         <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">Want to know more about Einklang?</h2>
-        <p className="txt-body mb-8 max-w-xl mx-auto">Book a 30-minute call with Aslam — no commitment, just a conversation.</p>
+        <p className="txt-body mb-8 max-w-xl mx-auto">Book a 30-minute call with Aslam. No commitment, just a conversation.</p>
         <a
           href="https://calendly.com/aslamjilani-einklangacademy/30min"
           target="_blank"

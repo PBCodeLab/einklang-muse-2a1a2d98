@@ -33,8 +33,8 @@ function SwissBank() {
       </div>
 
       <div className="space-y-6 txt-body">
-        <p>Switzerland's largest global bank partnered with Einklang to embed an AI-native audit capability across teams in Switzerland and the United Kingdom — a domain where regulatory rigour and methodological discipline cannot be compromised.</p>
-        <p>The pilot focused on 13 orchestrators — practitioners trained to run improvement and audit workflows alongside the Einklang Agent inside Microsoft Teams. Within months, the engagement validated a 5:1 return on investment and delivered CHF 200k in measured savings on the pilot scope alone.</p>
+        <p>Switzerland's largest global bank partnered with Einklang to embed an AI-native audit capability across teams in Switzerland and the United Kingdom, a domain where regulatory rigour and methodological discipline cannot be compromised.</p>
+        <p>The pilot focused on 13 orchestrators, practitioners trained to run improvement and audit workflows alongside the Einklang Agent inside Microsoft Teams. Within months, the engagement validated a 5:1 return on investment and delivered CHF 200k in measured savings on the pilot scope alone.</p>
         <p>Crucially, the capability stayed inside the bank. The Agent codified the bank's own playbooks and the orchestrators' judgement was strengthened, not replaced. The pilot is now scaling institutionally.</p>
       </div>
     </article>

@@ -4,7 +4,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Einklang Academy — Operational Excellence, finally scalable." },
-      { name: "description", content: "Einklang Agent: scaled access to proven OE methods, sustained adoption, and stepwise AI design — for every team." },
+      { name: "description", content: "Einklang Agent: scaled access to proven OE methods, sustained adoption, and stepwise AI design, for every team." },
       { property: "og:title", content: "Einklang Academy — Operational Excellence, finally scalable." },
       { property: "og:description", content: "The Einklang Agent gives every team access to proven improvement methods, inside Microsoft Teams." },
     ],
@@ -58,13 +58,13 @@ function Index() {
                 problem: "OE consulting is costly and doesn't scale.",
                 pBody: "Today, OE methods are mostly delivered through consulting. Because this approach is expensive and time-consuming, many companies simply could not afford it. Much of the economy has not yet profited from OE methods potential to boost productivity and efficiency.",
                 title: "Scaled access",
-                body: "Einklang agents make expert OE guidance available to every team — 24/7, inside Microsoft Teams and other platforms, at a fraction of the cost of consulting engagements.",
+                body: "Einklang agents make expert OE guidance available to every team, 24/7, inside Microsoft Teams and other platforms, at a fraction of the cost of consulting engagements.",
               },
               {
                 problem: "OE benefits fade, old routines return.",
                 pBody: "After OE consultants leave, employees often return to their routines. Under the pressure of daily work without ongoing support, the new OE methods and their benefits fade.",
                 title: "Sustained adoption",
-                body: "Einklang agents enable natural interactions adapted to each user's level of experience and involvement — keeping the OE method in use, teams engaged and benefits realized.",
+                body: "Einklang agents enable natural interactions adapted to each user's level of experience and involvement, keeping the OE method in use, teams engaged and benefits realized.",
               },
               {
                 problem: "AI-native OE strategy lacks execution.",
@@ -105,16 +105,16 @@ function Index() {
           </div>
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-6 txt-body">
-              <p>Most AI tools for business are built by technologists. Einklang is different — built by operational excellence practitioners with decades of experience across manufacturing, banking, consulting, and technology.</p>
-              <p>Knowing which method to apply to which problem — when to use a DMAIC cycle versus a rapid kaizen, how to map a value stream in financial services versus a production line — is the difference between OE that creates lasting change and OE that produces a report.</p>
+              <p>Most AI tools for business are built by technologists. Einklang is different. Built by operational excellence practitioners with decades of experience across manufacturing, banking, consulting, and technology.</p>
+              <p>Knowing which method to apply to which problem (when to use a DMAIC cycle versus a rapid kaizen, how to map a value stream in financial services versus a production line) is the difference between OE that creates lasting change and OE that produces a report.</p>
               <p>This domain knowledge powers the Einklang Agent. It is not a generic chatbot. It is an AI that knows what good looks like in operational excellence.</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
               {[
-                { t: "60 years cumulative OE", b: "Across manufacturing, banking, consulting, and technology — hundreds of OE programmes led from first principles." },
-                { t: "Method-first, not tool-first", b: "Built around proven OE methodology — Lean, Six Sigma, VSM, DMAIC — not around what AI can produce." },
+                { t: "60 years cumulative OE", b: "Across manufacturing, banking, consulting, and technology. Hundreds of OE programmes led from first principles." },
+                { t: "Method-first, not tool-first", b: "Built around proven OE methodology (Lean, Six Sigma, VSM, DMAIC), not around what AI can produce." },
                 { t: "Sector-specific intelligence", b: "OE in a Swiss bank looks different from OE in a manufacturer. The Agent understands the difference." },
-                { t: "Built to transfer capability", b: "Every interaction builds the practitioner's own judgement — not dependency on the tool." },
+                { t: "Built to transfer capability", b: "Every interaction builds the practitioner's own judgement, not dependency on the tool." },
               ].map((f) => (
                 <div key={f.t} className="bg-surface p-7">
                   <h3 className="txt-section-title text-primary text-lg mb-2">{f.t}</h3>
@@ -139,7 +139,7 @@ function Index() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant mb-16">
             {[
               { v: "30%+", l: "Productivity gain", s: "Average reported by clients" },
-              { v: "5:1", l: "Return on investment", s: "Validated — Swiss global bank pilot" },
+              { v: "5:1", l: "Return on investment", s: "Validated · Swiss global bank pilot" },
               { v: "CHF 3.8m+", l: "Measured impact", s: "Across Swissmem member companies" },
               { v: "160+", l: "Leaders certified", s: "Across DACH" },
             ].map((s) => (
@@ -159,7 +159,7 @@ function Index() {
             </Link>
             <Link to="/case-studies/swissmem" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
               <div className="txt-label-nav text-on-surface-variant mb-3">Case study</div>
-              <h3 className="txt-section-title text-primary mb-3">Swissmem — 1,300 member companies</h3>
+              <h3 className="txt-section-title text-primary mb-3">Swissmem · 1,300 member companies</h3>
               <p className="txt-body text-base mb-5">160+ leaders certified · CHF 3.8m+ impact. Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
               <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
             </Link>
