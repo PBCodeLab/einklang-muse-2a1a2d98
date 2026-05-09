@@ -27,10 +27,11 @@ function Index() {
               Operational Excellence,<br />
               <span className="text-on-surface-variant font-normal">finally scalable.</span>
             </h1>
-            <p className="txt-body mb-10 max-w-2xl whitespace-pre-line">
-              Scale operational excellence (OE) across your organization: The <strong className="font-semibold">Einklang Agent</strong> gives every team member access to proven OE improvement methods, it develops and keeps OE capability inside your organization, and turns every improvement project into a step toward AI-native ways of working.{"\n\n"}
+            <div className="txt-body mb-10 max-w-2xl whitespace-pre-line">
+              Scale operational excellence (OE) across your organization: {"\n\n"}
+              The <strong className="font-semibold">Einklang Agent</strong> empowers every team member to apply proven OE improvement methods in their own workflow, it thereby develops broad OE capability inside your organization, and - even better - turns every such improvement project into a step toward AI-native ways of working.{"\n\n"}
               With Einklang, raise OE across your organization and evolve it towards AI maturity.
-            </p>
+            </div>
             <div className="flex flex-wrap gap-3 mb-10">
               <Link
                 to="/products/agent"
