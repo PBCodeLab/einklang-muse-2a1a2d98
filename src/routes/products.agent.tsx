@@ -83,7 +83,7 @@ function AgentPage() {
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">How it works</div>
-            <h2 className="txt-primary-headline text-primary mb-4">Up and running in four steps.</h2>
+            <h2 className="txt-primary-headline text-primary mb-4 whitespace-nowrap">Up and running in four steps.</h2>
             <p className="txt-body">Deployed via your existing Microsoft tenant. No new infrastructure, no IT project.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant">
@@ -102,7 +102,7 @@ function AgentPage() {
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">Pricing</div>
-            <h2 className="txt-primary-headline text-primary mb-4">Simple, transparent pricing.</h2>
+            <h2 className="txt-primary-headline text-primary mb-4 whitespace-nowrap">Simple, transparent pricing.</h2>
             <p className="txt-body">No setup fees. Cancel anytime. Both plans include full onboarding and ongoing support.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -145,7 +145,7 @@ function AgentPage() {
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">Common questions</div>
-            <h2 className="txt-primary-headline text-primary">Questions we hear most often.</h2>
+            <h2 className="txt-primary-headline text-primary whitespace-nowrap">Questions we hear most often.</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
             {FAQ.map((f) => (
