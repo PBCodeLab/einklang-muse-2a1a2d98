@@ -27,9 +27,9 @@ function LogoRow() {
 
 export function LogoMarquee() {
   return (
-    <section className="bg-surface-container-lowest border-y border-outline-variant py-10">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 mb-6">
-        <div className="txt-label-nav text-on-surface-variant text-center">
+    <section className="bg-surface-container-lowest border-y border-outline-variant py-4">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 mb-2">
+        <div className="txt-label-nav text-on-surface-variant text-center text-[10px]">
           Trusted by teams at
         </div>
       </div>
