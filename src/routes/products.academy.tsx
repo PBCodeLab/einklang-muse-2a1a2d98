@@ -38,19 +38,6 @@ function AcademyPage() {
         <p className="txt-body max-w-3xl mb-10">
           Two certification pathways designed for DACH and LatAm. Practitioner and Orchestrator programmes combine structured methodology with AI-native tools — supported by the Einklang Agent throughout.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant">
-          {[
-            { v: "160+", l: "Leaders certified" },
-            { v: "CHF 3.8m+", l: "Measured impact" },
-            { v: "5:1", l: "ROI demonstrated" },
-            { v: "DE / EN", l: "Available now" },
-          ].map((s) => (
-            <div key={s.l} className="bg-surface p-7 text-center">
-              <div className="text-3xl md:text-4xl text-primary mb-2" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{s.v}</div>
-              <div className="text-sm text-on-surface-variant">{s.l}</div>
-            </div>
-          ))}
-        </div>
       </section>
 
       <section className="bg-surface-container-lowest py-24 border-t border-outline-variant">
