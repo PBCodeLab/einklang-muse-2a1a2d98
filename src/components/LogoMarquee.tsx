@@ -38,9 +38,9 @@ function LogoRow() {
 export function LogoMarquee() {
   return (
     <div className="bg-surface-container-lowest border-y border-outline-variant py-6">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 mb-3">
-        <div className="txt-label-nav text-on-surface-variant text-center text-[10px]">
-          Trusted by teams at
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 mb-4">
+        <div className="txt-label-nav text-on-surface-variant text-center text-[10px] tracking-wider">
+          EINKLANG SOLUTIONS TRUSTED BY MEMBERS OF
         </div>
       </div>
       <div className="marquee-mask marquee-track overflow-hidden">
