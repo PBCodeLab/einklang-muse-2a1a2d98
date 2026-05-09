@@ -8,14 +8,16 @@ import swissmem from "@/assets/logos/swissmem.svg";
 import ubs from "@/assets/logos/ubs.png";
 
 const LOGOS = [
-  { name: "UBS", src: ubs, h: "h-7 md:h-8" },
-  { name: "PwC", src: pwc, h: "h-8 md:h-9" },
-  { name: "Pilatus", src: pilatus, h: "h-7 md:h-8" },
-  { name: "Swissmem", src: swissmem, h: "h-6 md:h-7" },
-  { name: "Komax", src: komax, h: "h-5 md:h-6" },
-  { name: "ABB", src: abb, h: "h-6 md:h-7" },
-  { name: "Accelleron", src: accelleron, h: "h-5 md:h-6" },
-  { name: "Hitachi", src: hitachi, h: "h-5 md:h-6" },
+  // Heights tuned so the wordmark text appears visually similar across logos
+  // (using Accelleron's wordmark height as the reference).
+  { name: "UBS", src: ubs, h: "h-8 md:h-10" },
+  { name: "PwC", src: pwc, h: "h-11 md:h-12" },
+  { name: "Pilatus", src: pilatus, h: "h-4 md:h-5" },
+  { name: "Swissmem", src: swissmem, h: "h-10 md:h-11" },
+  { name: "Komax", src: komax, h: "h-12 md:h-14" },
+  { name: "ABB", src: abb, h: "h-7 md:h-8" },
+  { name: "Accelleron", src: accelleron, h: "h-6 md:h-7" },
+  { name: "Hitachi", src: hitachi, h: "h-9 md:h-10" },
 ];
 
 function LogoRow() {
