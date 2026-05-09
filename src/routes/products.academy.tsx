@@ -31,9 +31,9 @@ function AcademyPage() {
     <>
       <section className={`${MAX} pt-20 pb-16`}>
         <div className="txt-label-nav text-primary mb-5">Skill Build Academy</div>
-        <h1 className="txt-primary-headline text-primary mb-8 max-w-4xl">
-          Build real OE capability —<br />
-          <span className="text-on-surface-variant font-normal">certified, practical, AI-native.</span>
+        <h1 className="txt-primary-headline text-primary mb-8">
+          <span className="md:whitespace-nowrap block">Build real OE capability —</span>
+          <span className="text-on-surface-variant font-normal md:whitespace-nowrap block">certified, practical, AI-native.</span>
         </h1>
         <p className="txt-body max-w-3xl mb-10">
           Two certification pathways designed for DACH and LatAm. Practitioner and Orchestrator programmes combine structured methodology with AI-native tools — supported by the Einklang Agent throughout.
