@@ -16,6 +16,9 @@ import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
+import { Route as ProductsCustomRouteImport } from './routes/products.custom'
+import { Route as ProductsAgentRouteImport } from './routes/products.agent'
+import { Route as ProductsAcademyRouteImport } from './routes/products.academy'
 import { Route as CaseStudiesSwissmemRouteImport } from './routes/case-studies.swissmem'
 import { Route as CaseStudiesSwissBankRouteImport } from './routes/case-studies.swiss-bank'
 
@@ -54,6 +57,21 @@ const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
+const ProductsCustomRoute = ProductsCustomRouteImport.update({
+  id: '/products/custom',
+  path: '/products/custom',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsAgentRoute = ProductsAgentRouteImport.update({
+  id: '/products/agent',
+  path: '/products/agent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsAcademyRoute = ProductsAcademyRouteImport.update({
+  id: '/products/academy',
+  path: '/products/academy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
   id: '/swissmem',
   path: '/swissmem',
@@ -74,6 +92,9 @@ export interface FileRoutesByFullPath {
   '/solutions': typeof SolutionsRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/products/academy': typeof ProductsAcademyRoute
+  '/products/agent': typeof ProductsAgentRoute
+  '/products/custom': typeof ProductsCustomRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -84,6 +105,9 @@ export interface FileRoutesByTo {
   '/solutions': typeof SolutionsRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/products/academy': typeof ProductsAcademyRoute
+  '/products/agent': typeof ProductsAgentRoute
+  '/products/custom': typeof ProductsCustomRoute
   '/case-studies': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesById {
@@ -96,6 +120,9 @@ export interface FileRoutesById {
   '/solutions': typeof SolutionsRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/products/academy': typeof ProductsAcademyRoute
+  '/products/agent': typeof ProductsAgentRoute
+  '/products/custom': typeof ProductsCustomRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRouteTypes {
@@ -109,6 +136,9 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/products/academy'
+    | '/products/agent'
+    | '/products/custom'
     | '/case-studies/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -119,6 +149,9 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/products/academy'
+    | '/products/agent'
+    | '/products/custom'
     | '/case-studies'
   id:
     | '__root__'
@@ -130,6 +163,9 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/products/academy'
+    | '/products/agent'
+    | '/products/custom'
     | '/case-studies/'
   fileRoutesById: FileRoutesById
 }
@@ -140,6 +176,9 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   LetterRoute: typeof LetterRoute
   SolutionsRoute: typeof SolutionsRoute
+  ProductsAcademyRoute: typeof ProductsAcademyRoute
+  ProductsAgentRoute: typeof ProductsAgentRoute
+  ProductsCustomRoute: typeof ProductsCustomRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -193,6 +232,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesIndexRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
+    '/products/custom': {
+      id: '/products/custom'
+      path: '/products/custom'
+      fullPath: '/products/custom'
+      preLoaderRoute: typeof ProductsCustomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/agent': {
+      id: '/products/agent'
+      path: '/products/agent'
+      fullPath: '/products/agent'
+      preLoaderRoute: typeof ProductsAgentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/academy': {
+      id: '/products/academy'
+      path: '/products/academy'
+      fullPath: '/products/academy'
+      preLoaderRoute: typeof ProductsAcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-studies/swissmem': {
       id: '/case-studies/swissmem'
       path: '/swissmem'
@@ -233,6 +293,9 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   LetterRoute: LetterRoute,
   SolutionsRoute: SolutionsRoute,
+  ProductsAcademyRoute: ProductsAcademyRoute,
+  ProductsAgentRoute: ProductsAgentRoute,
+  ProductsCustomRoute: ProductsCustomRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

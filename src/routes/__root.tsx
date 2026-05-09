@@ -7,11 +7,13 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { useState } from "react";
 
 import appCss from "../styles.css?url";
 import logoUrl from "../assets/einklang-logo.png";
 
 function SiteHeader() {
+  const [productsOpen, setProductsOpen] = useState(false);
   return (
     <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
@@ -25,7 +27,31 @@ function SiteHeader() {
         </Link>
         <div className="flex items-center gap-3 md:gap-5 lg:gap-8">
           <nav className="hidden sm:flex items-center gap-3 md:gap-5 lg:gap-8">
-            <Link to="/solutions" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Products</Link>
+            <div
+              className="relative"
+              onMouseEnter={() => setProductsOpen(true)}
+              onMouseLeave={() => setProductsOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setProductsOpen((v) => !v)}
+                className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm inline-flex items-center gap-1"
+                aria-haspopup="menu"
+                aria-expanded={productsOpen}
+              >
+                Products
+                <span aria-hidden className="text-[10px]">▾</span>
+              </button>
+              {productsOpen && (
+                <div role="menu" className="absolute left-0 top-full pt-2 min-w-[220px]">
+                  <div className="bg-surface border border-outline-variant shadow-sm py-2">
+                    <Link to="/products/agent" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Agent</Link>
+                    <Link to="/products/academy" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Academy</Link>
+                    <Link to="/products/custom" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Custom Development</Link>
+                  </div>
+                </div>
+              )}
+            </div>
             <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Cases</Link>
             <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>AI Strategy</Link>
             <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Company</Link>
