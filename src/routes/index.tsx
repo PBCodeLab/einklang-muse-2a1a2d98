@@ -61,7 +61,7 @@ function Index() {
             <Link
               to="/products/agent"
               aria-label="Now available in Microsoft Teams"
-              className="group inline-flex items-center gap-3 bg-surface border border-outline-variant rounded-md pl-3 pr-4 py-2 mb-8 shadow-md hover:shadow-lg transition-all -rotate-2 hover:rotate-0 origin-left"
+              className="group relative inline-flex items-center gap-3 bg-surface border border-outline-variant rounded-md pl-3 pr-4 py-2 mb-8 shadow-md hover:shadow-lg transition-all -rotate-2 hover:rotate-0 origin-left"
             >
               <span className="absolute -top-1.5 -left-1.5 w-2.5 h-2.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
               <img src={teamsLogo} alt="" width={28} height={28} className="w-7 h-7 shrink-0" />
