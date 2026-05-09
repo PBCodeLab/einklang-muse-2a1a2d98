@@ -37,7 +37,7 @@ const founders = [
   {
     img: diego,
     name: "Diego Castillo",
-    role: "Co-Founder | CTO",
+    role: "Co-Founder | Tech lead",
     location: "Utrecht, Netherlands",
     bio: "Ex-McKinsey Senior Digital Manager with 20 years scaling technology platforms. Led AI and Cloud solutions reaching 20M+ users. Leads the architecture behind the Einklang Agent platform.",
   },
