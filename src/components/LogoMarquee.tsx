@@ -8,27 +8,25 @@ import swissmem from "@/assets/logos/swissmem.svg";
 import ubs from "@/assets/logos/ubs.png";
 
 const LOGOS = [
-  // Heights tuned so the wordmark text appears visually similar across logos
-  // (using Accelleron's wordmark height as the reference).
-  { name: "UBS", src: ubs, h: "h-8 md:h-10" },
-  { name: "PwC", src: pwc, h: "h-11 md:h-12" },
-  { name: "Pilatus", src: pilatus, h: "h-4 md:h-5" },
+  { name: "UBS", src: ubs, h: "h-7 md:h-8" },
+  { name: "PwC", src: pwc, h: "h-10 md:h-11" },
+  { name: "Pilatus", src: pilatus, h: "h-5 md:h-6" },
   { name: "Swissmem", src: swissmem, h: "h-10 md:h-11" },
-  { name: "Komax", src: komax, h: "h-12 md:h-14" },
-  { name: "ABB", src: abb, h: "h-7 md:h-8" },
+  { name: "Komax", src: komax, h: "h-16 md:h-20" },
+  { name: "ABB", src: abb, h: "h-10 md:h-12" },
   { name: "Accelleron", src: accelleron, h: "h-6 md:h-7" },
-  { name: "Hitachi", src: hitachi, h: "h-9 md:h-10" },
+  { name: "Hitachi", src: hitachi, h: "h-12 md:h-14" },
 ];
 
 function LogoRow() {
   return (
-    <ul className="flex items-center gap-12 md:gap-16 pr-12 md:pr-16 shrink-0">
+    <ul className="flex items-center gap-10 md:gap-12 pr-10 md:pr-12 shrink-0">
       {LOGOS.map((l) => (
-        <li key={l.name} className="flex items-center">
+        <li key={l.name} className="h-20 flex items-center">
           <img
             src={l.src}
             alt={l.name}
-            className={`${l.h} w-auto object-contain grayscale opacity-60 hover:opacity-90 transition-opacity`}
+            className={`${l.h} w-auto object-contain grayscale opacity-70`}
             loading="lazy"
           />
         </li>
@@ -39,13 +37,13 @@ function LogoRow() {
 
 export function LogoMarquee() {
   return (
-    <div className="bg-surface-container-lowest border-y border-outline-variant py-6">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 mb-4">
-        <div className="txt-label-nav text-on-surface-variant text-center text-[10px] tracking-wider">
-          EINKLANG SOLUTIONS TRUSTED BY MEMBERS OF
+    <div className="bg-surface border border-outline-variant flex flex-col md:flex-row">
+      <div className="md:w-56 shrink-0 px-6 py-4 md:py-0 flex items-center justify-center md:justify-start border-b md:border-b-0 md:border-r border-outline-variant">
+        <div className="txt-label-nav text-on-surface-variant text-[10px] tracking-wider leading-snug text-center md:text-left">
+          EINKLANG SOLUTIONS<br className="hidden md:inline" /> TRUSTED BY MEMBERS OF
         </div>
       </div>
-      <div className="marquee-mask marquee-track overflow-hidden">
+      <div className="marquee-mask marquee-track overflow-hidden flex-1">
         <div className="animate-marquee flex w-max">
           <LogoRow />
           <LogoRow />
