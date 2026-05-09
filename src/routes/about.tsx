@@ -3,6 +3,9 @@ import aslam from "../assets/team/aslam-sketch.jpeg";
 import andre from "../assets/team/andre-sketch.jpeg";
 import diego from "../assets/team/diego-sketch.jpeg";
 import philipp from "../assets/team/philipp-sketch.jpeg";
+import zurichImg from "../assets/regions/zurich-sketch.jpeg";
+import saoPauloImg from "../assets/regions/saopaulo-sketch.jpeg";
+import londonImg from "../assets/regions/london-sketch.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -66,9 +69,9 @@ const partners = [
 ];
 
 const regions = [
-  { flag: "🇨🇭", name: "Switzerland · DACH anchor", desc: "Headquarters in Zurich. Swissmem partnership. Swiss industrial sector focus." },
-  { flag: "🇧🇷", name: "Brazil · LatAm growth market", desc: "Andre Andreazzi leads from São Paulo. Active pipeline from Swiss Consulate São Paulo and LATC Mannheim 2026." },
-  { flag: "🇬🇧", name: "EU / UK · adjacent market", desc: "Brilliant Working Ltd reference case. Growing pipeline across European enterprise clients." },
+  { img: zurichImg, name: "Zurich" },
+  { img: saoPauloImg, name: "São Paulo" },
+  { img: londonImg, name: "London" },
 ];
 
 function AboutPage() {
@@ -141,14 +144,19 @@ function AboutPage() {
         <div className="txt-label-nav text-primary mb-3">Where we operate</div>
         <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">DACH and LatAm, with global reach</h2>
         <p className="txt-body mb-8 max-w-2xl">Headquartered in Zurich, with teams in São Paulo and Utrecht. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           {regions.map((r) => (
-            <div key={r.name} className="border border-outline-variant rounded p-6 bg-surface-container-lowest">
-              <div className="text-3xl mb-3">{r.flag}</div>
-              <div className="font-semibold text-primary mb-2">{r.name}</div>
-              <p className="txt-body text-sm">{r.desc}</p>
+            <div key={r.name} className="flex flex-col">
+              <img src={r.img} alt={r.name} loading="lazy" width={1024} height={1024} className="w-full aspect-square object-cover rounded" />
+              <div className="font-semibold text-primary mt-3 text-center">{r.name}</div>
             </div>
           ))}
+        </div>
+        <div className="border-t border-outline-variant pt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div><span className="txt-label-nav text-primary block mb-1">Headquarters</span><span className="text-on-surface-variant">Zurich</span></div>
+          <div><span className="txt-label-nav text-primary block mb-1">Anchor markets</span><span className="text-on-surface-variant">DACH</span></div>
+          <div><span className="txt-label-nav text-primary block mb-1">Growth markets</span><span className="text-on-surface-variant">LatAm</span></div>
+          <div><span className="txt-label-nav text-primary block mb-1">AI partnerships</span><span className="text-on-surface-variant">UK</span></div>
         </div>
       </section>
 
