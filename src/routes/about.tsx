@@ -20,7 +20,7 @@ const founders = [
   {
     img: aslam,
     name: "Aslam Jilani",
-    role: "CEO & Founder",
+    role: "Co-Founder | CEO",
     location: "Zurich, Switzerland",
     bio: "30 years driving continuous improvement at GE, IBM, and Shell. Expert in complex stakeholder management across Energy, Finance, and Technology sectors. Founded Einklang to make world-class OE accessible at scale.",
   },
