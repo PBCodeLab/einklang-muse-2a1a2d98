@@ -45,6 +45,14 @@ function Index() {
               >
                 Discover Agent pricing
               </Link>
+              <a
+                href="https://calendly.com/aslamjilani-einklangacademy/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
+              >
+                Book Agent demo
+              </a>
             </div>
           </div>
           <div className="lg:col-span-5 lg:pl-12 lg:border-l border-outline-variant">
