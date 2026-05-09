@@ -10,12 +10,12 @@ import ubs from "@/assets/logos/ubs.png";
 const LOGOS = [
   { name: "UBS", src: ubs, h: "h-7 md:h-8" },
   { name: "PwC", src: pwc, h: "h-10 md:h-11" },
-  { name: "Pilatus", src: pilatus, h: "h-4 md:h-5" },
+  { name: "Pilatus", src: pilatus, h: "h-[13px] md:h-[15px]" },
   { name: "Swissmem", src: swissmem, h: "h-10 md:h-11" },
   { name: "Komax", src: komax, h: "h-6 md:h-7" },
   { name: "ABB", src: abb, h: "h-10 md:h-12" },
   { name: "Accelleron", src: accelleron, h: "h-6 md:h-7" },
-  { name: "Hitachi", src: hitachi, h: "h-6 md:h-7" },
+  { name: "Hitachi", src: hitachi, h: "h-[18px] md:h-5" },
 ];
 
 function LogoRow() {
