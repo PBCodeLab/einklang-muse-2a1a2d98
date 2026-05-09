@@ -41,8 +41,6 @@ function Index() {
         </div>
       </section>
 
-      <LogoMarquee />
-
       {/* Transformation */}
       <section className="bg-surface-container-lowest py-28">
         <div className={MAX}>
@@ -150,6 +148,9 @@ function Index() {
                 <div className="text-xs text-on-surface-variant">{s.s}</div>
               </div>
             ))}
+          </div>
+          <div className="-mx-6 lg:-mx-10 mb-16">
+            <LogoMarquee />
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <Link to="/case-studies/swiss-bank" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
