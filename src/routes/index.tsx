@@ -98,7 +98,7 @@ function Index() {
           <div className="max-w-2xl mb-16">
             <div className="txt-label-nav text-primary mb-4">Why Einklang</div>
             <h2 className="txt-primary-headline text-primary">
-              Deep OE expertise,<br />
+              Decades of OE domain expertise,<br />
               <span className="text-on-surface-variant font-normal">delivered through AI.</span>
             </h2>
           </div>
