@@ -47,8 +47,8 @@ function Index() {
           <div className="max-w-3xl mb-20">
             <div className="txt-label-nav text-primary mb-4">THE PROBLEM AND SOLUTION</div>
             <h2 className="txt-primary-headline text-primary mb-6 whitespace-pre-line">
-              OE methods work great, but few have access and can benefit.{"\n"}
-              <span className="text-on-surface-variant font-normal">We change that.</span>
+              OE methods work great, but few benefit.{"\n"}
+              <span className="text-on-surface-variant font-normal">The <strong className="font-semibold">Einklang Agent</strong> changes that.</span>
             </h2>
             <p className="txt-body">We bridge the gap between traditional improvement challenges and scalable, AI-driven solutions.</p>
           </div>
