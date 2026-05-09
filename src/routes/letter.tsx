@@ -3,10 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/letter")({
   head: () => ({
     meta: [
-      { title: "TO OUR CEO CLIENTS — Einklang Academy" },
-      { name: "description", content: "An open letter from Einklang Academy to the CEOs we partner with." },
-      { property: "og:title", content: "TO OUR CEO CLIENTS — Einklang Academy" },
-      { property: "og:description", content: "An open letter from Einklang Academy to the CEOs we partner with." },
+      { title: "TO OUR CEO CLIENTS — Einklang.AI" },
+      { name: "description", content: "An open letter from Einklang.AI to the CEOs we partner with." },
+      { property: "og:title", content: "TO OUR CEO CLIENTS — Einklang.AI" },
+      { property: "og:description", content: "An open letter from Einklang.AI to the CEOs we partner with." },
     ],
   }),
   component: LetterPage,

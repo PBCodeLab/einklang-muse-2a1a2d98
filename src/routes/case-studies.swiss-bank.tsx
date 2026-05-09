@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/case-studies/swiss-bank")({
   head: () => ({
     meta: [
-      { title: "Swiss global bank — Case study | Einklang Academy" },
+      { title: "Swiss global bank — Case study | Einklang.AI" },
       { name: "description", content: "13 Orchestrators · 5:1 ROI · CHF 200k savings. AI-native audit capability embedded across Switzerland and the UK." },
       { property: "og:title", content: "Swiss global bank — Case study" },
       { property: "og:description", content: "Pilot validated 5:1 ROI and led to a full institutional scale-up." },
