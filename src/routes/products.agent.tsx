@@ -53,7 +53,7 @@ function AgentPage() {
           <div className="flex-1 min-w-0">
             <h1 className="txt-primary-headline text-primary mb-8">
               <span className="block">Your AI-powered OE advisor,</span>
-              <span className="text-on-surface-variant font-normal block">inside Microsoft Teams or any browser.</span>
+              <span className="text-on-surface-variant font-normal block">inside Microsoft Teams or browser.</span>
             </h1>
             <p className="txt-body">
               Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
