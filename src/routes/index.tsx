@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LogoMarquee } from "@/components/LogoMarquee";
-import stickerWatercolor from "@/assets/sticker-watercolor.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,26 +20,6 @@ function Index() {
     <>
       {/* Hero */}
       <section className={`${MAX} pt-20 pb-24 relative`}>
-        {/* Sticker badge — watercolor */}
-        <Link
-          to="/products/agent"
-          aria-label="Now available in Microsoft Teams"
-          className="hidden md:block absolute top-2 right-2 lg:right-6 z-10 w-48 h-48 lg:w-56 lg:h-56 rotate-[6deg] hover:rotate-0 transition-transform duration-500"
-        >
-          <img
-            src={stickerWatercolor}
-            alt=""
-            width={768}
-            height={768}
-            className="absolute inset-0 w-full h-full object-contain"
-          />
-          <div className="absolute inset-x-0 bottom-[18%] top-[44%] flex flex-col items-center justify-center text-center px-8">
-            <span className="txt-label-nav text-primary mb-1.5">New</span>
-            <span className="text-sm lg:text-base leading-snug text-primary font-semibold">
-              Now available<br />in MS Teams
-            </span>
-          </div>
-        </Link>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <div className="txt-label-nav text-primary mb-5">The Platform</div>
