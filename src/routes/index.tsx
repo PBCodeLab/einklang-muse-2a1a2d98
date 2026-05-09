@@ -43,7 +43,7 @@ function Index() {
                 hash="pricing"
                 className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
               >
-                Explore Agent pricing
+                Lookup Agent pricing
               </Link>
               <a
                 href="https://calendly.com/aslamjilani-einklangacademy/30min"
