@@ -36,7 +36,7 @@ function Index() {
                 to="/products/agent"
                 className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
               >
-                Explore the Agent
+                Learn more about the Agent
               </Link>
               <Link
                 to="/products/agent"
