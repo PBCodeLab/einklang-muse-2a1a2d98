@@ -58,22 +58,22 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                 problem: "Consulting is costly and does not scale.",
-                pBody: "Currently, OE methods are implemented through consulting engagements. As this is costly, only few companies have profited from these proven methods. Large parts of the economy have not leveraged the potential or OE methods to dramatically increase productivity and efficiency.",
+                problem: "OE consulting is costly and doesn't scale.",
+                pBody: "Today, OE methods are delivered through consulting projects. Because this approach is expensive and time-consuming, many companies simply cannot afford such lengthy consulting engagements. As a result, much of the economy has not yet used OE methods to significantly improve productivity and efficiency.",
                 title: "Scaled access",
-                body: "Expert OE guidance available to every team — 24/7, inside Microsoft Teams, at a fraction of the cost.",
+                body: "Einklang agents make expert OE guidance available to every team — 24/7, inside Microsoft Teams and other platforms, at a fraction of the cost of consulting engagements.",
               },
               {
-                problem: "Training doesn't stick",
-                pBody: "People return to daily work and methods fade under daily pressure. Improvement is inconsistent without ongoing support.",
+                problem: "OE benefits fade, old routines return.",
+                pBody: "After OE consultants leave, employees often return to their routines. Under the pressure of daily work without ongoing support, the new OE methods and their benefits fade.",
                 title: "Sustained adoption",
-                body: "The Agent keeps the method in use and the team engaged — long after the project ends.",
+                body: "Einklang agents enable natural interactions adapted to each user's level of experience and involvement — keeping the OE method in use, teams engaged and benefits realized.",
               },
               {
-                problem: "AI feels abstract",
-                pBody: "Leaders know they need to become AI-native, but teams need a practical structured path — not another transformation programme.",
+                problem: "AI-native OE strategy lacks execution.",
+                pBody: "Leaders know they need to become AI-native, but teams need a practical, structured path – not another, high-level transformation program.",
                 title: "Stepwise AI design",
-                body: "Every improvement project reveals where AI can automate, augment, or redesign how work gets done.",
+                body: "Beyond delivering traditional OE expertise, Einklang solutions can use every improvement project to reveal where AI can automate, augment, or redesign how work gets done.",
               },
             ].map((c) => (
               <div key={c.title} className="flex flex-col">
