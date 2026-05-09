@@ -4,9 +4,9 @@ import { LogoMarquee } from "@/components/LogoMarquee";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Einklang Academy — Operational Excellence, finally scalable." },
+      { title: "Einklang.AI — Operational Excellence, finally scalable." },
       { name: "description", content: "Einklang Agent: scaled access to proven OE methods, sustained adoption, and stepwise AI design, for every team." },
-      { property: "og:title", content: "Einklang Academy — Operational Excellence, finally scalable." },
+      { property: "og:title", content: "Einklang.AI — Operational Excellence, finally scalable." },
       { property: "og:description", content: "The Einklang Agent gives every team access to proven improvement methods, inside Microsoft Teams." },
     ],
   }),

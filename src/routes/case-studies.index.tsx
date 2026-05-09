@@ -3,9 +3,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
     meta: [
-      { title: "Case studies — Einklang Academy" },
+      { title: "Case studies — Einklang.AI" },
       { name: "description", content: "Real-world results from organisations scaling operational excellence with the Einklang Agent." },
-      { property: "og:title", content: "Case studies — Einklang Academy" },
+      { property: "og:title", content: "Case studies — Einklang.AI" },
       { property: "og:description", content: "Swiss bank · Swissmem — measurable impact across DACH." },
     ],
   }),

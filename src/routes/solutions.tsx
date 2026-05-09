@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions — Einklang Academy" },
+      { title: "Solutions — Einklang.AI" },
       { name: "description", content: "How the Einklang Agent embeds proven improvement methods into every team's daily work." },
-      { property: "og:title", content: "Solutions — Einklang Academy" },
+      { property: "og:title", content: "Solutions — Einklang.AI" },
       { property: "og:description", content: "How the Einklang Agent embeds proven improvement methods into every team's daily work." },
     ],
   }),
