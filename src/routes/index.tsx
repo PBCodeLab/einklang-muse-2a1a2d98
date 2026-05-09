@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LogoMarquee } from "@/components/LogoMarquee";
+import teamsLogo from "@/assets/teams-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,6 +58,18 @@ function Index() {
             </div>
           </div>
           <div className="lg:col-span-5 lg:pl-12 lg:border-l border-outline-variant">
+            <Link
+              to="/products/agent"
+              aria-label="Now available in Microsoft Teams"
+              className="group relative inline-flex items-center gap-3 bg-surface border border-outline-variant rounded-md pl-3 pr-4 py-2 mb-8 shadow-md hover:shadow-lg transition-all -rotate-2 hover:rotate-0 origin-left"
+            >
+              <span className="absolute -top-1.5 -left-1.5 w-2.5 h-2.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
+              <img src={teamsLogo} alt="" width={28} height={28} className="w-7 h-7 shrink-0" />
+              <span className="flex flex-col leading-tight">
+                <span className="txt-label-nav text-primary">New</span>
+                <span className="text-sm font-semibold text-primary">Now available in MS Teams!</span>
+              </span>
+            </Link>
             <div className="text-primary leading-[0.9] text-[112px] md:text-[160px] mb-2" style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 800, letterSpacing: "-0.06em" }}>
               30%+
             </div>
