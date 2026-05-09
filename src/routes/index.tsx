@@ -47,7 +47,7 @@ function Index() {
       <section className="bg-surface-container-lowest py-28">
         <div className={MAX}>
           <div className="max-w-3xl mb-20">
-            <div className="txt-label-nav text-primary mb-4">THE PROBLEM AND SOLUTIONS</div>
+            <div className="txt-label-nav text-primary mb-4">THE PROBLEM AND SOLUTION</div>
             <h2 className="txt-primary-headline text-primary mb-6">
               OE methods work, but few had access and could benefit.<br />
               <span className="text-on-surface-variant font-normal">We change that.</span>
