@@ -11,11 +11,11 @@ const COMPANIES = [
 
 function LogoRow() {
   return (
-    <ul className="flex items-center gap-16 pr-16 shrink-0" aria-hidden="false">
+    <ul className="flex items-center gap-10 pr-10 shrink-0" aria-hidden="false">
       {COMPANIES.map((name) => (
         <li
           key={name}
-          className="text-on-surface-variant/70 hover:text-primary transition-colors text-2xl md:text-3xl tracking-tight whitespace-nowrap"
+          className="text-on-surface-variant/70 hover:text-primary transition-colors text-base md:text-lg tracking-tight whitespace-nowrap"
           style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 700, letterSpacing: "-0.02em" }}
         >
           {name}
