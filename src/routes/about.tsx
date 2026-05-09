@@ -142,7 +142,7 @@ function AboutPage() {
       {/* Regions */}
       <section className="mb-20">
         <div className="txt-label-nav text-primary mb-3">Where we operate</div>
-        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">DACH and LatAm, with global reach</h2>
+        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">Headquartered in Zurich - expanding to growth hubs</h2>
         <p className="txt-body mb-8 max-w-2xl">Headquartered in Zurich, with teams in São Paulo and Utrecht. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {regions.map((r) => (
