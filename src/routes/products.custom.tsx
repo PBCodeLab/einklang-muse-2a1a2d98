@@ -172,7 +172,7 @@ function CustomPage() {
           <p className="txt-body mb-10">Book a 30-minute discovery call. We'll explore your methodology, your use case, and whether a Custom Agent is the right fit.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Book a discovery call</a>
-            <a href="https://einklang-academy.com/case-study-sara/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded border border-outline-variant px-5 py-2.5 text-sm font-bold text-primary hover:bg-surface-container-low transition">Read the Sara case study →</a>
+            <Link to="/case-studies/sara" className="inline-flex items-center justify-center rounded border border-outline-variant px-5 py-2.5 text-sm font-bold text-primary hover:bg-surface-container-low transition">Read the Sara case study →</Link>
           </div>
         </div>
       </section>
