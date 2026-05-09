@@ -18,7 +18,7 @@ function SolutionsPage() {
       <div className="txt-label-nav text-primary mb-4">Solutions</div>
       <h1 className="txt-primary-headline text-primary mb-6">Operational excellence, embedded where work happens.</h1>
       <p className="txt-body">
-        The Einklang Agent gives every team access to proven improvement methods inside Microsoft Teams — turning every project into a step toward AI-native ways of working.
+        The Einklang Agent gives every team access to proven improvement methods inside Microsoft Teams, turning every project into a step toward AI-native ways of working.
       </p>
     </section>
   );
