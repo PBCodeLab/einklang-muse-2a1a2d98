@@ -32,7 +32,7 @@ const founders = [
     name: "Andre Andreazzi",
     role: "Co-Founder | LatAm lead",
     location: "São Paulo, Brazil",
-    bio: "28 years leading transformation at McKinsey, IBM, and HP. MBA in AI & Big Data from USP. Leads Einklang's Brazil and LatAm expansion.",
+    bio: "Ex-McKinsey Digital Transformation lead LatAm with\n25+ years leading transformation incl. continuous improvement at IBM, and HP. MBA in AI & Big Data from USP. Leads Einklang's LatAm expansion.",
   },
   {
     img: diego,
@@ -117,7 +117,7 @@ function AboutPage() {
               <div className="font-semibold text-primary text-lg">{f.name}</div>
               <div className="text-sm text-on-surface-variant mb-1">{f.role}</div>
               <div className="text-xs text-on-surface-variant mb-3">{f.location}</div>
-              <p className="txt-body text-sm">{f.bio}</p>
+              <p className="txt-body text-sm whitespace-pre-line">{f.bio}</p>
             </div>
           ))}
         </div>
