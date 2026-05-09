@@ -64,7 +64,7 @@ function AgentPage() {
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">What it does</div>
-            <h2 className="txt-primary-headline text-primary mb-4">Eight things the Einklang Agent does every day.</h2>
+            <h2 className="txt-primary-headline text-primary mb-4 whitespace-nowrap">Eight things the Einklang Agent does every day.</h2>
             <p className="txt-body">Available 24/7 inside Teams. No login, no separate app, no waiting for the next consultant visit.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant">
