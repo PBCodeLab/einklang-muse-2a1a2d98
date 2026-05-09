@@ -64,9 +64,6 @@ function AgentPage() {
             <span className="txt-label-nav text-on-surface-variant mt-2 text-center">One deployment option</span>
           </div>
         </div>
-        <p className="text-sm text-on-surface-variant mb-8 max-w-3xl">
-          Microsoft Teams is one deployment option. The Einklang Agent is also available platform-independent — directly in your browser or as a standalone web app.
-        </p>
         <p className="txt-body max-w-3xl mb-10">
           Guides your team through waste identification, value stream mapping, root cause analysis, and benefit realisation — 24/7, in your language. No consultant required. Improvement that sustains because capability stays inside your organisation.
         </p>
