@@ -45,7 +45,7 @@ const founders = [
     img: philipp,
     name: "Philipp Bubenzer",
     role: "Co-Founder | Growth lead",
-    location: "Switzerland",
+    location: "Zurich, Switzerland",
     bio: "20 years experience building deep tech ventures and advising corporates and governments. WHU alumn, innovation scholar at ETH Zurich and Fribourg School of Management. Leads PMF / GTM and innovation at Einklang.",
   },
 ];
