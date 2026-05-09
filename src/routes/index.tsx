@@ -26,9 +26,9 @@ function Index() {
               Operational Excellence,<br />
               <span className="text-on-surface-variant font-normal">finally scalable.</span>
             </h1>
-            <p className="txt-body mb-10 max-w-2xl">
-              The Einklang Agent gives every team access to proven improvement methods — keeps capability inside your organisation, not in a consultant's head — and turns every improvement project into a step toward AI-native ways of working.
-              <br /><br />
+            <p className="txt-body mb-10 max-w-2xl whitespace-pre-line">
+              Einklang agents give every team access to proven improvement methods, develops and keeps capability inside your organization, and turns every improvement project into a step toward AI-native ways of working.
+
               Strategy and execution, connected by AI.
             </p>
           </div>
