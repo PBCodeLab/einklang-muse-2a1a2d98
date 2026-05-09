@@ -76,7 +76,7 @@ const regions = [
 
 function AboutPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 lg:px-10 py-20">
+    <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
       {/* Hero */}
       <section className="max-w-3xl mb-20">
         <div className="txt-label-nav text-primary mb-4">About Einklang</div>
