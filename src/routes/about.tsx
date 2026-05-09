@@ -7,10 +7,10 @@ import philipp from "../assets/team/philipp-sketch.jpeg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Who we are — Einklang Academy" },
-      { name: "description", content: "Built by practitioners, for practitioners. The team and thinking behind Einklang Academy — making world-class operational excellence accessible to every organisation." },
-      { property: "og:title", content: "Who we are — Einklang Academy" },
-      { property: "og:description", content: "Built by practitioners, for practitioners. The team behind Einklang Academy." },
+      { title: "Who we are — Einklang.AI" },
+      { name: "description", content: "Built by practitioners, for practitioners. The team and thinking behind Einklang.AI — making world-class operational excellence accessible to every organisation." },
+      { property: "og:title", content: "Who we are — Einklang.AI" },
+      { property: "og:description", content: "Built by practitioners, for practitioners. The team behind Einklang.AI." },
     ],
   }),
   component: AboutPage,

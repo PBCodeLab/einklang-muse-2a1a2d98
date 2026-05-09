@@ -15,10 +15,10 @@ function SiteHeader() {
   return (
     <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
-        <Link to="/" className="flex items-center shrink-0" aria-label="Einklang Academy home">
+        <Link to="/" className="flex items-center shrink-0" aria-label="Einklang.AI home">
           <img
             src={logoUrl}
-            alt="Einklang Academy"
+            alt="Einklang.AI"
             className="h-9 sm:h-10 md:h-12 lg:h-14 w-auto shrink-0 object-contain"
             style={{ mixBlendMode: "multiply" }}
           />
@@ -49,7 +49,7 @@ function SiteFooter() {
     <footer className="border-t border-outline-variant bg-surface-container-lowest mt-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <div className="font-semibold text-primary text-lg mb-3">Einklang Academy</div>
+          <div className="font-semibold text-primary text-lg mb-3">Einklang.AI</div>
           <p className="txt-body text-sm">Operational excellence, finally scalable. The Einklang Agent for AI-native ways of working.</p>
         </div>
         <div>
@@ -64,7 +64,7 @@ function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-outline-variant py-6 text-center text-xs text-on-surface-variant">
-        © {new Date().getFullYear()} Einklang Academy. All rights reserved.
+        © {new Date().getFullYear()} Einklang.AI. All rights reserved.
       </div>
     </footer>
   );
@@ -134,7 +134,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Einklang — Operational Excellence, finally scalable." },
       { name: "description", content: "The Einklang Agent gives every team access to proven improvement methods and turns every project into a step toward AI-native ways of working." },
-      { name: "author", content: "Einklang Academy" },
+      { name: "author", content: "Einklang.AI" },
       { property: "og:title", content: "Einklang — Operational Excellence, finally scalable." },
       { property: "og:description", content: "The Einklang Agent gives every team access to proven improvement methods and turns every project into a step toward AI-native ways of working." },
       { property: "og:type", content: "website" },
