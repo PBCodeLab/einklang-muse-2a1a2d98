@@ -191,7 +191,7 @@ Three years co-developing OE programmes across the Swiss industrial ecosystem.</
         <div className={MAX}>
           <div className="max-w-2xl mb-16">
             <div className="txt-label-nav text-primary mb-4">Enterprise Ready</div>
-            <h2 className="txt-primary-headline text-primary">Enterprise-ready by design.</h2>
+            <h2 className="txt-primary-headline text-primary whitespace-nowrap">Enterprise-ready by design.</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
