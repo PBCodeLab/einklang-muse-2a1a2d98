@@ -76,9 +76,10 @@ function Index() {
             </h2>
             <p className="txt-body whitespace-pre-line">
               A few words on the problem and the solution:{"\n\n"}
-              Behind many of the world’s most admired organizations — from Toyota to Porsche’s comeback, GE under Jack Welch, and modern leaders like Intel, Nike and Amazon — lies a simple truth: They consistently apply certain Operational Excellence methods.{"\n\n"}
-              Yet for decades, these methods have mostly been available to companies that could afford expert consultants and large transformation programs. Even then, adoption often faded once experts left and teams returned to old routines under daily pressure.{"\n\n"}
-              We overcome these access and sustained adoption challenges by selecting the best, context-relevant OE skills and by making them available in scalable AI agents. But we don't just scale the proven methods: We evolve them for the AI-native era, so that they increasingly guide users towards AI-native operational excellence.
+              From Toyota to Porsche’s comeback, to modern leaders like Nestlé, Danaher and Amazon: Behind many of the world’s most admired organizations lies a simple truth. They consistently apply certain Operational Excellence methods.{"\n\n"}
+              Yet for decades, these methods have mostly been accessible to companies that could afford expert consultants and large transformation programs. Even then, adoption often faded once experts left and teams returned to old routines under daily pressure.{"\n\n"}
+              We overcome these access and adoption challenges by selecting the best, context-relevant OE skills and making them available in scalable AI agents. For lasting OE results, at least 10x cheaper.&nbsp;{"\n\n"}
+              And we don't stop there: We evolve the OE methods for the AI-native era, so that Einklang agents increasingly guide users towards AI-native operational excellence solutions.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
