@@ -29,7 +29,7 @@ function Index() {
             </h1>
             <div className="txt-body mb-10 max-w-2xl whitespace-pre-line">
               Scale Operational Excellence (OE) across your organization:&nbsp;{"\n"}
-              The <strong className="font-semibold">Einklang Agent</strong> empowers everyone to apply proven OE improvement methods, individually or in teams. Deploying the Einklang Agent thereby develops broad OE capability across your workforce, and - even better - turns every such improvement project into a step toward AI-native ways of working.{"\n\n"}
+              The <strong className="font-semibold">Einklang Agent</strong> empowers everyone to apply proven OE improvement methods, individually or in teams. Deploying the Einklang Agent thereby develops broad OE capability across your workforce, and, even better, turns every such improvement project into a step toward AI-native ways of working.{"\n\n"}
               With Einklang, raise OE across your organization and evolve it towards AI maturity.
             </div>
             <div className="flex flex-wrap gap-3 mb-10">
