@@ -44,9 +44,9 @@ const founders = [
   {
     img: philipp,
     name: "Philipp Bubenzer",
-    role: "Co-Founder | Advisor Growth",
+    role: "Co-Founder | Advisor",
     location: "Zurich, Switzerland",
-    bio: "20 years experience building deep tech ventures. WHU alumn, innovation scholar at ETH Zurich and HEG Fribourg. The Einklang approach builds on his research on architectural innovation and ai. Advises on GTM and growth.",
+    bio: "20 years experience building deep tech ventures. WHU alumnus and researcher at ETH Zurich and HEG Fribourg. The Einklang approach builds on his research in architectural innovation and ai. Advises on GTM and growth.",
   },
 ];
 
