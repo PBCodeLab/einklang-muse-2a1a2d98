@@ -46,7 +46,7 @@ const founders = [
     name: "Philipp Bubenzer",
     role: "Co-Founder | Advisor Growth",
     location: "Zurich, Switzerland",
-    bio: "20 years experience building deep tech ventures. WHU alumn, innovation scholar at ETH Zurich and HEG Fribourg. Developed the orchestrator model at the core of Einklang. Advises on GTM and growth.",
+    bio: "20 years experience building deep tech ventures. WHU alumn, innovation scholar at ETH Zurich and HEG Fribourg. Developed key elements of the Einklang approach. Advises on GTM and growth.",
   },
 ];
 
