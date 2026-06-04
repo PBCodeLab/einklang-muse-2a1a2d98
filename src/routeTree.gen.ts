@@ -75,9 +75,9 @@ const ProductsAcademyRoute = ProductsAcademyRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const LetterPostsRoute = LetterPostsRouteImport.update({
-  id: '/posts',
-  path: '/posts',
-  getParentRoute: () => LetterRoute,
+  id: '/letter/posts',
+  path: '/letter/posts',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
   id: '/swissmem',
@@ -199,6 +199,7 @@ export interface RootRouteChildren {
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
   SolutionsRoute: typeof SolutionsRoute
+  LetterPostsRoute: typeof LetterPostsRoute
   ProductsAcademyRoute: typeof ProductsAcademyRoute
   ProductsAgentRoute: typeof ProductsAgentRoute
   ProductsCustomRoute: typeof ProductsCustomRoute
@@ -279,10 +280,10 @@ declare module '@tanstack/react-router' {
     }
     '/letter/posts': {
       id: '/letter/posts'
-      path: '/posts'
+      path: '/letter/posts'
       fullPath: '/letter/posts'
       preLoaderRoute: typeof LetterPostsRouteImport
-      parentRoute: typeof LetterRoute
+      parentRoute: typeof rootRouteImport
     }
     '/case-studies/swissmem': {
       id: '/case-studies/swissmem'
@@ -332,6 +333,7 @@ const rootRouteChildren: RootRouteChildren = {
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
   SolutionsRoute: SolutionsRoute,
+  LetterPostsRoute: LetterPostsRoute,
   ProductsAcademyRoute: ProductsAcademyRoute,
   ProductsAgentRoute: ProductsAgentRoute,
   ProductsCustomRoute: ProductsCustomRoute,
