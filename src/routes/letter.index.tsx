@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/letter")({
+export const Route = createFileRoute("/letter/")({
   head: () => ({
     meta: [
       { title: "TO OUR CEO CLIENTS — Einklang.AI" },

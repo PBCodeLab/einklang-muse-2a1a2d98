@@ -10,11 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SolutionsRouteImport } from './routes/solutions'
-import { Route as LetterRouteImport } from './routes/letter'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LetterIndexRouteImport } from './routes/letter.index'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as ProductsCustomRouteImport } from './routes/products.custom'
 import { Route as ProductsAgentRouteImport } from './routes/products.agent'
@@ -27,11 +27,6 @@ import { Route as CaseStudiesSaraRouteImport } from './routes/case-studies.sara'
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LetterRoute = LetterRouteImport.update({
-  id: '/letter',
-  path: '/letter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -52,6 +47,11 @@ const AboutRoute = AboutRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LetterIndexRoute = LetterIndexRouteImport.update({
+  id: '/letter/',
+  path: '/letter/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
@@ -75,9 +75,9 @@ const ProductsAcademyRoute = ProductsAcademyRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const LetterPostsRoute = LetterPostsRouteImport.update({
-  id: '/posts',
-  path: '/posts',
-  getParentRoute: () => LetterRoute,
+  id: '/letter/posts',
+  path: '/letter/posts',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
   id: '/swissmem',
@@ -100,7 +100,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
-  '/letter': typeof LetterRouteWithChildren
   '/solutions': typeof SolutionsRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
@@ -110,12 +109,12 @@ export interface FileRoutesByFullPath {
   '/products/agent': typeof ProductsAgentRoute
   '/products/custom': typeof ProductsCustomRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
+  '/letter/': typeof LetterIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/letter': typeof LetterRouteWithChildren
   '/solutions': typeof SolutionsRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
@@ -125,6 +124,7 @@ export interface FileRoutesByTo {
   '/products/agent': typeof ProductsAgentRoute
   '/products/custom': typeof ProductsCustomRoute
   '/case-studies': typeof CaseStudiesIndexRoute
+  '/letter': typeof LetterIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -132,7 +132,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
-  '/letter': typeof LetterRouteWithChildren
   '/solutions': typeof SolutionsRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
@@ -142,6 +141,7 @@ export interface FileRoutesById {
   '/products/agent': typeof ProductsAgentRoute
   '/products/custom': typeof ProductsCustomRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
+  '/letter/': typeof LetterIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -150,7 +150,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/case-studies'
     | '/contact'
-    | '/letter'
     | '/solutions'
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
@@ -160,12 +159,12 @@ export interface FileRouteTypes {
     | '/products/agent'
     | '/products/custom'
     | '/case-studies/'
+    | '/letter/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
-    | '/letter'
     | '/solutions'
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
@@ -175,13 +174,13 @@ export interface FileRouteTypes {
     | '/products/agent'
     | '/products/custom'
     | '/case-studies'
+    | '/letter'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/case-studies'
     | '/contact'
-    | '/letter'
     | '/solutions'
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
@@ -191,6 +190,7 @@ export interface FileRouteTypes {
     | '/products/agent'
     | '/products/custom'
     | '/case-studies/'
+    | '/letter/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -198,11 +198,12 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
-  LetterRoute: typeof LetterRouteWithChildren
   SolutionsRoute: typeof SolutionsRoute
+  LetterPostsRoute: typeof LetterPostsRoute
   ProductsAcademyRoute: typeof ProductsAcademyRoute
   ProductsAgentRoute: typeof ProductsAgentRoute
   ProductsCustomRoute: typeof ProductsCustomRoute
+  LetterIndexRoute: typeof LetterIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -212,13 +213,6 @@ declare module '@tanstack/react-router' {
       path: '/solutions'
       fullPath: '/solutions'
       preLoaderRoute: typeof SolutionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/letter': {
-      id: '/letter'
-      path: '/letter'
-      fullPath: '/letter'
-      preLoaderRoute: typeof LetterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -247,6 +241,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/letter/': {
+      id: '/letter/'
+      path: '/letter'
+      fullPath: '/letter/'
+      preLoaderRoute: typeof LetterIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/': {
@@ -279,10 +280,10 @@ declare module '@tanstack/react-router' {
     }
     '/letter/posts': {
       id: '/letter/posts'
-      path: '/posts'
+      path: '/letter/posts'
       fullPath: '/letter/posts'
       preLoaderRoute: typeof LetterPostsRouteImport
-      parentRoute: typeof LetterRoute
+      parentRoute: typeof rootRouteImport
     }
     '/case-studies/swissmem': {
       id: '/case-studies/swissmem'
@@ -326,28 +327,28 @@ const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
   CaseStudiesRouteChildren,
 )
 
-interface LetterRouteChildren {
-  LetterPostsRoute: typeof LetterPostsRoute
-}
-
-const LetterRouteChildren: LetterRouteChildren = {
-  LetterPostsRoute: LetterPostsRoute,
-}
-
-const LetterRouteWithChildren =
-  LetterRoute._addFileChildren(LetterRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
-  LetterRoute: LetterRouteWithChildren,
   SolutionsRoute: SolutionsRoute,
+  LetterPostsRoute: LetterPostsRoute,
   ProductsAcademyRoute: ProductsAcademyRoute,
   ProductsAgentRoute: ProductsAgentRoute,
   ProductsCustomRoute: ProductsCustomRoute,
+  LetterIndexRoute: LetterIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
