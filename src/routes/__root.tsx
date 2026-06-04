@@ -14,6 +14,7 @@ import logoUrl from "../assets/einklang-logo.png";
 
 function SiteHeader() {
   const [productsOpen, setProductsOpen] = useState(false);
+  const [strategyOpen, setStrategyOpen] = useState(false);
   return (
     <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
@@ -53,7 +54,30 @@ function SiteHeader() {
               )}
             </div>
             <Link to="/case-studies" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Cases</Link>
-            <Link to="/letter" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>AI Strategy</Link>
+            <div
+              className="relative"
+              onMouseEnter={() => setStrategyOpen(true)}
+              onMouseLeave={() => setStrategyOpen(false)}
+            >
+              <Link
+                to="/letter"
+                className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm inline-flex items-center gap-1"
+                activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm inline-flex items-center gap-1" }}
+                aria-haspopup="menu"
+                aria-expanded={strategyOpen}
+              >
+                AI Strategy
+                <span aria-hidden className="text-[10px]">▾</span>
+              </Link>
+              {strategyOpen && (
+                <div role="menu" className="absolute left-0 top-full pt-2 min-w-[200px]">
+                  <div className="bg-surface border border-outline-variant shadow-sm py-2">
+                    <Link to="/letter" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setStrategyOpen(false)}>Letter</Link>
+                    <Link to="/letter/posts" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setStrategyOpen(false)}>Posts</Link>
+                  </div>
+                </div>
+              )}
+            </div>
             <Link to="/about" className="txt-label-nav text-primary hover:underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" activeProps={{ className: "txt-label-nav text-primary underline underline-offset-4 whitespace-nowrap text-[11px] md:text-xs lg:text-sm" }}>Company</Link>
           </nav>
           <a

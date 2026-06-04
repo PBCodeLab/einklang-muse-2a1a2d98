@@ -19,6 +19,7 @@ import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.inde
 import { Route as ProductsCustomRouteImport } from './routes/products.custom'
 import { Route as ProductsAgentRouteImport } from './routes/products.agent'
 import { Route as ProductsAcademyRouteImport } from './routes/products.academy'
+import { Route as LetterPostsRouteImport } from './routes/letter.posts'
 import { Route as CaseStudiesSwissmemRouteImport } from './routes/case-studies.swissmem'
 import { Route as CaseStudiesSwissBankRouteImport } from './routes/case-studies.swiss-bank'
 import { Route as CaseStudiesSaraRouteImport } from './routes/case-studies.sara'
@@ -73,6 +74,11 @@ const ProductsAcademyRoute = ProductsAcademyRouteImport.update({
   path: '/products/academy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LetterPostsRoute = LetterPostsRouteImport.update({
+  id: '/posts',
+  path: '/posts',
+  getParentRoute: () => LetterRoute,
+} as any)
 const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
   id: '/swissmem',
   path: '/swissmem',
@@ -94,11 +100,12 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
-  '/letter': typeof LetterRoute
+  '/letter': typeof LetterRouteWithChildren
   '/solutions': typeof SolutionsRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/letter/posts': typeof LetterPostsRoute
   '/products/academy': typeof ProductsAcademyRoute
   '/products/agent': typeof ProductsAgentRoute
   '/products/custom': typeof ProductsCustomRoute
@@ -108,11 +115,12 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/letter': typeof LetterRoute
+  '/letter': typeof LetterRouteWithChildren
   '/solutions': typeof SolutionsRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/letter/posts': typeof LetterPostsRoute
   '/products/academy': typeof ProductsAcademyRoute
   '/products/agent': typeof ProductsAgentRoute
   '/products/custom': typeof ProductsCustomRoute
@@ -124,11 +132,12 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
-  '/letter': typeof LetterRoute
+  '/letter': typeof LetterRouteWithChildren
   '/solutions': typeof SolutionsRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
+  '/letter/posts': typeof LetterPostsRoute
   '/products/academy': typeof ProductsAcademyRoute
   '/products/agent': typeof ProductsAgentRoute
   '/products/custom': typeof ProductsCustomRoute
@@ -146,6 +155,7 @@ export interface FileRouteTypes {
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/letter/posts'
     | '/products/academy'
     | '/products/agent'
     | '/products/custom'
@@ -160,6 +170,7 @@ export interface FileRouteTypes {
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/letter/posts'
     | '/products/academy'
     | '/products/agent'
     | '/products/custom'
@@ -175,6 +186,7 @@ export interface FileRouteTypes {
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
+    | '/letter/posts'
     | '/products/academy'
     | '/products/agent'
     | '/products/custom'
@@ -186,7 +198,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
-  LetterRoute: typeof LetterRoute
+  LetterRoute: typeof LetterRouteWithChildren
   SolutionsRoute: typeof SolutionsRoute
   ProductsAcademyRoute: typeof ProductsAcademyRoute
   ProductsAgentRoute: typeof ProductsAgentRoute
@@ -265,6 +277,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsAcademyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/letter/posts': {
+      id: '/letter/posts'
+      path: '/posts'
+      fullPath: '/letter/posts'
+      preLoaderRoute: typeof LetterPostsRouteImport
+      parentRoute: typeof LetterRoute
+    }
     '/case-studies/swissmem': {
       id: '/case-studies/swissmem'
       path: '/swissmem'
@@ -307,12 +326,23 @@ const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
   CaseStudiesRouteChildren,
 )
 
+interface LetterRouteChildren {
+  LetterPostsRoute: typeof LetterPostsRoute
+}
+
+const LetterRouteChildren: LetterRouteChildren = {
+  LetterPostsRoute: LetterPostsRoute,
+}
+
+const LetterRouteWithChildren =
+  LetterRoute._addFileChildren(LetterRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
-  LetterRoute: LetterRoute,
+  LetterRoute: LetterRouteWithChildren,
   SolutionsRoute: SolutionsRoute,
   ProductsAcademyRoute: ProductsAcademyRoute,
   ProductsAgentRoute: ProductsAgentRoute,
@@ -321,13 +351,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
