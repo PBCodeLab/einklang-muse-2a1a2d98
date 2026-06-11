@@ -10,6 +10,15 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "waste-1-of-8",
+    title: 'Waste 1 of 8: "You spent millions on AI tools. Your team is still copy-pasting."',
+    excerpt:
+      "Companies invest heavily in AI tools and technology partners, but nobody owns the joins between the systems. Data still travels the hard way, copied, emailed, reformatted, and the cost never shows up on a budget line. Mapping those handoffs is where the real opportunity starts.",
+    date: "2026-06-09",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7470038000354287616/",
+  },
+  {
     id: "ai-enabled-to-ai-native",
     title: "From AI-Enabled to AI-Native: Why Most Organisations Are Already Behind",
     excerpt:
