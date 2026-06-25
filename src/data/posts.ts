@@ -10,6 +10,24 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "ai-breakthroughs-move-too-slowly",
+    title: "We have the AI breakthroughs. We just move too slowly to keep them.",
+    excerpt:
+      "At the Swissmem Industrietag, the imagery of a small Swiss fish surrounded by larger predators captured the core issue. Switzerland has the research and the breakthroughs, but ideas get lost moving through slow internal processes while faster, less risk-averse players take them to market. The same friction between idea and execution plays out inside every company.",
+    date: "2026-06-25",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:ugcPost:7475839303332483072/",
+  },
+  {
+    id: "waste-2-of-8",
+    title: 'Waste 2 of 8: "For decades we were told to reduce inventory. Then the world changed."',
+    excerpt:
+      "Unused AI models and idle tools are pure waste, but the lesson from Endress+Hauser is that physical inventory is different. By deliberately increasing stock, they turned resilience into a competitive advantage when competitors ran dry. The real question is no longer how lean your inventory is, but how resilient it is.",
+    date: "2026-06-18",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7472904674241810432/",
+  },
+  {
     id: "waste-1-of-8",
     title: 'Waste 1 of 8: "You spent millions on AI tools. Your team is still copy-pasting."',
     excerpt:
