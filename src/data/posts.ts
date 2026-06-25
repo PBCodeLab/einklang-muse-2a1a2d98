@@ -11,7 +11,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     id: "ai-breakthroughs-move-too-slowly",
-    title: "We have the AI breakthroughs. We just move too slowly to keep them.",
+    title: 'Waste 3 of 8: "We have the AI breakthroughs. We just move too slowly to keep them."',
     excerpt:
       "At the Swissmem Industrietag, the imagery of a small Swiss fish surrounded by larger predators captured the core issue. Switzerland has the research and the breakthroughs, but ideas get lost moving through slow internal processes while faster, less risk-averse players take them to market. The same friction between idea and execution plays out inside every company.",
     date: "2026-06-25",
