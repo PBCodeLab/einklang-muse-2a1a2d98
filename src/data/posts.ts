@@ -10,6 +10,15 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "waste-4-of-8",
+    title: 'Waste 4 of 8: "Your AI runs in seconds. Your decisions take weeks."',
+    excerpt:
+      "Automation removes the easy waiting, but it cannot touch decision latency, the approval that sits in an inbox for weeks, the pilot that cannot scale because no one will move first. We worked with an engineering company where a CHF 1,000 sign-off rule, introduced during a crisis and never removed, caused multi-week delays long after the turnaround. The bottleneck is rarely the technology. It is the governance structure built around it.",
+    date: "2026-07-06",
+    linkedinUrl:
+      "https://www.linkedin.com/posts/aslam-jilani-736bb12_operationalexcellence-ainative-leansixsigma-activity-7479974852922327040-7aLi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACIadoBd2v5_N9wgwMD-wGEqyIuDtYHx7Y",
+  },
+  {
     id: "ai-breakthroughs-move-too-slowly",
     title: 'Waste 3 of 8: "We have the AI breakthroughs. We just move too slowly to keep them."',
     excerpt:
