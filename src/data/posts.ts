@@ -10,6 +10,15 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "waste-5-of-8",
+    title: 'Waste 5 of 8: "We are using Formula 1 engines to go to the supermarket."',
+    excerpt:
+      "At RAISE Summit in Paris, 9,000 AI leaders gathered at the Carrousel du Louvre, with President Macron addressing the room. The progress was genuinely inspiring, but one theme stood out: the struggle to link AI effort to ROI. The core issue is that too many organisations are deploying frontier models and complex AI stacks for tasks a simpler, cheaper tool would handle just as well. Understanding which of the five AI layers, applications, models, infrastructure, chips, and energy, your decision actually touches is where the ROI conversation has to start.",
+    date: "2026-07-14",
+    linkedinUrl:
+      "https://www.linkedin.com/posts/aslam-jilani-736bb12_operationalexcellence-ainative-leansixsigma-activity-7482725104989270017-M-ZU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACIadoBd2v5_N9wgwMD-wGEqyIuDtYHx7Y",
+  },
+  {
     id: "waste-4-of-8",
     title: 'Waste 4 of 8: "Your AI runs in seconds. Your decisions take weeks."',
     excerpt:
