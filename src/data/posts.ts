@@ -10,6 +10,15 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "waste-6-of-8",
+    title: 'Waste 6 of 8: "I once printed out a list of 146 reports and hung it in the boardroom. In the era of AI the problem got 10 times worse."',
+    excerpt:
+      "In 2002, working at a GE subsidiary Swiss bank with 350 employees, compiling every report being produced revealed an astonishing 146. Printing the full list and presenting it to the leadership team in the boardroom led to immediate eliminations, a review of frequency, and agreement on common metric definitions. At almost every client since, the same opportunity was waiting. Today AI has not solved the overproduction problem. It has industrialised it.",
+    date: "2026-07-23",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7485959108941000705/",
+  },
+  {
     id: "waste-5-of-8",
     title: 'Waste 5 of 8: "We are using Formula 1 engines to go to the supermarket."',
     excerpt:
