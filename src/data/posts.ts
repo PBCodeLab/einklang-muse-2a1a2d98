@@ -10,6 +10,14 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "waste-7-of-8",
+    title: 'Waste 7 of 8: "Bad AI outcomes are rarely the AI\'s fault."',
+    excerpt:
+      "A finance automation that left five people managing a broken process. A webshop drop-off problem met with an AI agent before anyone asked why customers were leaving. The defect is almost never the technology. It is the decision to deploy before understanding the process, the exceptions, and what people actually do versus what their job description says. The leader moves on to the next AI initiative. The team lives with the consequences.",
+    date: "2026-07-28",
+    linkedinUrl: "",
+  },
+  {
     id: "waste-6-of-8",
     title: 'Waste 6 of 8: "I once printed out a list of 146 reports and hung it in the boardroom. In the era of AI the problem got 10 times worse."',
     excerpt:
