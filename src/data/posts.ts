@@ -15,7 +15,8 @@ export const posts: Post[] = [
     excerpt:
       "A finance automation that left five people managing a broken process. A webshop drop-off problem met with an AI agent before anyone asked why customers were leaving. The defect is almost never the technology. It is the decision to deploy before understanding the process, the exceptions, and what people actually do versus what their job description says. The leader moves on to the next AI initiative. The team lives with the consequences.",
     date: "2026-07-28",
-    linkedinUrl: "",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7487790118557245441/",
   },
   {
     id: "waste-6-of-8",
