@@ -9,34 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SolutionsRouteImport } from './routes/solutions'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CaseStudiesRouteImport } from './routes/case-studies'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as LetterIndexRouteImport } from './routes/letter.index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
-import { Route as ProductsCustomRouteImport } from './routes/products.custom'
-import { Route as ProductsAgentRouteImport } from './routes/products.agent'
-import { Route as ProductsAcademyRouteImport } from './routes/products.academy'
-import { Route as LetterPostsRouteImport } from './routes/letter.posts'
-import { Route as CaseStudiesSwissmemRouteImport } from './routes/case-studies.swissmem'
-import { Route as CaseStudiesSwissBankRouteImport } from './routes/case-studies.swiss-bank'
 import { Route as CaseStudiesSaraRouteImport } from './routes/case-studies.sara'
+import { Route as CaseStudiesSwissBankRouteImport } from './routes/case-studies.swiss-bank'
+import { Route as CaseStudiesSwissmemRouteImport } from './routes/case-studies.swissmem'
+import { Route as LetterIndexRouteImport } from './routes/letter.index'
+import { Route as LetterPostsRouteImport } from './routes/letter.posts'
+import { Route as ProductsAcademyRouteImport } from './routes/products.academy'
+import { Route as ProductsAgentRouteImport } from './routes/products.agent'
+import { Route as ProductsCustomRouteImport } from './routes/products.custom'
 
-const SolutionsRoute = SolutionsRouteImport.update({
-  id: '/solutions',
-  path: '/solutions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CaseStudiesRoute = CaseStudiesRouteImport.update({
-  id: '/case-studies',
-  path: '/case-studies',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -44,14 +34,19 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LetterIndexRoute = LetterIndexRouteImport.update({
-  id: '/letter/',
-  path: '/letter/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
@@ -59,29 +54,9 @@ const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
-const ProductsCustomRoute = ProductsCustomRouteImport.update({
-  id: '/products/custom',
-  path: '/products/custom',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProductsAgentRoute = ProductsAgentRouteImport.update({
-  id: '/products/agent',
-  path: '/products/agent',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProductsAcademyRoute = ProductsAcademyRouteImport.update({
-  id: '/products/academy',
-  path: '/products/academy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LetterPostsRoute = LetterPostsRouteImport.update({
-  id: '/letter/posts',
-  path: '/letter/posts',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
-  id: '/swissmem',
-  path: '/swissmem',
+const CaseStudiesSaraRoute = CaseStudiesSaraRouteImport.update({
+  id: '/sara',
+  path: '/sara',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
 const CaseStudiesSwissBankRoute = CaseStudiesSwissBankRouteImport.update({
@@ -89,10 +64,35 @@ const CaseStudiesSwissBankRoute = CaseStudiesSwissBankRouteImport.update({
   path: '/swiss-bank',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
-const CaseStudiesSaraRoute = CaseStudiesSaraRouteImport.update({
-  id: '/sara',
-  path: '/sara',
+const CaseStudiesSwissmemRoute = CaseStudiesSwissmemRouteImport.update({
+  id: '/swissmem',
+  path: '/swissmem',
   getParentRoute: () => CaseStudiesRoute,
+} as any)
+const LetterIndexRoute = LetterIndexRouteImport.update({
+  id: '/letter/',
+  path: '/letter/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LetterPostsRoute = LetterPostsRouteImport.update({
+  id: '/letter/posts',
+  path: '/letter/posts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsAcademyRoute = ProductsAcademyRouteImport.update({
+  id: '/products/academy',
+  path: '/products/academy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsAgentRoute = ProductsAgentRouteImport.update({
+  id: '/products/agent',
+  path: '/products/agent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsCustomRoute = ProductsCustomRouteImport.update({
+  id: '/products/custom',
+  path: '/products/custom',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -208,25 +208,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/solutions': {
-      id: '/solutions'
-      path: '/solutions'
-      fullPath: '/solutions'
-      preLoaderRoute: typeof SolutionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/case-studies': {
-      id: '/case-studies'
-      path: '/case-studies'
-      fullPath: '/case-studies'
-      preLoaderRoute: typeof CaseStudiesRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -236,18 +222,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/letter/': {
-      id: '/letter/'
-      path: '/letter'
-      fullPath: '/letter/'
-      preLoaderRoute: typeof LetterIndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/': {
@@ -257,39 +250,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesIndexRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/products/custom': {
-      id: '/products/custom'
-      path: '/products/custom'
-      fullPath: '/products/custom'
-      preLoaderRoute: typeof ProductsCustomRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products/agent': {
-      id: '/products/agent'
-      path: '/products/agent'
-      fullPath: '/products/agent'
-      preLoaderRoute: typeof ProductsAgentRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products/academy': {
-      id: '/products/academy'
-      path: '/products/academy'
-      fullPath: '/products/academy'
-      preLoaderRoute: typeof ProductsAcademyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/letter/posts': {
-      id: '/letter/posts'
-      path: '/letter/posts'
-      fullPath: '/letter/posts'
-      preLoaderRoute: typeof LetterPostsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/case-studies/swissmem': {
-      id: '/case-studies/swissmem'
-      path: '/swissmem'
-      fullPath: '/case-studies/swissmem'
-      preLoaderRoute: typeof CaseStudiesSwissmemRouteImport
+    '/case-studies/sara': {
+      id: '/case-studies/sara'
+      path: '/sara'
+      fullPath: '/case-studies/sara'
+      preLoaderRoute: typeof CaseStudiesSaraRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
     '/case-studies/swiss-bank': {
@@ -299,12 +264,47 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesSwissBankRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
-    '/case-studies/sara': {
-      id: '/case-studies/sara'
-      path: '/sara'
-      fullPath: '/case-studies/sara'
-      preLoaderRoute: typeof CaseStudiesSaraRouteImport
+    '/case-studies/swissmem': {
+      id: '/case-studies/swissmem'
+      path: '/swissmem'
+      fullPath: '/case-studies/swissmem'
+      preLoaderRoute: typeof CaseStudiesSwissmemRouteImport
       parentRoute: typeof CaseStudiesRoute
+    }
+    '/letter/': {
+      id: '/letter/'
+      path: '/letter'
+      fullPath: '/letter/'
+      preLoaderRoute: typeof LetterIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/letter/posts': {
+      id: '/letter/posts'
+      path: '/letter/posts'
+      fullPath: '/letter/posts'
+      preLoaderRoute: typeof LetterPostsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/academy': {
+      id: '/products/academy'
+      path: '/products/academy'
+      fullPath: '/products/academy'
+      preLoaderRoute: typeof ProductsAcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/agent': {
+      id: '/products/agent'
+      path: '/products/agent'
+      fullPath: '/products/agent'
+      preLoaderRoute: typeof ProductsAgentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/custom': {
+      id: '/products/custom'
+      path: '/products/custom'
+      fullPath: '/products/custom'
+      preLoaderRoute: typeof ProductsCustomRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
