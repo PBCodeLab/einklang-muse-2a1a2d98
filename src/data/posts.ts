@@ -10,6 +10,15 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "waste-8-of-8",
+    title: 'Waste 8 of 8: "The most expensive waste in any organisation is the intelligence already inside it that nobody ever asked for."',
+    excerpt:
+      "At a South African bank, 60 of 90 days in the mortgage approval process sat with a government office nobody had identified. At an energy company, a marketing campaign caused stock to run out because sales and supply never spoke. In both cases the intelligence to fix the problem was already inside the organisation. Today AI compounds the same pattern, use cases deployed without understanding the process, patchwork solutions that make life harder, and the people who could have told you exactly where the problem was still waiting to be asked. Einklang means in unison. Technology, processes, and people looked at together, not in isolation.",
+    date: "2026-08-13",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7493594486799843330/",
+  },
+  {
     id: "waste-7-of-8",
     title: 'Waste 7 of 8: "Bad AI outcomes are rarely the AI\'s fault."',
     excerpt:
