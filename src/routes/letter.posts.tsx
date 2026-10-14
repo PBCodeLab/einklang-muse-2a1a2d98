@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { posts } from "@/data/posts";
+import { posts, type Post } from "@/data/posts";
 
 export const Route = createFileRoute("/letter/posts")({
   head: () => ({
@@ -14,6 +14,7 @@ export const Route = createFileRoute("/letter/posts")({
 });
 
 function formatDate(iso: string) {
+  if (!iso) return "";
   try {
     return new Date(iso).toLocaleDateString("en-US", {
       year: "numeric",
@@ -25,8 +26,48 @@ function formatDate(iso: string) {
   }
 }
 
+// Posts without a date yet are treated as the newest.
+function sortPosts() {
+  return [...posts].sort((a, b) => {
+    if (!a.date && !b.date) return 0;
+    if (!a.date) return -1;
+    if (!b.date) return 1;
+    return a.date < b.date ? 1 : -1;
+  });
+}
+
+function PostBody({ post }: { post: Post }) {
+  const date = formatDate(post.date);
+  return (
+    <>
+      {post.coverImage && (
+        <img
+          src={post.coverImage}
+          alt=""
+          className="block w-full h-44 md:h-64 object-cover"
+          loading="lazy"
+        />
+      )}
+      <div className="p-6 md:p-8">
+        {date && (
+          <div className="txt-label-nav text-on-surface-variant mb-2">{date}</div>
+        )}
+        <h2 className="text-xl md:text-2xl font-semibold text-primary mb-3 group-hover:underline underline-offset-4">
+          {post.title}
+        </h2>
+        <p className="txt-body mb-4">{post.excerpt}</p>
+        {post.linkedinUrl && (
+          <span className="text-sm text-primary font-medium">
+            Read on LinkedIn →
+          </span>
+        )}
+      </div>
+    </>
+  );
+}
+
 function PostsPage() {
-  const sorted = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const sorted = sortPosts();
 
   return (
     <section className="max-w-4xl mx-auto px-6 lg:px-10 py-24">
@@ -45,35 +86,20 @@ function PostsPage() {
         <ul className="space-y-6">
           {sorted.map((post) => (
             <li key={post.id}>
-              <a
-                href={post.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block border border-outline-variant bg-surface p-6 md:p-8 hover:border-primary transition"
-              >
-                <div className="flex flex-col md:flex-row md:items-start md:gap-8">
-                  {post.coverImage && (
-                    <img
-                      src={post.coverImage}
-                      alt=""
-                      className="w-full md:w-48 h-48 md:h-32 object-cover mb-4 md:mb-0 shrink-0"
-                      loading="lazy"
-                    />
-                  )}
-                  <div className="flex-1">
-                    <div className="txt-label-nav text-on-surface-variant mb-2">
-                      {formatDate(post.date)}
-                    </div>
-                    <h2 className="text-xl md:text-2xl font-semibold text-primary mb-3 group-hover:underline underline-offset-4">
-                      {post.title}
-                    </h2>
-                    <p className="txt-body mb-4">{post.excerpt}</p>
-                    <span className="text-sm text-primary font-medium">
-                      Read on LinkedIn →
-                    </span>
-                  </div>
+              {post.linkedinUrl ? (
+                <a
+                  href={post.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block overflow-hidden border border-outline-variant bg-surface hover:border-primary transition"
+                >
+                  <PostBody post={post} />
+                </a>
+              ) : (
+                <div className="group block overflow-hidden border border-outline-variant bg-surface">
+                  <PostBody post={post} />
                 </div>
-              </a>
+              )}
             </li>
           ))}
         </ul>
