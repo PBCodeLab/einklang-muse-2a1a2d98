@@ -20,6 +20,7 @@ export const posts: Post[] = [
       "https://www.linkedin.com/feed/update/urn:li:activity:7509179751920562177/",
     coverImage:
       "/__l5e/assets-v1/569bf3f8-a3e3-4e36-831a-d713398d6e60/think-slow-act-fast.png",
+    coverFull: true,
   },
   {
     id: "sge-pakistan",
