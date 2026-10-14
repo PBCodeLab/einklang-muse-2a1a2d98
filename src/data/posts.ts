@@ -5,6 +5,7 @@ export type Post = {
   date: string; // ISO YYYY-MM-DD
   linkedinUrl: string;
   coverImage?: string;
+  coverFull?: boolean; // show the whole cover instead of a cropped banner
 };
 
 // Newest first. To add a new post, prepend an entry here.
