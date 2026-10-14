@@ -44,7 +44,11 @@ function PostBody({ post }: { post: Post }) {
         <img
           src={post.coverImage}
           alt=""
-          className="block w-full h-44 md:h-64 object-cover"
+          className={
+            post.coverFull
+              ? "block w-full h-auto"
+              : "block w-full h-44 md:h-64 object-cover"
+          }
           loading="lazy"
         />
       )}
