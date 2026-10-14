@@ -10,6 +10,17 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "think-slow-act-fast",
+    title: "New series: Think Slow, Act Fast. Decision-making in the era of AI.",
+    excerpt:
+      "After hundreds of transformation projects, the patterns that decided whether a programme succeeded were human rather than methodological. Going to the most critical leader first, watching leaders jump between technology waves out of fear of missing out, and seeing improvement managers insist on one way of working when the situation calls for another. Daniel Kahneman's Thinking, Fast and Slow supplied the missing mental model, and this five-part series looks at those patterns through System 1 and System 2 with an operational excellence angle. The methodology was never the hard part. The people were, and that includes me.",
+    date: "2026-09-25",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7509179751920562177/",
+    coverImage:
+      "/__l5e/assets-v1/569bf3f8-a3e3-4e36-831a-d713398d6e60/think-slow-act-fast.png",
+  },
+  {
     id: "sge-pakistan",
     title:
       "Expanding internationally with Switzerland Global Enterprise: from São Paulo to a fact-finding mission in Pakistan",
