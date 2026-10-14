@@ -39,16 +39,16 @@ function sortPosts() {
 function PostBody({ post }: { post: Post }) {
   const date = formatDate(post.date);
   return (
-    <div className="flex flex-col md:flex-row md:items-start md:gap-8">
+    <>
       {post.coverImage && (
         <img
           src={post.coverImage}
           alt=""
-          className="w-full md:w-64 h-48 md:h-36 object-cover mb-4 md:mb-0 shrink-0"
+          className="w-full h-44 md:h-64 object-cover mb-5 md:mb-6"
           loading="lazy"
         />
       )}
-      <div className="flex-1">
+      <div>
         {date && (
           <div className="txt-label-nav text-on-surface-variant mb-2">{date}</div>
         )}
@@ -62,7 +62,7 @@ function PostBody({ post }: { post: Post }) {
           </span>
         )}
       </div>
-    </div>
+    </>
   );
 }
 
