@@ -11,6 +11,19 @@ export type Post = {
 // Newest first. To add a new post, prepend an entry here.
 export const posts: Post[] = [
   {
+    id: "post-1-of-5-technology-waves",
+    title:
+      "Post 1 of 5: Why experience does not protect us from the next technology wave (and what a proven better way looks like)",
+    excerpt:
+      "ERP, RPA, digital transformation, Agile and now AI. Each wave created real value for some companies and expensive disappointment for many others, and experience does not seem to protect us because every wave arrives looking new enough that the slow, deliberate thinking never switches on. A night walking the end-to-end newspaper process with the team at CH Media shows the alternative. In a workshop you see the process as people describe it, and walking it at night you see how it behaves. That is System 2 in its most practical form, and it is how you find out where improvement and technology will genuinely pay off.",
+    date: "2026-10-14",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7516005167436095488/",
+    coverImage:
+      "/__l5e/assets-v1/0d907988-afc0-4333-a1d0-478052ed1b59/ch-media-night-walk.jpg",
+    coverFull: true,
+  },
+  {
     id: "think-slow-act-fast",
     title: "New series: Think Slow, Act Fast. Decision-making in the era of AI.",
     excerpt:
