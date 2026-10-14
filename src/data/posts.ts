@@ -15,7 +15,7 @@ export const posts: Post[] = [
       "Expanding internationally with Switzerland Global Enterprise: from São Paulo to a fact-finding mission in Pakistan",
     excerpt:
       "Working with Switzerland Global Enterprise has given Einklang fast access to the right people and local networks, including an event at the Swiss Consulate in São Paulo on the evolution of operational excellence in the era of AI, and a meeting at SGE headquarters in Zurich with the Swiss Embassy in Islamabad and the Swiss Business Council in Karachi. Pakistan has a vibrant entrepreneurial ecosystem with many hidden champions embedded in global supply chains, and those are exactly the companies Einklang wants to reach, since expensive consultants and large transformation programmes are rarely a viable option for them. A fact-finding mission follows in 2027.",
-    date: "",
+    date: "2026-09-21",
     linkedinUrl: "",
     coverImage: "/__l5e/assets-v1/63916214-3057-490c-a5e7-071cca30b1a8/sge-pakistan.png",
   },
