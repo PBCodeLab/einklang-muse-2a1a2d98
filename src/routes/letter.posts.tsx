@@ -44,11 +44,11 @@ function PostBody({ post }: { post: Post }) {
         <img
           src={post.coverImage}
           alt=""
-          className="w-full h-44 md:h-64 object-cover -mx-6 -mt-6 md:-mx-8 md:-mt-8 mb-5 md:mb-6"
+          className="block w-full h-44 md:h-64 object-cover"
           loading="lazy"
         />
       )}
-      <div>
+      <div className="p-6 md:p-8">
         {date && (
           <div className="txt-label-nav text-on-surface-variant mb-2">{date}</div>
         )}
@@ -91,12 +91,12 @@ function PostsPage() {
                   href={post.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block border border-outline-variant bg-surface p-6 md:p-8 hover:border-primary transition"
+                  className="group block overflow-hidden border border-outline-variant bg-surface hover:border-primary transition"
                 >
                   <PostBody post={post} />
                 </a>
               ) : (
-                <div className="group block border border-outline-variant bg-surface p-6 md:p-8">
+                <div className="group block overflow-hidden border border-outline-variant bg-surface">
                   <PostBody post={post} />
                 </div>
               )}
