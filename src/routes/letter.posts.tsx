@@ -44,7 +44,7 @@ function PostBody({ post }: { post: Post }) {
         <img
           src={post.coverImage}
           alt=""
-          className="w-full h-44 md:h-64 object-cover mb-5 md:mb-6"
+          className="w-full h-44 md:h-64 object-cover -mx-6 -mt-6 md:-mx-8 md:-mt-8 mb-5 md:mb-6"
           loading="lazy"
         />
       )}
