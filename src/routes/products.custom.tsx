@@ -76,7 +76,7 @@ function CustomPage() {
               <div>
                 <h4 className="txt-section-title text-primary text-lg mb-2">Einklang Agent</h4>
                 <p className="text-sm text-on-surface-variant mb-3">Standard OE methodology — ready to deploy immediately. Ideal for organisations without a proprietary framework.</p>
-                <p className="text-sm font-medium text-primary mb-2">CHF 149/seat or CHF 2,500/month</p>
+                <p className="text-sm font-medium text-primary mb-2">From CHF 179/month · CHF 149/seat · CHF 2,490/month</p>
                 <Link to="/products/agent" className="text-sm text-primary underline underline-offset-4">See the Agent →</Link>
               </div>
               <div>

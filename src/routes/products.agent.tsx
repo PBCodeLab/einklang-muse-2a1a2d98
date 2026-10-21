@@ -35,13 +35,22 @@ const STEPS = [
   { n: "04", title: "Measure & realise", body: "Monthly benefit realisation reports. Average client sees 30% cost reduction within 6 months." },
 ];
 
+const TIERS = [
+  { tag: "Single user", audience: "Individuals and company trials", price: "CHF 179", unit: "/ month", note: "60-day free trial · the way in", cta: "Start free trial", featured: false,
+    features: ["All modules and benefit realisation", "Paid monthly by card through Stripe", "Cancel anytime", "Upgrade to Team or Enterprise anytime"] },
+  { tag: "Team", audience: "Mid-sized companies", price: "CHF 149", unit: "/ seat / month", note: "Minimum 3 seats · invoiced yearly", cta: "Get started", featured: false,
+    features: ["All modules and benefit realisation", "From 3 seats upwards", "Shared team projects", "Invoiced yearly"] },
+  { tag: "Enterprise", audience: "Larger organisations", price: "CHF 2,490", unit: "/ month", note: "Unlimited users · CHF 29,880 a year", cta: "Talk to us", featured: true,
+    features: ["All modules and benefit realisation", "Unlimited users across the organisation", "Organisation-wide rollout and reporting", "Invoiced yearly"] },
+];
+
 const FAQ = [
   { q: "Does it work with our existing Microsoft 365 setup?", a: "Yes — it deploys as a Teams app inside your existing tenant. No new infrastructure or separate login. IT approval typically takes one meeting." },
   { q: "What about data security and GDPR?", a: "Your data never leaves your Microsoft tenant. EU GDPR and Swiss data protection standards. A data processing agreement is included with every contract." },
   { q: "How does benefit realisation work?", a: "The agent tracks improvement initiatives from initiation to completion, quantifying financial and operational benefits at each stage. Monthly reports show leadership the real impact." },
   { q: "How long does implementation take?", a: "Most organisations are live within two weeks. Configuration takes 2–3 days; the first team is onboarded in a single 90-minute session." },
   { q: "Which languages are supported?", a: "German, English, Portuguese, and Spanish out of the box. Additional languages on request." },
-  { q: "What support is included?", a: "Both plans include ongoing methodology and technology support. Our team handles escalations — you are never left on your own." },
+  { q: "What support is included?", a: "All plans include ongoing methodology and technology support. Our team handles escalations — you are never left on your own." },
 ];
 
 function AgentPage() {
@@ -144,42 +153,44 @@ function AgentPage() {
         <div className={MAX}>
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">Pricing</div>
-            <h2 className="txt-primary-headline text-primary mb-4 whitespace-nowrap">Simple, transparent pricing.</h2>
-            <p className="txt-body">No setup fees. Cancel anytime. Both plans include full onboarding and ongoing support.</p>
+            <h2 className="txt-primary-headline text-primary mb-4 md:whitespace-nowrap">Three tiers from one user to the whole company.</h2>
+            <p className="txt-body">Everyone starts on the same 60-day free trial, then picks one of three plans. No setup fees.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-surface border border-outline-variant p-10">
-              <div className="txt-label-nav text-primary mb-3">Most popular</div>
-              <h3 className="txt-section-title text-primary mb-3">Enterprise flat rate</h3>
-              <div className="text-4xl text-primary mb-1" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>CHF 2,500</div>
-              <div className="text-sm text-on-surface-variant mb-6">per month · unlimited seats</div>
-              <ul className="text-sm text-on-surface-variant space-y-2 mb-8">
-                <li>✓ Unlimited users in your organisation</li>
-                <li>✓ All eight modules including benefit realisation</li>
-                <li>✓ DE / EN / PT / ES · more on request</li>
-                <li>✓ Microsoft Teams &amp; Copilot integration</li>
-                <li>✓ Monthly benefit realisation reporting</li>
-                <li>✓ Methodology &amp; technology support</li>
-              </ul>
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a pilot</a>
-            </div>
-            <div className="bg-surface border border-outline-variant p-10">
-              <div className="txt-label-nav text-on-surface-variant mb-3">Per seat</div>
-              <h3 className="txt-section-title text-primary mb-3">Team licence</h3>
-              <div className="text-4xl text-primary mb-1" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>CHF 149</div>
-              <div className="text-sm text-on-surface-variant mb-6">per seat / per month · min. 3 seats</div>
-              <ul className="text-sm text-on-surface-variant space-y-2 mb-8">
-                <li>✓ All eight modules including benefit realisation</li>
-                <li>✓ DE / EN / PT / ES · more on request</li>
-                <li>✓ Microsoft Teams integration</li>
-                <li>✓ Monthly benefit realisation reporting</li>
-                <li>✓ Methodology &amp; technology support</li>
-                <li>✓ Cancel anytime</li>
-              </ul>
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Get started</a>
+          <div className="grid md:grid-cols-3 gap-6">
+            {TIERS.map((t) => (
+              <div key={t.tag} className={`bg-surface p-8 flex flex-col ${t.featured ? "border-2 border-primary" : "border border-outline-variant"}`}>
+                <div className={`txt-label-nav self-start px-4 py-1.5 rounded mb-3 ${t.featured ? "bg-primary text-on-primary" : "bg-surface-container-low text-primary"}`}>{t.tag}</div>
+                <div className="text-sm text-on-surface-variant mb-5">{t.audience}</div>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="text-4xl text-primary" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{t.price}</span>
+                  <span className="text-sm text-on-surface-variant">{t.unit}</span>
+                </div>
+                <div className="text-sm italic font-semibold text-primary mb-6 pb-6 border-b border-outline-variant">{t.note}</div>
+                <ul className="text-sm text-on-surface-variant space-y-2 mb-8 flex-1">
+                  {t.features.map((f) => <li key={f}>✓ {f}</li>)}
+                </ul>
+                <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary self-start">{t.cta}</a>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm italic font-semibold text-primary mt-4">Companies start on a single licence and move up as the team grows.</p>
+          <div className="grid md:grid-cols-4 gap-4 mt-10">
+            {[
+              { t: "Inside Microsoft 365", b: "Teams and Copilot. No new login." },
+              { t: "EU data residency", b: "Your data stays in your tenant." },
+              { t: "Four languages", b: "German, English, Portuguese, Spanish." },
+            ].map((x) => (
+              <div key={x.t} className="bg-surface border-l-4 border-primary p-5">
+                <div className="text-sm font-bold text-primary mb-1">{x.t}</div>
+                <div className="text-xs text-on-surface-variant">{x.b}</div>
+              </div>
+            ))}
+            <div className="bg-primary text-on-primary p-5">
+              <div className="txt-label-nav mb-2">Options on request</div>
+              <div className="text-xs">Upload your data, private to your users</div>
+              <div className="text-xs">Your own dedicated instance</div>
             </div>
           </div>
-          <p className="text-xs text-on-surface-variant mt-6">EU GDPR compliant &amp; enterprise-grade security. Deployed inside your Microsoft tenant — your data never leaves your organisation's environment.</p>
         </div>
       </section>
 
