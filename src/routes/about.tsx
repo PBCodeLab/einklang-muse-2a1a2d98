@@ -44,7 +44,7 @@ const founders = [
   {
     img: philipp,
     name: "Philipp Bubenzer",
-    role: "Co-Founder | Advisor",
+    role: "Academic Advisor",
     location: "Zurich, Switzerland",
     bio: "20+ years experience building deep tech ventures and innovation initiatives. WHU alumnus. Scholar at ETH Zurich and HES-SO. The Einklang approach builds on his work on ai-native organizations: How to scale OE.",
   },
