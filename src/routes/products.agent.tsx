@@ -16,6 +16,7 @@ export const Route = createFileRoute("/products/agent")({
 
 const MAX = "max-w-7xl mx-auto px-6 lg:px-10";
 const CALENDLY = "https://calendly.com/aslamjilani-einklangacademy/30min";
+const SIGNUP = "https://einklang.ai/agent/billing";
 
 const CAPABILITIES = [
   { tag: "Core", title: "Waste identification", body: "Structured Lean waste analysis — including waste created by poor AI deployments." },
@@ -36,11 +37,11 @@ const STEPS = [
 ];
 
 const TIERS = [
-  { tag: "Single user", audience: "Individuals and company trials", price: "CHF 179", unit: "/ month", note: "60-day free trial · the way in", cta: "Start free trial", featured: false,
+  { tag: "Single user", audience: "Individuals and company trials", price: "CHF 179", unit: "/ month", note: "60-day free trial · the way in", cta: "Start free trial", link: SIGNUP, featured: false,
     features: ["All modules and benefit realisation", "Paid monthly by card through Stripe", "Cancel anytime", "Upgrade to Team or Enterprise anytime"] },
-  { tag: "Team", audience: "Mid-sized companies", price: "CHF 149", unit: "/ seat / month", note: "Minimum 3 seats · invoiced yearly", cta: "Get started", featured: false,
+  { tag: "Team", audience: "Mid-sized companies", price: "CHF 149", unit: "/ seat / month", note: "Minimum 3 seats · invoiced yearly", cta: "Get started", link: CALENDLY, featured: false,
     features: ["All modules and benefit realisation", "From 3 seats upwards", "Shared team projects", "Invoiced yearly"] },
-  { tag: "Enterprise", audience: "Larger organisations", price: "CHF 2,490", unit: "/ month", note: "Unlimited users · CHF 29,880 a year", cta: "Talk to us", featured: true,
+  { tag: "Enterprise", audience: "Larger organisations", price: "CHF 2,490", unit: "/ month", note: "Unlimited users · CHF 29,880 a year", cta: "Talk to us", link: CALENDLY, featured: true,
     features: ["All modules and benefit realisation", "Unlimited users across the organisation", "Organisation-wide rollout and reporting", "Invoiced yearly"] },
 ];
 
@@ -169,7 +170,7 @@ function AgentPage() {
                 <ul className="text-sm text-on-surface-variant space-y-2 mb-8 flex-1">
                   {t.features.map((f) => <li key={f}>✓ {f}</li>)}
                 </ul>
-                <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary self-start">{t.cta}</a>
+                <a href={t.link} target="_blank" rel="noopener noreferrer" className="btn-primary self-start">{t.cta}</a>
               </div>
             ))}
           </div>
