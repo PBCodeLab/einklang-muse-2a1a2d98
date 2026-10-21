@@ -11,7 +11,8 @@ import {
 import { useState } from "react";
 
 import appCss from "../styles.css?url";
-import logoUrl from "../assets/einklang-logo.png";
+import logoAsset from "../assets/einklang-compass.png.asset.json";
+const logoUrl = logoAsset.url;
 
 function SiteHeader() {
   const [productsOpen, setProductsOpen] = useState(false);
@@ -19,13 +20,14 @@ function SiteHeader() {
   return (
     <header className="border-b border-outline-variant bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between gap-3">
-        <Link to="/" className="flex items-center shrink-0" aria-label="Einklang.AI home">
+        <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-0" aria-label="Einklang.AI home">
           <img
             src={logoUrl}
-            alt="Einklang.AI"
-            className="h-9 sm:h-10 md:h-12 lg:h-14 w-auto shrink-0 object-contain"
+            alt=""
+            className="h-9 sm:h-10 md:h-12 w-auto shrink-0 object-contain"
             style={{ mixBlendMode: "multiply" }}
           />
+          <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary tracking-tight whitespace-nowrap">Einklang.AI</span>
         </Link>
         <div className="flex items-center gap-3 md:gap-5 lg:gap-8">
           <nav className="hidden sm:flex items-center gap-3 md:gap-5 lg:gap-8">
@@ -100,12 +102,15 @@ function SiteFooter() {
     <footer className="border-t border-outline-variant bg-surface-container-lowest mt-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <img
-            src={logoUrl}
-            alt="Einklang.AI"
-            className="h-10 md:h-12 w-auto mb-4 object-contain"
-            style={{ mixBlendMode: "multiply" }}
-          />
+          <div className="flex items-center gap-2 mb-4">
+            <img
+              src={logoUrl}
+              alt=""
+              className="h-10 md:h-12 w-auto object-contain"
+              style={{ mixBlendMode: "multiply" }}
+            />
+            <span className="text-lg md:text-xl font-bold text-primary tracking-tight">Einklang.AI</span>
+          </div>
           <p className="txt-body text-sm whitespace-pre-line">Operational excellence,{"\n"}finally scalable.</p>
         </div>
         <div>
@@ -202,6 +207,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" },
