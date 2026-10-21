@@ -159,7 +159,7 @@ function AgentPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {TIERS.map((t) => (
               <div key={t.tag} className={`bg-surface p-8 flex flex-col ${t.featured ? "border-2 border-primary" : "border border-outline-variant"}`}>
-                <div className={`txt-label-nav self-start px-4 py-1.5 rounded mb-3 ${t.featured ? "bg-primary text-on-primary" : "bg-surface-container-high text-primary"}`}>{t.tag}</div>
+                <div className={`txt-label-nav self-start px-4 py-1.5 rounded mb-3 ${t.featured ? "bg-primary text-on-primary" : "bg-surface-container-low text-primary"}`}>{t.tag}</div>
                 <div className="text-sm text-on-surface-variant mb-5">{t.audience}</div>
                 <div className="flex items-baseline gap-1 mb-1">
                   <span className="text-4xl text-primary" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{t.price}</span>
