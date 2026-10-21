@@ -94,17 +94,13 @@ function AboutPage() {
         <div className="txt-label-nav text-primary mb-3">Why we exist</div>
         <h2 className="txt-primary-headline text-primary mb-8 text-3xl md:text-4xl">Our vision & mission</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest flex flex-col">
+          <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
             <div className="txt-label-nav text-primary mb-3">Vision</div>
-            <div className="flex-1 flex items-center">
-              <p className="txt-body text-xl md:text-2xl leading-snug text-primary">To help companies continuously improve, adapt and prosper.</p>
-            </div>
+            <p className="txt-body text-xl md:text-2xl leading-snug text-primary">To help companies continuously improve, adapt and prosper.</p>
           </div>
-          <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest flex flex-col">
+          <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
             <div className="txt-label-nav text-primary mb-3">Mission</div>
-            <div className="flex-1 flex items-center">
-              <p className="txt-body text-lg md:text-xl leading-relaxed text-primary">To equip organisations and their people with a proven improvement method, embedded in an intelligent agent, so they solve the right problems, deliver results at scale and keep the knowledge in the business.</p>
-            </div>
+            <p className="txt-body text-lg md:text-xl leading-relaxed text-primary">To equip organisations and their people with a proven improvement method, embedded in an intelligent agent, so they solve the right problems, deliver results at scale and keep the knowledge in the business.</p>
           </div>
         </div>
       </section>
