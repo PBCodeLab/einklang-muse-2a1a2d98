@@ -96,13 +96,11 @@ function AboutPage() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
             <div className="txt-label-nav text-primary mb-3">Vision</div>
-            <h3 className="text-xl font-semibold text-primary mb-3">OE for everyone</h3>
-            <p className="txt-body">A world where every organisation, from a São Paulo SME to a Swiss industrial group, can access and apply world-class operational excellence methodology.</p>
+            <p className="txt-body text-xl md:text-2xl leading-snug text-primary">To help companies continuously improve, adapt and prosper.</p>
           </div>
           <div className="border border-outline-variant rounded p-8 bg-surface-container-lowest">
             <div className="txt-label-nav text-primary mb-3">Mission</div>
-            <h3 className="text-xl font-semibold text-primary mb-3">Embed AI into how work improves</h3>
-            <p className="txt-body">We build AI-native tools and certified learning programmes that put OE capability directly in the hands of practitioners, not just consultants.</p>
+            <p className="txt-body text-lg md:text-xl leading-relaxed text-primary">To equip organisations and their people with a proven improvement method, embedded in an intelligent agent, so they solve the right problems, deliver results at scale and keep the knowledge in the business.</p>
           </div>
         </div>
       </section>
