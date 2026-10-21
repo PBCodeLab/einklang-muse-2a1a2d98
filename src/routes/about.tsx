@@ -30,7 +30,7 @@ const founders = [
   {
     img: andre,
     name: "Andre Andreazzi",
-    role: "Co-Founder | LatAm lead",
+    role: "Co-Founder | COO",
     location: "São Paulo, Brazil",
     bio: "Ex-McKinsey Digital Transformation lead LatAm with\n25+ years leading transformation incl. continuous improvement at IBM, and HP. MBA in AI & Big Data from USP. Leads Einklang's LatAm expansion.",
   },
