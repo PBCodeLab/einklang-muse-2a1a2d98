@@ -50,7 +50,7 @@ const FAQ = [
   { q: "How does benefit realisation work?", a: "The agent tracks improvement initiatives from initiation to completion, quantifying financial and operational benefits at each stage. Monthly reports show leadership the real impact." },
   { q: "How long does implementation take?", a: "Most organisations are live within two weeks. Configuration takes 2–3 days; the first team is onboarded in a single 90-minute session." },
   { q: "Which languages are supported?", a: "German, English, Portuguese, and Spanish out of the box. Additional languages on request." },
-  { q: "What support is included?", a: "Both plans include ongoing methodology and technology support. Our team handles escalations — you are never left on your own." },
+  { q: "What support is included?", a: "All plans include ongoing methodology and technology support. Our team handles escalations — you are never left on your own." },
 ];
 
 function AgentPage() {
