@@ -11,7 +11,7 @@ import {
 import { useState } from "react";
 
 import appCss from "../styles.css?url";
-import logoAsset from "../assets/einklang-compass.png.asset.json";
+import logoAsset from "../assets/einklang-compass-forest.png.asset.json";
 const logoUrl = logoAsset.url;
 
 function SiteHeader() {
@@ -25,7 +25,6 @@ function SiteHeader() {
             src={logoUrl}
             alt=""
             className="h-9 sm:h-10 md:h-12 w-auto shrink-0 object-contain"
-            style={{ mixBlendMode: "multiply" }}
           />
           <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary tracking-tight whitespace-nowrap">Einklang.AI</span>
         </Link>
@@ -107,7 +106,6 @@ function SiteFooter() {
               src={logoUrl}
               alt=""
               className="h-10 md:h-12 w-auto object-contain"
-              style={{ mixBlendMode: "multiply" }}
             />
             <span className="text-lg md:text-xl font-bold text-primary tracking-tight">Einklang.AI</span>
           </div>
