@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { posts, type Post } from "@/data/posts";
+import { shareImageMeta } from "@/lib/share-image";
 
 export const Route = createFileRoute("/letter/posts")({
   head: () => ({
@@ -10,6 +11,7 @@ export const Route = createFileRoute("/letter/posts")({
       { property: "og:description", content: "Curated posts from Einklang on AI strategy, AI-native organizations, and operational excellence." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      ...shareImageMeta,
     ],
   }),
   component: PostsPage,

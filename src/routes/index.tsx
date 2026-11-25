@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LogoMarquee } from "@/components/LogoMarquee";
+import { productivityValue, productivityDescription, productivityClaim } from "@/lib/results";
+import { shareImageMeta } from "@/lib/share-image";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -10,6 +12,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "The Einklang Agent gives every team access to proven improvement methods, inside Microsoft Teams." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      ...shareImageMeta,
     ],
   }),
   component: Index,
@@ -59,10 +62,10 @@ function Index() {
             </div>
           </div>
           <div className="lg:col-span-5 lg:pl-12 lg:border-l border-outline-variant">
-            <div className="text-primary leading-[0.9] text-[112px] md:text-[160px] mb-2" style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 800, letterSpacing: "-0.06em" }}>
-              30%+
-            </div>
-            <div className="txt-label-nav text-on-surface-variant mb-10">Productivity gain · avg. reported by clients</div>
+            <p aria-label={productivityClaim}>
+              <span className="block text-primary leading-[0.9] text-[112px] md:text-[160px] mb-2" style={{ fontFamily: "'Inter Tight', Inter, sans-serif", fontWeight: 800, letterSpacing: "-0.06em" }}>{productivityValue}</span>{" "}
+              <span className="block txt-label-nav text-on-surface-variant mb-10">{productivityDescription}</span>
+            </p>
           </div>
         </div>
       </section>
@@ -170,14 +173,14 @@ function Index() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-outline-variant border border-outline-variant mb-16">
             {[
-              { v: "30%+", l: "Productivity gain", s: "Average reported by clients" },
+              { v: productivityValue, l: productivityDescription, s: "" },
               { v: "5:1", l: "Return on investment", s: "Validated · Swiss global bank pilot" },
               { v: "160+", l: "Leaders certified", s: "Across DACH" },
             ].map((s) => (
               <div key={s.l} className="bg-surface p-8 text-center">
                 <div className="text-4xl md:text-5xl text-primary mb-3" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{s.v}</div>
                 <div className="text-sm font-medium text-primary mb-1">{s.l}</div>
-                <div className="text-xs text-on-surface-variant">{s.s}</div>
+                {s.s && <div className="text-xs text-on-surface-variant">{s.s}</div>}
               </div>
             ))}
           </div>

@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { academyCertifiedValue, academyRoiValue, academyRoiClaim } from "@/lib/results";
+import { shareImageMeta } from "@/lib/share-image";
 
 export const Route = createFileRoute("/products/academy")({
   head: () => ({
@@ -6,9 +8,10 @@ export const Route = createFileRoute("/products/academy")({
       { title: "Skill Build Academy — AI-Native OE certification" },
       { name: "description", content: "Practitioner and Orchestrator certifications combining proven OE methodology with AI-native tools, supported by the Einklang Agent." },
       { property: "og:title", content: "Skill Build Academy — AI-Native OE certification" },
-      { property: "og:description", content: "Two certification pathways for DACH and LatAm. 160+ leaders certified. 5:1 ROI demonstrated." },
+      { property: "og:description", content: `Two certification pathways for DACH and LatAm. ${academyCertifiedValue} leaders certified. ${academyRoiClaim}.` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      ...shareImageMeta,
     ],
   }),
   component: AcademyPage,
@@ -25,7 +28,7 @@ const DELIVERABLES = [
   { t: "Transformation roadmap", b: "Clear strategic steps and prioritised initiatives for AI transformation." },
   { t: "AI-native process redesign", b: "Core processes redesigned for the AI-native environment, ready for implementation." },
   { t: "Measurable KPI framework", b: "Quantifiable KPIs to track efficiency gains and cost reductions." },
-  { t: "Guaranteed 5:1 ROI", b: "Demonstrable return on investment, validated by specific KPIs and real improvements." },
+  { t: academyRoiClaim, b: "Demonstrable return on investment, validated by specific KPIs and real improvements." },
 ];
 
 function AcademyPage() {
@@ -40,6 +43,16 @@ function AcademyPage() {
         <p className="txt-body max-w-3xl mb-10">
           Two certification pathways designed for DACH and LatAm. Practitioner and Orchestrator programmes combine structured methodology with AI-native tools — supported by the Einklang Agent throughout.
         </p>
+        <dl className="grid grid-cols-2 gap-6 border-y border-outline-variant py-8">
+          <div className="text-center min-w-0">
+            <dd className="text-4xl md:text-5xl font-extrabold text-primary mb-2">{academyCertifiedValue}</dd>
+            <dt className="text-sm text-on-surface-variant">leaders certified</dt>
+          </div>
+          <div className="text-center min-w-0">
+            <dd className="text-4xl md:text-5xl font-extrabold text-primary mb-2">{academyRoiValue}</dd>
+            <dt className="text-sm text-on-surface-variant">ROI demonstrated</dt>
+          </div>
+        </dl>
       </section>
 
       <section className="bg-surface-container-lowest py-24 border-t border-outline-variant">

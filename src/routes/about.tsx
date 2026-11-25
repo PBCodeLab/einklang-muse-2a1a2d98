@@ -6,6 +6,7 @@ import philipp from "../assets/team/philipp-sketch.jpeg";
 import zurichImg from "../assets/regions/zurich-sketch.jpeg";
 import saoPauloImg from "../assets/regions/saopaulo-sketch.jpeg";
 import londonImg from "../assets/regions/london-sketch.jpeg";
+import { shareImageMeta } from "@/lib/share-image";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: "Built by practitioners, for practitioners. The team behind Einklang.AI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      ...shareImageMeta,
     ],
   }),
   component: AboutPage,

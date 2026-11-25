@@ -1,0 +1,15 @@
+{
+  "productivity": {
+    "gainPercent": 30,
+    "atLeast": true,
+    "metric": "productivity gain",
+    "basis": "average reported by clients"
+  },
+  "academy": {
+    "leadersCertified": 160,
+    "leadersCertifiedAtLeast": true,
+    "roiRatio": 5,
+    "roiGuaranteed": false,
+    "roiEvidence": "Swiss global bank programme"
+  }
+}

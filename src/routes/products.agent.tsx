@@ -3,6 +3,8 @@ import teamsLogo from "@/assets/teams-logo.png";
 import browsersLogo from "@/assets/browsers-2x2.png";
 import agentPricing from "@/data/agent-pricing.json";
 import { Button } from "@/components/ui/button";
+import { productivityClaim } from "@/lib/results";
+import { shareImageMeta } from "@/lib/share-image";
 
 export const Route = createFileRoute("/products/agent")({
   head: () => ({
@@ -13,6 +15,7 @@ export const Route = createFileRoute("/products/agent")({
       { property: "og:description", content: "Eight OE capabilities, deployed inside your Microsoft tenant. EU GDPR compliant. Live in two weeks." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      ...shareImageMeta,
     ],
   }),
   component: AgentPage,
@@ -36,7 +39,7 @@ const STEPS = [
   { n: "01", title: "Connect your tenant", body: "Deployed inside your Microsoft 365 environment. IT approval typically takes one meeting." },
   { n: "02", title: "Configure your context", body: "We tailor the agent to your industry, terminology, and KPIs. Takes 2–3 days." },
   { n: "03", title: "Train your team", body: "A 90-minute onboarding session. Practitioners independent within a week." },
-  { n: "04", title: "Measure & realise", body: "Monthly benefit realisation reports. Average client sees 30% cost reduction within 6 months." },
+  { n: "04", title: "Measure & realise", body: `Monthly benefit realisation reports. ${productivityClaim}.` },
 ];
 
 const TIERS = agentPricing.plans.map((plan) => {

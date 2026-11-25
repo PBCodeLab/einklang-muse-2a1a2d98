@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { shareImageMeta } from "@/lib/share-image";
 
 export const Route = createFileRoute("/case-studies/swiss-bank")({
   head: () => ({
@@ -9,6 +10,7 @@ export const Route = createFileRoute("/case-studies/swiss-bank")({
       { property: "og:description", content: "Pilot validated 5:1 ROI and led to a full institutional scale-up." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      ...shareImageMeta,
     ],
   }),
   component: SwissBank,
