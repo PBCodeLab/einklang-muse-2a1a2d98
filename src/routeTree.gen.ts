@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as WorkshopRouteImport } from './routes/workshop'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as CaseStudiesSaraRouteImport } from './routes/case-studies.sara'
 import { Route as CaseStudiesSwissBankRouteImport } from './routes/case-studies.swiss-bank'
@@ -47,6 +48,11 @@ const ContactRoute = ContactRouteImport.update({
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkshopRoute = WorkshopRouteImport.update({
+  id: '/workshop',
+  path: '/workshop',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/solutions': typeof SolutionsRoute
+  '/workshop': typeof WorkshopRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/solutions': typeof SolutionsRoute
+  '/workshop': typeof WorkshopRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/case-studies': typeof CaseStudiesRouteWithChildren
   '/contact': typeof ContactRoute
   '/solutions': typeof SolutionsRoute
+  '/workshop': typeof WorkshopRoute
   '/case-studies/sara': typeof CaseStudiesSaraRoute
   '/case-studies/swiss-bank': typeof CaseStudiesSwissBankRoute
   '/case-studies/swissmem': typeof CaseStudiesSwissmemRoute
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/case-studies'
     | '/contact'
     | '/solutions'
+    | '/workshop'
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/solutions'
+    | '/workshop'
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/case-studies'
     | '/contact'
     | '/solutions'
+    | '/workshop'
     | '/case-studies/sara'
     | '/case-studies/swiss-bank'
     | '/case-studies/swissmem'
@@ -199,6 +211,7 @@ export interface RootRouteChildren {
   CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
   ContactRoute: typeof ContactRoute
   SolutionsRoute: typeof SolutionsRoute
+  WorkshopRoute: typeof WorkshopRoute
   LetterPostsRoute: typeof LetterPostsRoute
   ProductsAcademyRoute: typeof ProductsAcademyRoute
   ProductsAgentRoute: typeof ProductsAgentRoute
@@ -241,6 +254,13 @@ declare module '@tanstack/react-router' {
       path: '/solutions'
       fullPath: '/solutions'
       preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/workshop': {
+      id: '/workshop'
+      path: '/workshop'
+      fullPath: '/workshop'
+      preLoaderRoute: typeof WorkshopRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/': {
@@ -333,6 +353,7 @@ const rootRouteChildren: RootRouteChildren = {
   CaseStudiesRoute: CaseStudiesRouteWithChildren,
   ContactRoute: ContactRoute,
   SolutionsRoute: SolutionsRoute,
+  WorkshopRoute: WorkshopRoute,
   LetterPostsRoute: LetterPostsRoute,
   ProductsAcademyRoute: ProductsAcademyRoute,
   ProductsAgentRoute: ProductsAgentRoute,
