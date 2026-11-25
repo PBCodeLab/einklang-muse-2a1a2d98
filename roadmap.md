@@ -20,3 +20,10 @@
 - [x] Use a verified production-hosted sharing image on every content page.
 - [x] Hide the Edit with Lovable badge.
 - [x] Verify the changed pages, sharing tags, and image on desktop/mobile.
+
+# Book page and Insights
+
+- [x] Replace the letter placeholder with the book cover, copy, and booking links.
+- [x] Rename the navigation to Insights with The book and Posts.
+- [x] Add the slim book banner below the homepage results.
+- [x] Verify book links, the cover, and desktop/mobile layouts.

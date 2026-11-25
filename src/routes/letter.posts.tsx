@@ -5,9 +5,9 @@ import { shareImageMeta } from "@/lib/share-image";
 export const Route = createFileRoute("/letter/posts")({
   head: () => ({
     meta: [
-      { title: "Posts — AI Strategy — Einklang.AI" },
+      { title: "Posts | Insights | Einklang.AI" },
       { name: "description", content: "Curated posts from Einklang on AI strategy, AI-native organizations, and operational excellence." },
-      { property: "og:title", content: "Posts — AI Strategy — Einklang.AI" },
+      { property: "og:title", content: "Posts | Insights | Einklang.AI" },
       { property: "og:description", content: "Curated posts from Einklang on AI strategy, AI-native organizations, and operational excellence." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -79,7 +79,7 @@ function PostsPage() {
 
   return (
     <section className="max-w-4xl mx-auto px-6 lg:px-10 py-24">
-      <div className="txt-label-nav text-primary mb-4">AI Strategy</div>
+      <div className="txt-label-nav text-primary mb-4">Insights</div>
       <h1 className="txt-primary-headline text-primary mb-6">Posts</h1>
       <p className="txt-body mb-12 max-w-2xl">
         Notes from the field on AI-native organizations, operational excellence,

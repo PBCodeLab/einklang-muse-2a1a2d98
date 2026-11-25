@@ -5,3 +5,4 @@
 - Agent plan rules live in shared JSON data consumed by the pricing page and Python regression tests, so prices, billing terms, and entitlements can be verified without coupling tests to presentation copy.
 - Result values and evidence qualifiers live in shared JSON data with browser-safe formatting helpers, so headline stats and programme claims use the same measured figures and cannot drift independently.
 - Sharing-image metadata is added through a shared helper on content leaf routes only, so each page gets one matched Open Graph/Twitter image pair without inherited root-level duplicates.
+- The book page and homepage teaser reuse one CDN cover pointer, so the image stays consistent without duplicated binaries.

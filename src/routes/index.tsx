@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { productivityValue, productivityDescription, productivityClaim } from "@/lib/results";
 import { shareImageMeta } from "@/lib/share-image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import bookCover from "@/assets/books/ai-by-design-cover.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -203,6 +206,29 @@ Three years co-developing OE programmes across the Swiss industrial ecosystem.</
           <div>
             <LogoMarquee />
           </div>
+        </div>
+      </section>
+
+      {/* Book */}
+      <section className="border-t border-outline-variant bg-surface-container-lowest">
+        <div className={MAX}>
+          <Button asChild variant="ghost" className="group h-auto w-full justify-start whitespace-normal rounded-none px-0 py-6 text-left text-primary hover:bg-transparent">
+            <Link to="/letter" className="flex gap-5 md:gap-7">
+              <img
+                src={bookCover.url}
+                alt="Cover of AI by Design: The Human Way to Make AI Work"
+                width={1000}
+                height={1500}
+                loading="lazy"
+                className="block w-12 md:w-14 h-auto shrink-0 shadow-book-cover"
+              />
+              <span className="flex-1 text-base md:text-lg leading-relaxed font-medium">
+                New book: AI by Design: The Human Way to Make AI Work.{" "}
+                <span className="underline underline-offset-4">Pre-order now.</span>
+              </span>
+              <ArrowRight aria-hidden="true" className="shrink-0" />
+            </Link>
+          </Button>
         </div>
       </section>
 
