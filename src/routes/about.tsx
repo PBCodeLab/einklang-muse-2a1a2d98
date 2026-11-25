@@ -69,7 +69,7 @@ const partners = [
 ];
 
 const regions = [
-  { img: altendorfImg.url, name: company.headquarters, alt: "Pencil and watercolour drawing of Altendorf's lakeside homes on Lake Zurich, with wooded hills behind, Switzerland" },
+  { img: altendorfImg.url, name: company.headquarters, alt: "Pencil and watercolour drawing of Altendorf's lakeside homes on Lake Zurich, with wooded hills behind" },
   { img: saoPauloImg, name: "São Paulo", alt: "Pencil and watercolour drawing of São Paulo's urban skyline, Brazil" },
   { img: londonImg, name: "London", alt: "Pencil and watercolour drawing of London's riverside skyline, United Kingdom" },
 ];
