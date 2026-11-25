@@ -36,9 +36,9 @@ function Index() {
               <span className="text-on-surface-variant font-normal">finally scalable.</span>
             </h1>
             <div className="txt-body mb-10 max-w-2xl whitespace-pre-line">
-              Scale Operational Excellence (OE) across your organization:&nbsp;{"\n"}
+              Scale Operational Excellence (OE) across your organisation:&nbsp;{"\n"}
               The <strong className="font-semibold">Einklang Agent</strong> empowers everyone to apply proven OE improvement methods, individually or in teams. Deploying the Einklang Agent thereby develops broad OE capability across your workforce, and, even better, turns every such improvement project into a step toward AI-native ways of working.{"\n\n"}
-              With Einklang, raise OE across your organization and evolve it towards AI maturity.
+              With Einklang, raise OE across your organisation and evolve it towards AI maturity.
             </div>
             <div className="flex flex-wrap gap-3 mb-10">
               <Link
@@ -60,7 +60,7 @@ function Index() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
               >
-                Book Agent demo
+                Book a 30-min call
               </a>
             </div>
           </div>
@@ -84,8 +84,8 @@ function Index() {
             </h2>
             <p className="txt-body whitespace-pre-line">
               A few words on the problem and the solution:{"\n\n"}
-              From Toyota to Porsche’s comeback, to modern leaders like Nestlé, Danaher and Amazon: Behind many of the world’s most admired organizations lies a simple truth. They consistently apply certain Operational Excellence methods.{"\n\n"}
-              Yet for decades, these methods have mostly been accessible to companies that could afford expert consultants and large transformation programs. Even then, adoption often faded once experts left and teams returned to old routines under daily pressure.{"\n\n"}
+              From Toyota to Porsche’s comeback, to modern leaders like Nestlé, Danaher and Amazon: Behind many of the world’s most admired organisations lies a simple truth. They consistently apply certain Operational Excellence methods.{"\n\n"}
+              Yet for decades, these methods have mostly been accessible to companies that could afford expert consultants and large transformation programmes. Even then, adoption often faded once experts left and teams returned to old routines under daily pressure.{"\n\n"}
               We overcome these access and adoption challenges by selecting the best, context-relevant OE skills and making them available in scalable AI agents. For lasting OE results, at least 10x cheaper.&nbsp;{"\n\n"}
               And we don't stop there: We evolve the OE methods for the AI-native era, so that Einklang agents increasingly guide users towards AI-native operational excellence solutions.
             </p>
@@ -102,11 +102,11 @@ function Index() {
                 problem: "OE benefits fade, old routines return.",
                 pBody: "After OE consultants leave, employees often return to their routines. Under the pressure of daily work without ongoing support, the new OE methods and their benefits fade.",
                 title: "Sustained adoption",
-                body: "Einklang agents enable natural interactions adapted to each user's level of experience and involvement, keeping the OE method in use, teams engaged and benefits realized.",
+                body: "Einklang agents enable natural interactions adapted to each user's level of experience and involvement, keeping the OE method in use, teams engaged and benefits realised.",
               },
               {
                 problem: "AI-native OE strategy lacks execution.",
-                pBody: "Leaders know they need to become AI-native, but teams need a practical, structured path – not another, high-level transformation program.",
+                pBody: "Leaders know they need to become AI-native, but teams need a practical, structured path – not another, high-level transformation programme.",
                 title: "Stepwise AI design",
                 body: "Beyond delivering traditional OE expertise, Einklang solutions can use every improvement project to reveal where AI can automate, augment, or redesign how work gets done.",
               },
@@ -150,7 +150,7 @@ function Index() {
             <div className="grid sm:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
               {[
                 { t: "60 years cumulative OE", b: "Across manufacturing, banking, consulting, and technology. Hundreds of OE programmes led from first principles." },
-                { t: "Method-first, not tool-first", b: "Built around proven OE methodology (Lean, Six Sigma, VSM, DMAIC), not generalized AI output." },
+                { t: "Method-first, not tool-first", b: "Built around proven OE methodology (Lean, Six Sigma, VSM, DMAIC), not generalised AI output." },
                 { t: "Sector-specific intelligence", b: "OE in a Swiss bank looks different from OE in a manufacturer. The Agent understands the difference." },
                 { t: "Built to transfer capability", b: "Every interaction builds the practitioner's own judgement, not dependency on the tool." },
               ].map((f) => (
@@ -265,7 +265,7 @@ Three years co-developing OE programmes across the Swiss industrial ecosystem.</
           </h2>
           <p className="txt-body mb-10">See how Einklang can help your teams improve performance today, keep the gains, and identify where AI can redesign work for tomorrow.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a demo</a>
+            <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a 30-min call</a>
           </div>
         </div>
       </section>

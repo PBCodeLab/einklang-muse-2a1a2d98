@@ -27,3 +27,12 @@
 - [x] Rename the navigation to Insights with The book and Posts.
 - [x] Add the slim book banner below the homepage results.
 - [x] Verify book links, the cover, and desktop/mobile layouts.
+
+# Contact, headquarters and editorial consistency
+
+- [x] Update footer email, headquarters and all Calendly link labels.
+- [x] Update About headquarters, founding details and Aslam's location and biography.
+- [x] Replace the headquarters image with a drawing based on the supplied Lake Zurich photo.
+- [x] Add descriptive image alternatives and apply British spelling site-wide.
+- [x] Align bank and Swissmem descriptions with the measured outcomes.
+- [x] Verify links, images, descriptions and desktop/mobile presentation.

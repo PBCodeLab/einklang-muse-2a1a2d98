@@ -5,9 +5,10 @@ export const Route = createFileRoute("/case-studies/swissmem")({
   head: () => ({
     meta: [
       { title: "Swissmem — Case study | Einklang.AI" },
-      { name: "description", content: "160+ leaders certified · CHF 3.8m+ impact across Swissmem's 1,300 member companies." },
+      { name: "description", content: "160+ leaders certified · CHF 3.8m+ impact measured across participating member companies. Three years co-developing OE programmes with Swissmem." },
       { property: "og:title", content: "Swissmem — Case study" },
-      { property: "og:description", content: "Three years co-developing OE programmes across the Swiss industrial ecosystem." },
+      { property: "og:description", content: "160+ leaders certified · CHF 3.8m+ impact measured across participating member companies. Three years co-developing OE programmes with Swissmem." },
+      { name: "twitter:description", content: "160+ leaders certified · CHF 3.8m+ impact measured across participating member companies. Three years co-developing OE programmes with Swissmem." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       ...shareImageMeta,

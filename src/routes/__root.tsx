@@ -12,6 +12,7 @@ import { useState } from "react";
 
 import appCss from "../styles.css?url";
 import logoAsset from "../assets/einklang-compass-forest.png.asset.json";
+import company from "@/data/company.json";
 const logoUrl = logoAsset.url;
 
 function SiteHeader() {
@@ -23,13 +24,13 @@ function SiteHeader() {
         <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-0" aria-label="Einklang.AI home">
           <img
             src={logoUrl}
-            alt=""
+            alt="Einklang.AI dark-green compass rose logo"
             className="h-9 sm:h-10 md:h-12 w-auto shrink-0 object-contain"
           />
           <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary tracking-tight whitespace-nowrap">Einklang.AI</span>
         </Link>
-        <div className="flex items-center gap-3 md:gap-5 lg:gap-8">
-          <nav className="hidden sm:flex items-center gap-3 md:gap-5 lg:gap-8">
+        <div className="flex items-center gap-3 lg:gap-8">
+          <nav className="hidden sm:flex items-center gap-3 lg:gap-8">
             <div
               className="relative"
               onMouseEnter={() => setProductsOpen(true)}
@@ -94,7 +95,7 @@ function SiteHeader() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
           >
-            Book a demo
+            Book a 30-min call
           </a>
         </div>
       </div>
@@ -110,7 +111,7 @@ function SiteFooter() {
           <div className="flex items-center gap-2 mb-4">
             <img
               src={logoUrl}
-              alt=""
+              alt="Einklang.AI dark-green compass rose logo"
               className="h-10 md:h-12 w-auto object-contain"
             />
             <span className="text-lg md:text-xl font-bold text-primary tracking-tight">Einklang.AI</span>
@@ -122,10 +123,12 @@ function SiteFooter() {
           <p className="text-sm text-on-surface-variant leading-relaxed">
             DACH · LATAM · UK
           </p>
+          <div className="txt-label-nav text-primary mt-6 mb-3">Headquarters</div>
+          <p className="text-sm text-on-surface-variant leading-relaxed">{company.headquarters}</p>
         </div>
         <div>
-          <div className="txt-label-nav text-primary mb-3">Get in touch</div>
-          <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline underline-offset-4">Book a 30-min demo</a>
+          <a href={`mailto:${company.contactEmail}`} className="txt-label-nav text-primary mb-3 block w-fit underline underline-offset-4">Get in touch</a>
+          <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline underline-offset-4">Book a 30-min call</a>
         </div>
       </div>
       <div className="border-t border-outline-variant py-6 text-center text-xs text-on-surface-variant">

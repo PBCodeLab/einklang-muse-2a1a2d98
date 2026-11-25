@@ -25,7 +25,7 @@ function LogoRow() {
         <li key={l.name} className="h-20 flex items-center">
           <img
             src={l.src}
-            alt={l.name}
+            alt={`${l.name} company logo`}
             className={`${l.h} w-auto object-contain grayscale opacity-70`}
             loading="lazy"
           />

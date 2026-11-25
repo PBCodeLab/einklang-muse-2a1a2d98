@@ -52,7 +52,7 @@
       "pastProjectsPreloaded": false,
       "dataStaysInEnvironment": false,
       "mostPopular": true,
-      "actionLabel": "Book a demo",
+      "actionLabel": "Book a 30-min call",
       "actionUrl": "https://calendly.com/aslamjilani-einklangacademy/30min"
     },
     {
@@ -78,7 +78,7 @@
       "pastProjectsPreloaded": true,
       "dataStaysInEnvironment": true,
       "mostPopular": false,
-      "actionLabel": "Talk to us",
+      "actionLabel": "Book a 30-min call",
       "actionUrl": "https://calendly.com/aslamjilani-einklangacademy/30min"
     }
   ]

@@ -128,7 +128,7 @@ function AcademyPage() {
             Ready to build AI-Native OE capability in your organisation?
           </h2>
           <p className="txt-body mb-10">Start with a discovery call — or register your interest in the next cohort.</p>
-          <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Book a discovery call</a>
+          <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Book a 30-min call</a>
         </div>
       </section>
     </>

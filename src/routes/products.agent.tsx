@@ -9,9 +9,9 @@ import { shareImageMeta } from "@/lib/share-image";
 export const Route = createFileRoute("/products/agent")({
   head: () => ({
     meta: [
-      { title: "Einklang Agent — AI-powered OE advisor in Microsoft Teams" },
-      { name: "description", content: "An always-on OE advisor inside Microsoft Teams. Waste analysis, VSM, root cause, and benefit realisation — guided 24/7 in your language." },
-      { property: "og:title", content: "Einklang Agent — AI-powered OE advisor in Microsoft Teams" },
+      { title: "Einklang Agent — AI-powered OE adviser in Microsoft Teams" },
+      { name: "description", content: "An always-on OE adviser inside Microsoft Teams. Waste analysis, VSM, root cause, and benefit realisation — guided 24/7 in your language." },
+      { property: "og:title", content: "Einklang Agent — AI-powered OE adviser in Microsoft Teams" },
       { property: "og:description", content: "Eight OE capabilities, deployed inside your Microsoft tenant. EU GDPR compliant. Live in two weeks." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -100,7 +100,7 @@ function AgentPage() {
         <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-10 mb-8">
           <div className="flex-1 min-w-0">
             <h1 className="txt-primary-headline text-primary mb-8">
-              <span className="block">Your AI-powered OE advisor,</span>
+              <span className="block">Your AI-powered OE adviser,</span>
               <span className="text-on-surface-variant font-normal block">inside Microsoft Teams or browser.</span>
             </h1>
             <p className="txt-body">
@@ -144,7 +144,7 @@ function AgentPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm lg:px-5 font-bold hover:opacity-90 transition whitespace-nowrap"
           >
-            Book a demo
+            Book a 30-min call
           </a>
         </div>
         <div className="txt-label-nav text-on-surface-variant">Microsoft Teams &amp; Copilot · EU GDPR · Swiss data protection</div>
@@ -247,7 +247,7 @@ function AgentPage() {
           <p className="txt-body mb-10">Start a pilot with your team. We'll deploy it in your Teams tenant and measure the impact together.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild className="btn-primary h-auto shadow-none">
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Start a pilot with your team</a>
+              <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Book a 30-min call</a>
             </Button>
           </div>
         </div>

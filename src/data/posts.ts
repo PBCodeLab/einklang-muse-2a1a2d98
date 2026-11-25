@@ -5,6 +5,7 @@ export type Post = {
   date: string; // ISO YYYY-MM-DD
   linkedinUrl: string;
   coverImage?: string;
+  coverAlt?: string;
   coverFull?: boolean; // show the whole cover instead of a cropped banner
 };
 
@@ -22,6 +23,7 @@ export const posts: Post[] = [
     coverImage:
       "/__l5e/assets-v1/0d907988-afc0-4333-a1d0-478052ed1b59/ch-media-night-walk.jpg",
     coverFull: true,
+    coverAlt: "The CH Media team during a night-time walk through the end-to-end newspaper production process",
   },
   {
     id: "think-slow-act-fast",
@@ -34,6 +36,7 @@ export const posts: Post[] = [
     coverImage:
       "/__l5e/assets-v1/569bf3f8-a3e3-4e36-831a-d713398d6e60/think-slow-act-fast.png",
     coverFull: true,
+    coverAlt: "Think Slow, Act Fast infographic comparing System 1 intuitive thinking and System 2 deliberate thinking, with operational excellence examples",
   },
   {
     id: "sge-pakistan",
@@ -45,6 +48,7 @@ export const posts: Post[] = [
     linkedinUrl:
       "https://www.linkedin.com/feed/update/urn:li:activity:7507715891493576704/",
     coverImage: "/__l5e/assets-v1/63916214-3057-490c-a5e7-071cca30b1a8/sge-pakistan.png",
+    coverAlt: "Four meeting participants in front of a Switzerland Global Enterprise backdrop, discussing Einklang's international expansion to Pakistan",
   },
   {
     id: "waste-8-of-8",

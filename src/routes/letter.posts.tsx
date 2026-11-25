@@ -6,9 +6,9 @@ export const Route = createFileRoute("/letter/posts")({
   head: () => ({
     meta: [
       { title: "Posts | Insights | Einklang.AI" },
-      { name: "description", content: "Curated posts from Einklang on AI strategy, AI-native organizations, and operational excellence." },
+      { name: "description", content: "Curated posts from Einklang on AI strategy, AI-native organisations, and operational excellence." },
       { property: "og:title", content: "Posts | Insights | Einklang.AI" },
-      { property: "og:description", content: "Curated posts from Einklang on AI strategy, AI-native organizations, and operational excellence." },
+      { property: "og:description", content: "Curated posts from Einklang on AI strategy, AI-native organisations, and operational excellence." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       ...shareImageMeta,
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/letter/posts")({
 function formatDate(iso: string) {
   if (!iso) return "";
   try {
-    return new Date(iso).toLocaleDateString("en-US", {
+    return new Date(iso).toLocaleDateString("en-GB", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -47,7 +47,7 @@ function PostBody({ post }: { post: Post }) {
       {post.coverImage && (
         <img
           src={post.coverImage}
-          alt=""
+          alt={post.coverAlt || `Cover image for ${post.title}`}
           className={
             post.coverFull
               ? "block w-full h-auto"
@@ -82,7 +82,7 @@ function PostsPage() {
       <div className="txt-label-nav text-primary mb-4">Insights</div>
       <h1 className="txt-primary-headline text-primary mb-6">Posts</h1>
       <p className="txt-body mb-12 max-w-2xl">
-        Notes from the field on AI-native organizations, operational excellence,
+        Notes from the field on AI-native organisations, operational excellence,
         and the craft of scaling change.
       </p>
 

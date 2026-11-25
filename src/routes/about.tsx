@@ -3,10 +3,11 @@ import aslam from "../assets/team/aslam-sketch.jpeg";
 import andre from "../assets/team/andre-sketch.jpeg";
 import diego from "../assets/team/diego-sketch.jpeg";
 import philipp from "../assets/team/philipp-sketch.jpeg";
-import zurichImg from "../assets/regions/zurich-sketch.jpeg";
+import altendorfImg from "@/assets/regions/altendorf-lake-zurich-sketch.jpg.asset.json";
 import saoPauloImg from "../assets/regions/saopaulo-sketch.jpeg";
 import londonImg from "../assets/regions/london-sketch.jpeg";
 import { shareImageMeta } from "@/lib/share-image";
+import company from "@/data/company.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -28,8 +29,8 @@ const founders = [
     img: aslam,
     name: "Aslam Jilani",
     role: "Co-Founder | CEO",
-    location: "Zurich, Switzerland",
-    bio: "30 years driving continuous improvement at GE, IBM, and Shell. Expert in complex stakeholder management across Energy, Finance, and Technology sectors. Founded Einklang to make world-class OE accessible at scale.",
+    location: "Altendorf, Lake Zurich",
+    bio: "30 years driving continuous improvement at GE, IBM, and Shell. Expert in complex stakeholder management across Energy, Finance, and Technology sectors. Founded Einklang to make world-class OE accessible at scale. GE-certified Master Black Belt. Co-author of 'AI by Design: The Human Way to Make AI Work'.",
   },
   {
     img: andre,
@@ -50,7 +51,7 @@ const founders = [
     name: "Philipp Bubenzer",
     role: "Academic Advisor",
     location: "Zurich, Switzerland",
-    bio: "20+ years experience building deep tech ventures and innovation initiatives. WHU alumnus. Scholar at ETH Zurich and HES-SO. The Einklang approach builds on his work on ai-native organizations: How to scale OE.",
+    bio: "20+ years experience building deep tech ventures and innovation initiatives. WHU alumnus. Scholar at ETH Zurich and HES-SO. The Einklang approach builds on his work on ai-native organisations: How to scale OE.",
   },
 ];
 
@@ -58,7 +59,7 @@ const partners = [
   {
     name: "Swissmem",
     role: "Strategic partner · Swiss industry",
-    desc: "Switzerland's leading industrial association with 1,300 member companies. 160+ leaders certified through Einklang, with CHF 3.8m in measured impact across the membership.",
+    desc: "Switzerland's leading industrial association with 1,300 member companies. 160+ leaders certified through Einklang, with CHF 3.8m in measured impact across participating member companies.",
   },
   {
     name: "kyro",
@@ -68,22 +69,22 @@ const partners = [
 ];
 
 const regions = [
-  { img: zurichImg, name: "Zurich" },
-  { img: saoPauloImg, name: "São Paulo" },
-  { img: londonImg, name: "London" },
+  { img: altendorfImg.url, name: company.headquarters, alt: "Pencil and watercolour drawing of Altendorf's lakeside homes on Lake Zurich, with wooded hills behind, Switzerland" },
+  { img: saoPauloImg, name: "São Paulo", alt: "Pencil and watercolour drawing of São Paulo's urban skyline, Brazil" },
+  { img: londonImg, name: "London", alt: "Pencil and watercolour drawing of London's riverside skyline, United Kingdom" },
 ];
 
 function AboutPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
       {/* Hero */}
-      <section className="max-w-3xl mb-20">
+      <section className="mb-20">
         <div className="txt-label-nav text-primary mb-4">About Einklang</div>
-        <h1 className="txt-primary-headline text-primary mb-6">
+        <h1 className="txt-primary-headline text-primary mb-6 text-base min-[375px]:text-xl sm:text-3xl lg:text-5xl xl:text-6xl tracking-normal">
           <span className="whitespace-nowrap">Built by practitioners, for practitioners,</span><br />
           <span className="text-on-surface-variant font-normal">with a clear purpose.</span>
         </h1>
-        <p className="txt-body text-lg">
+        <p className="txt-body text-lg max-w-3xl">
           We started Einklang because we saw the same problem everywhere: world-class operational excellence methodology locked inside expensive consulting engagements, inaccessible to the organisations that need it most.
         </p>
       </section>
@@ -102,6 +103,7 @@ function AboutPage() {
             <p className="txt-body text-lg md:text-xl leading-relaxed text-primary">To equip organisations and their people with a proven improvement method, embedded in an intelligent agent, so they solve the right problems, deliver results at scale and keep the knowledge in the business.</p>
           </div>
         </div>
+        <p className="txt-body mt-6">Founded in {company.foundedYear}. Headquartered in {company.headquarters}.</p>
       </section>
 
       {/* Founders */}
@@ -111,7 +113,7 @@ function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {founders.map((f) => (
             <div key={f.name} className="flex flex-col">
-              <img src={f.img} alt={f.name} className="w-44 h-44 rounded object-cover mb-4" />
+              <img src={f.img} alt={`Pencil and watercolour portrait of ${f.name}, ${f.role}`} className="w-44 h-44 rounded object-cover mb-4" />
               <div className="font-semibold text-primary text-lg">{f.name}</div>
               <div className="text-sm text-on-surface-variant mb-1">{f.role}</div>
               <div className="text-xs text-on-surface-variant mb-3">{f.location}</div>
@@ -140,18 +142,18 @@ function AboutPage() {
       {/* Regions */}
       <section className="mb-20">
         <div className="txt-label-nav text-primary mb-3">Where we operate</div>
-        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">Headquartered in Zurich - expanding to growth hubs</h2>
-        <p className="txt-body mb-8 max-w-2xl">Headquartered in Zurich, with team members in São Paulo and Utrecht and partners in the UK. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
+        <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">Our headquarters</h2>
+        <p className="txt-body mb-8 max-w-2xl">Headquartered in {company.headquarters}, with team members in São Paulo and Utrecht and partners in the UK. Serving clients across Switzerland, Germany, Austria, Brazil, and the wider LatAm region.</p>
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {regions.map((r) => (
             <div key={r.name} className="flex flex-col">
-              <img src={r.img} alt={r.name} loading="lazy" width={1024} height={1024} className="w-full aspect-square object-cover rounded" />
+              <img src={r.img} alt={r.alt} loading="lazy" width={1024} height={1024} className="w-full aspect-square object-cover rounded" />
               <div className="font-semibold text-primary mt-3 text-center">{r.name}</div>
             </div>
           ))}
         </div>
         <div className="border-t border-outline-variant pt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-          <div><span className="txt-label-nav text-primary block mb-1">Headquarters</span><span className="text-on-surface-variant">Zurich</span></div>
+          <div><span className="txt-label-nav text-primary block mb-1">Headquarters</span><span className="text-on-surface-variant">{company.headquarters}</span></div>
           <div><span className="txt-label-nav text-primary block mb-1">Anchor markets</span><span className="text-on-surface-variant">DACH</span></div>
           <div><span className="txt-label-nav text-primary block mb-1">Growth markets</span><span className="text-on-surface-variant">LatAm</span></div>
           <div><span className="txt-label-nav text-primary block mb-1">AI partnerships</span><span className="text-on-surface-variant">UK</span></div>
@@ -168,7 +170,7 @@ function AboutPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded bg-primary text-on-primary px-6 py-3 text-sm font-bold hover:opacity-90 transition"
         >
-          Book a call
+          Book a 30-min call
         </a>
       </section>
     </div>

@@ -49,7 +49,7 @@ function BookPage() {
               </Button>
               <Button asChild variant="outline" className="h-auto min-h-11 whitespace-normal rounded-sm border-primary bg-transparent px-5 py-3 text-sm font-semibold text-primary shadow-none hover:bg-surface-container-low w-full sm:w-auto">
                 <a href="https://calendly.com/aslamjilani-einklangacademy/30min" target="_blank" rel="noopener noreferrer">
-                  Book a 30-min call with Aslam
+                  Book a 30-min call
                 </a>
               </Button>
             </div>

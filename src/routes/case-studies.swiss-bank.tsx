@@ -5,9 +5,10 @@ export const Route = createFileRoute("/case-studies/swiss-bank")({
   head: () => ({
     meta: [
       { title: "Swiss global bank — Case study | Einklang.AI" },
-      { name: "description", content: "13 Orchestrators · 5:1 ROI · CHF 200k savings. AI-native audit capability embedded across Switzerland and the UK." },
+      { name: "description", content: "13 Orchestrators · 5:1 ROI · CHF 200k pilot savings. The AI-native audit pilot across Switzerland and the UK is now scaling institutionally." },
       { property: "og:title", content: "Swiss global bank — Case study" },
-      { property: "og:description", content: "Pilot validated 5:1 ROI and led to a full institutional scale-up." },
+      { property: "og:description", content: "13 Orchestrators · 5:1 ROI · CHF 200k pilot savings. The AI-native audit pilot across Switzerland and the UK is now scaling institutionally." },
+      { name: "twitter:description", content: "13 Orchestrators · 5:1 ROI · CHF 200k pilot savings. The AI-native audit pilot across Switzerland and the UK is now scaling institutionally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       ...shareImageMeta,
