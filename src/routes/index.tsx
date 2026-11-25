@@ -224,7 +224,7 @@ Three years co-developing OE programmes across the Swiss industrial ecosystem.</
               />
               <span className="flex-1 text-base md:text-lg leading-relaxed font-medium">
                 New book: AI by Design: The Human Way to Make AI Work.{" "}
-                <span className="underline underline-offset-4">Pre-order now.</span>
+                <span className="underline underline-offset-4">Order now.</span>
               </span>
               <ArrowRight aria-hidden="true" className="shrink-0" />
             </Link>

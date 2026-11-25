@@ -8,9 +8,9 @@ export const Route = createFileRoute("/letter/")({
   head: () => ({
     meta: [
       { title: "AI by Design: The Human Way to Make AI Work | Einklang.AI" },
-      { name: "description", content: "By Lascelles, Maguire and Jilani. Practical steps to make AI work for the people who do the work. Available to pre-order on Amazon." },
+      { name: "description", content: "By Lascelles, Maguire and Jilani. Practical steps to make AI work for the people who do the work. Available now on Amazon." },
       { property: "og:title", content: "AI by Design: The Human Way to Make AI Work | Einklang.AI" },
-      { property: "og:description", content: "By Lascelles, Maguire and Jilani. Practical steps to make AI work for the people who do the work. Available to pre-order on Amazon." },
+      { property: "og:description", content: "By Lascelles, Maguire and Jilani. Practical steps to make AI work for the people who do the work. Available now on Amazon." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       ...shareImageMeta,
@@ -31,7 +31,7 @@ function BookPage() {
               <span className="block text-balance">The Human Way to Make AI Work</span>
             </h1>
             <p className="txt-body mb-8">
-              By Lascelles, Maguire and Jilani. Available to pre-order on Amazon.
+              By Lascelles, Maguire and Jilani. Available now on Amazon.
             </p>
             <figure className="border-l-2 border-outline-variant pl-5 mb-8">
               <blockquote className="txt-body italic text-primary">
@@ -44,7 +44,7 @@ function BookPage() {
             <div className="flex flex-col sm:flex-row md:flex-col xl:flex-row gap-3 items-stretch sm:items-start md:items-start">
               <Button asChild className="h-auto min-h-11 whitespace-normal rounded-sm px-5 py-3 text-sm font-semibold shadow-none w-full sm:w-auto">
                 <a href="https://www.amazon.co.uk/dp/1739894693" target="_blank" rel="noopener noreferrer">
-                  Pre-order on Amazon <ExternalLink aria-hidden="true" />
+                  Order on Amazon <ExternalLink aria-hidden="true" />
                 </a>
               </Button>
               <Button asChild variant="outline" className="h-auto min-h-11 whitespace-normal rounded-sm border-primary bg-transparent px-5 py-3 text-sm font-semibold text-primary shadow-none hover:bg-surface-container-low w-full sm:w-auto">
