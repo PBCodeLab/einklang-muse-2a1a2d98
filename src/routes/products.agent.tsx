@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import teamsLogo from "@/assets/teams-logo.png";
 import browsersLogo from "@/assets/browsers-2x2.png";
+import agentPricing from "@/data/agent-pricing.json";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/products/agent")({
   head: () => ({
@@ -18,7 +20,6 @@ export const Route = createFileRoute("/products/agent")({
 
 const MAX = "max-w-7xl mx-auto px-6 lg:px-10";
 const CALENDLY = "https://calendly.com/aslamjilani-einklangacademy/30min";
-const SIGNUP = "https://einklang.ai/agent/billing";
 
 const CAPABILITIES = [
   { tag: "Core", title: "Waste identification", body: "Structured Lean waste analysis — including waste created by poor AI deployments." },
@@ -38,14 +39,46 @@ const STEPS = [
   { n: "04", title: "Measure & realise", body: "Monthly benefit realisation reports. Average client sees 30% cost reduction within 6 months." },
 ];
 
-const TIERS = [
-  { tag: "Single user", audience: "Individuals and company trials", price: "CHF 179", unit: "/ month", note: "60-day free trial · the way in", cta: "Start free trial", link: SIGNUP, featured: false,
-    features: ["All modules and benefit realisation", "Paid monthly by card through Stripe", "Cancel anytime", "Upgrade to Team or Enterprise anytime"] },
-  { tag: "Team", audience: "Mid-sized companies", price: "CHF 149", unit: "/ seat / month", note: "Minimum 3 seats · invoiced yearly", cta: "Get started", link: CALENDLY, featured: false,
-    features: ["All modules and benefit realisation", "From 3 seats upwards", "Shared team projects", "Invoiced yearly"] },
-  { tag: "Enterprise", audience: "Larger organisations", price: "CHF 2,490", unit: "/ month", note: "Unlimited users · CHF 29,880 a year", cta: "Talk to us", link: CALENDLY, featured: true,
-    features: ["All modules and benefit realisation", "Unlimited users across the organisation", "Organisation-wide rollout and reporting", "Invoiced yearly"] },
-];
+const TIERS = agentPricing.plans.map((plan) => {
+  const features: string[] = [];
+  if (plan.id === "enterprise") {
+    features.push("Everything in Team");
+  } else {
+    features.push(`All ${plan.moduleCount === 8 ? "eight" : plan.moduleCount} modules`);
+  }
+  if (plan.id === "individual") {
+    features.push(plan.languages.join("/"));
+  }
+  if (plan.browserApp) features.push("Web app in any browser");
+  if (plan.id !== "enterprise") {
+    if (plan.teamsIntegration) features.push("Microsoft Teams integration");
+    if (plan.monthlyBenefitReporting) features.push("Monthly benefit reporting");
+    if (plan.methodologySupport && plan.technologySupport) features.push("Methodology and technology support");
+  }
+  if (plan.copilotIntegration) features.push("Copilot integration");
+  if (plan.dedicatedTenantAgent) features.push("A dedicated agent deployed in your own Microsoft tenant");
+  if (plan.strategyPreloaded && plan.pastProjectsPreloaded) {
+    features.push("Pre-loaded with your strategy and past projects so the agent learns your organisation");
+  }
+  if (plan.dataStaysInEnvironment) features.push("Your data never leaves your environment");
+
+  const terms = [];
+  if (plan.trialDays > 0) terms.push(`${plan.trialDays}-day free trial`);
+  if (plan.billingInterval === "monthly") terms.push("Monthly payment");
+  if (plan.cancelAnytime) terms.push("Cancel anytime");
+  if (plan.id === "team") terms.push(`Minimum ${plan.minimumUsers} users`);
+  if (plan.billingInterval === "annually") terms.push("Invoiced annually");
+  if (plan.unlimitedUsers) terms.push("Unlimited users");
+
+  return {
+    ...plan,
+    audience: plan.id === "individual" ? "Individuals and company trials" : plan.id === "team" ? "Mid-sized companies" : "Larger organisations",
+    price: `${agentPricing.currency} ${plan.monthlyPrice.toLocaleString("en-US")}`,
+    unit: plan.perUser ? "/ user / month" : "/ month",
+    note: terms.join(" · "),
+    features,
+  };
+});
 
 const FAQ = [
   { q: "Does it work with our existing Microsoft 365 setup?", a: "Yes — it deploys as a Teams app inside your existing tenant. No new infrastructure or separate login. IT approval typically takes one meeting." },
@@ -53,7 +86,7 @@ const FAQ = [
   { q: "How does benefit realisation work?", a: "The agent tracks improvement initiatives from initiation to completion, quantifying financial and operational benefits at each stage. Monthly reports show leadership the real impact." },
   { q: "How long does implementation take?", a: "Most organisations are live within two weeks. Configuration takes 2–3 days; the first team is onboarded in a single 90-minute session." },
   { q: "Which languages are supported?", a: "German, English, Portuguese, and Spanish out of the box. Additional languages on request." },
-  { q: "What support is included?", a: "All plans include ongoing methodology and technology support. Our team handles escalations — you are never left on your own." },
+  { q: "What support is included?", a: "Team and Enterprise include ongoing methodology and technology support. Our team handles escalations, so you are never left on your own." },
 ];
 
 function AgentPage() {
@@ -157,43 +190,32 @@ function AgentPage() {
           <div className="max-w-2xl mb-14">
             <div className="txt-label-nav text-primary mb-4">Pricing</div>
             <h2 className="txt-primary-headline text-primary mb-4 md:whitespace-nowrap">Three tiers from one user to the whole company.</h2>
-            <p className="txt-body">Everyone starts on the same 60-day free trial, then picks one of three plans. No setup fees.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {TIERS.map((t) => (
-              <div key={t.tag} className={`bg-surface p-8 flex flex-col ${t.featured ? "border-2 border-primary" : "border border-outline-variant"}`}>
-                <div className={`txt-label-nav self-start px-4 py-1.5 rounded mb-3 ${t.featured ? "bg-primary text-on-primary" : "bg-surface-container-low text-primary"}`}>{t.tag}</div>
+              <div key={t.id} className={`bg-surface p-8 flex flex-col min-w-0 ${t.mostPopular ? "border-2 border-primary" : "border border-outline-variant"}`}>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3">
+                  <h3 className={`txt-label-nav px-4 py-1.5 rounded ${t.mostPopular ? "bg-primary text-on-primary" : "bg-surface-container-low text-primary"}`}>{t.name}</h3>
+                  {t.mostPopular && <span className="text-xs font-semibold text-primary">Most popular</span>}
+                </div>
                 <div className="text-sm text-on-surface-variant mb-5">{t.audience}</div>
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className="text-4xl text-primary" style={{ fontWeight: 800, letterSpacing: "-0.04em" }}>{t.price}</span>
+                <div className="flex flex-wrap items-baseline gap-x-1 mb-1">
+                  <span className="text-4xl font-extrabold text-primary whitespace-nowrap">{t.price}</span>
                   <span className="text-sm text-on-surface-variant">{t.unit}</span>
                 </div>
                 <div className="text-sm italic font-semibold text-primary mb-6 pb-6 border-b border-outline-variant">{t.note}</div>
                 <ul className="text-sm text-on-surface-variant space-y-2 mb-8 flex-1">
                   {t.features.map((f) => <li key={f}>✓ {f}</li>)}
                 </ul>
-                <a href={t.link} target="_blank" rel="noopener noreferrer" className="btn-primary self-start">{t.cta}</a>
+                <Button asChild className="btn-primary self-start h-auto shadow-none">
+                  <a href={t.actionUrl} target="_blank" rel="noopener noreferrer">{t.actionLabel}</a>
+                </Button>
               </div>
             ))}
           </div>
-          <p className="text-sm italic font-semibold text-primary mt-4">Companies start on a single licence and move up as the team grows.</p>
-          <div className="grid md:grid-cols-4 gap-4 mt-10">
-            {[
-              { t: "Inside Microsoft 365", b: "Teams and Copilot. No new login." },
-              { t: "EU data residency", b: "Your data stays in your tenant." },
-              { t: "Four languages", b: "German, English, Portuguese, Spanish." },
-            ].map((x) => (
-              <div key={x.t} className="bg-surface border-l-4 border-primary p-5">
-                <div className="text-sm font-bold text-primary mb-1">{x.t}</div>
-                <div className="text-xs text-on-surface-variant">{x.b}</div>
-              </div>
-            ))}
-            <div className="bg-primary text-on-primary p-5">
-              <div className="txt-label-nav mb-2">Options on request</div>
-              <div className="text-xs">Upload your data, private to your users</div>
-              <div className="text-xs">Your own dedicated instance</div>
-            </div>
-          </div>
+          <p className="text-sm italic font-semibold text-primary mt-4">
+            From {agentPricing.enterpriseBetterValueFromUsers} users, Enterprise is the better value. All prices in {agentPricing.currency}{agentPricing.excludesVat ? ", excluding VAT." : "."}
+          </p>
         </div>
       </section>
 
@@ -219,9 +241,11 @@ function AgentPage() {
           <h2 className="txt-primary-headline text-primary mb-6 text-3xl md:text-4xl">
             Ready to see the Einklang Agent in your environment?
           </h2>
-          <p className="txt-body mb-10">Start with a no-commitment pilot. We'll deploy it in your Teams tenant and measure the impact together.</p>
+          <p className="txt-body mb-10">Start a pilot with your team. We'll deploy it in your Teams tenant and measure the impact together.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Start a pilot</a>
+            <Button asChild className="btn-primary h-auto shadow-none">
+              <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Start a pilot with your team</a>
+            </Button>
           </div>
         </div>
       </section>
