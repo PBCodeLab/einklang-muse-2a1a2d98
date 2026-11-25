@@ -36,3 +36,10 @@
 - [x] Add descriptive image alternatives and apply British spelling site-wide.
 - [x] Align bank and Swissmem descriptions with the measured outcomes.
 - [x] Verify links, images, descriptions and desktop/mobile presentation.
+
+# Academy prices and live session
+
+- [x] Add both participant prices and the member, cohort and VAT note without changing the card design.
+- [x] Link the closing copy to the free live session on 13 January 2027 and create /workshop.
+- [x] Verify prices, session date, navigation and desktop/mobile presentation.
+- [ ] Add workshop registration once its link is supplied (waiting for the user).

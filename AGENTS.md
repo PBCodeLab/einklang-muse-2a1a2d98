@@ -8,3 +8,4 @@
 - The book page and homepage teaser reuse one CDN cover pointer, so the image stays consistent without duplicated binaries.
 - Shared company facts live in browser-safe JSON reused by About, the footer and factual regression tests, so founding and contact details stay consistent.
 - Post cover descriptions live alongside post data and render as image alternatives, so image context stays with each post.
+- Academy participant prices, rate terms and live-session dates live in shared browser-safe JSON consumed by Academy/workshop pages and regression tests, so commercial and event facts stay consistent.

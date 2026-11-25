@@ -1,0 +1,18 @@
+{
+  "currency": "CHF",
+  "vatIncluded": false,
+  "swissmemPreferentialRates": true,
+  "inHouseCohorts": "on_request",
+  "practitioner": {
+    "price": 6500,
+    "priceBasis": "participant"
+  },
+  "orchestrator": {
+    "price": 9950,
+    "priceBasis": "participant"
+  },
+  "liveSession": {
+    "date": "2027-01-13",
+    "price": 0
+  }
+}

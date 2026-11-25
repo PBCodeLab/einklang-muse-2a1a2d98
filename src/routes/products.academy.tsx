@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { academyCertifiedValue, academyRoiValue, academyRoiClaim } from "@/lib/results";
 import { shareImageMeta } from "@/lib/share-image";
+import academy from "@/data/academy-programmes.json";
 
 export const Route = createFileRoute("/products/academy")({
   head: () => ({
@@ -21,6 +22,9 @@ const MAX = "max-w-7xl mx-auto px-6 lg:px-10";
 const CALENDLY = "https://calendly.com/aslamjilani-einklangacademy/30min";
 const SWISSMEM_GREEN = "https://www.swissmem-academy.ch/de/kurse/lean-six-sigma-green-belt-zertifizierung.html";
 const SWISSMEM_BLACK = "https://www.swissmem-academy.ch/de/kurse/lean-six-sigma-black-belt-zertifizierung.html";
+const sessionDate = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+}).format(new Date(`${academy.liveSession.date}T00:00:00Z`));
 
 const DELIVERABLES = [
   { t: "Certification", b: "AI-Native Green Belt or Black Belt — recognised across DACH and LatAm." },
@@ -75,6 +79,10 @@ function AcademyPage() {
             <div className="bg-surface border border-outline-variant p-10">
               <div className="txt-label-nav text-primary mb-3">Practitioner</div>
               <h3 className="txt-section-title text-primary mb-3">AI-Native Green Belt</h3>
+              <p className="text-2xl font-semibold text-primary mb-6">
+                {academy.currency} {academy.practitioner.price.toLocaleString("en-GB")}{" "}
+                <span className="text-sm font-normal text-on-surface-variant">per {academy.practitioner.priceBasis}</span>
+              </p>
               <p className="text-sm text-on-surface-variant leading-relaxed mb-6">A focused certification for practitioners applying DMAIC methodology on the job. Starts at Sprint 3 — straight into value stream analysis and improvement work.</p>
               <div className="text-xs text-on-surface-variant mb-6">DE · EN available now · PT, ES coming</div>
               <a href={SWISSMEM_GREEN} target="_blank" rel="noopener noreferrer" className="btn-primary">Enrol now</a>
@@ -82,11 +90,20 @@ function AcademyPage() {
             <div className="bg-surface border border-outline-variant p-10">
               <div className="txt-label-nav text-primary mb-3">Orchestrator</div>
               <h3 className="txt-section-title text-primary mb-3">AI-Native Black Belt</h3>
+              <p className="text-2xl font-semibold text-primary mb-6">
+                {academy.currency} {academy.orchestrator.price.toLocaleString("en-GB")}{" "}
+                <span className="text-sm font-normal text-on-surface-variant">per {academy.orchestrator.priceBasis}</span>
+              </p>
               <p className="text-sm text-on-surface-variant leading-relaxed mb-6">For senior leaders running OE programmes at scale. Covers all 6 sprints — from AI-Native foundations through to value stream design, change orchestration, and benefit realisation.</p>
               <div className="text-xs text-on-surface-variant mb-6">EN · DE available now · PT, ES coming</div>
               <a href={SWISSMEM_BLACK} target="_blank" rel="noopener noreferrer" className="btn-primary">Enrol now</a>
             </div>
           </div>
+          <p className="text-sm text-on-surface-variant leading-relaxed mt-6">
+            {academy.swissmemPreferentialRates && "Swissmem members receive preferential rates. "}
+            {academy.inHouseCohorts === "on_request" && "In-house cohorts for your organisation on request. "}
+            All prices in {academy.currency}, {academy.vatIncluded ? "including" : "excluding"} VAT.
+          </p>
         </div>
       </section>
 
@@ -127,7 +144,12 @@ function AcademyPage() {
           <h2 className="txt-primary-headline text-primary mb-6 text-3xl md:text-4xl">
             Ready to build AI-Native OE capability in your organisation?
           </h2>
-          <p className="txt-body mb-10">Start with a discovery call — or register your interest in the next cohort.</p>
+          <p className="txt-body mb-10">
+            Start with a discovery call, or{" "}
+            <Link to="/workshop" className="text-primary underline underline-offset-4 hover:opacity-80">
+              join our free live session on {sessionDate}
+            </Link>.
+          </p>
           <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-primary">Book a 30-min call</a>
         </div>
       </section>
