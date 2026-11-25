@@ -48,9 +48,8 @@ function SiteHeader() {
               {productsOpen && (
                 <div role="menu" className="absolute left-0 top-full pt-2 min-w-[220px]">
                   <div className="bg-surface border border-outline-variant shadow-sm py-2">
-                    <Link to="/products/agent" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Agent</Link>
-                    <Link to="/products/academy" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Academy</Link>
-                    <Link to="/products/custom" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Custom Development</Link>
+                    <Link to="/products/agent" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Einklang Agent</Link>
+                    <Link to="/products/academy" className="block px-4 py-2 text-xs md:text-sm text-primary hover:bg-surface-container-low whitespace-nowrap" onClick={() => setProductsOpen(false)}>Skill Build Academy</Link>
                   </div>
                 </div>
               )}
@@ -200,8 +199,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Einklang — Operational Excellence, finally scalable." },
       { name: "twitter:description", content: "The Einklang Agent gives every team access to proven improvement methods and turns every project into a step toward AI-native ways of working." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/065f9fbc-810d-4df6-a133-2613d9c9f43e/id-preview-8262327f--700180b2-c62f-4275-bdcd-ea123227ac96.lovable.app-1778245818080.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/065f9fbc-810d-4df6-a133-2613d9c9f43e/id-preview-8262327f--700180b2-c62f-4275-bdcd-ea123227ac96.lovable.app-1778245818080.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

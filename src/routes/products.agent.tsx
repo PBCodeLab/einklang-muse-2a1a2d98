@@ -9,6 +9,8 @@ export const Route = createFileRoute("/products/agent")({
       { name: "description", content: "An always-on OE advisor inside Microsoft Teams. Waste analysis, VSM, root cause, and benefit realisation — guided 24/7 in your language." },
       { property: "og:title", content: "Einklang Agent — AI-powered OE advisor in Microsoft Teams" },
       { property: "og:description", content: "Eight OE capabilities, deployed inside your Microsoft tenant. EU GDPR compliant. Live in two weeks." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: AgentPage,

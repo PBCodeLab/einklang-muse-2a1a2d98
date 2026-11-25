@@ -7,6 +7,8 @@ export const Route = createFileRoute("/case-studies/swissmem")({
       { name: "description", content: "160+ leaders certified · CHF 3.8m+ impact across Swissmem's 1,300 member companies." },
       { property: "og:title", content: "Swissmem — Case study" },
       { property: "og:description", content: "Three years co-developing OE programmes across the Swiss industrial ecosystem." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Swissmem,

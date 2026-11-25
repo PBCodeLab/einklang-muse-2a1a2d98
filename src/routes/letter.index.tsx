@@ -7,6 +7,8 @@ export const Route = createFileRoute("/letter/")({
       { name: "description", content: "An open letter from Einklang.AI to the CEOs we partner with." },
       { property: "og:title", content: "TO OUR CEO CLIENTS — Einklang.AI" },
       { property: "og:description", content: "An open letter from Einklang.AI to the CEOs we partner with." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: LetterPage,

@@ -14,6 +14,8 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Built by practitioners, for practitioners. The team and thinking behind Einklang.AI — making world-class operational excellence accessible to every organisation." },
       { property: "og:title", content: "Who we are — Einklang.AI" },
       { property: "og:description", content: "Built by practitioners, for practitioners. The team behind Einklang.AI." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: AboutPage,
@@ -55,11 +57,6 @@ const partners = [
     name: "Swissmem",
     role: "Strategic partner · Swiss industry",
     desc: "Switzerland's leading industrial association with 1,300 member companies. 160+ leaders certified through Einklang, with CHF 3.8m in measured impact across the membership.",
-  },
-  {
-    name: "Brilliant Working Ltd",
-    role: "Reference implementation partner",
-    desc: "The organisation behind the Brilliant Working methodology. Einklang built Sara (a fully custom AI agent trained on their proprietary framework) as the reference Customer Agent implementation.",
   },
   {
     name: "kyro",
@@ -127,7 +124,7 @@ function AboutPage() {
         <div className="txt-label-nav text-primary mb-3">Ecosystem</div>
         <h2 className="txt-primary-headline text-primary mb-4 text-3xl md:text-4xl">Partners & advisors</h2>
         <p className="txt-body mb-8 max-w-2xl">We work with organisations that share our belief that operational excellence should be accessible to everyone.</p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {partners.map((p) => (
             <div key={p.name} className="border border-outline-variant rounded p-6 bg-surface-container-lowest">
               <div className="font-semibold text-primary text-lg mb-1">{p.name}</div>

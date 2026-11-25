@@ -7,6 +7,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Book a 30-minute demo or start a pilot with the Einklang team." },
       { property: "og:title", content: "Contact — Einklang.AI" },
       { property: "og:description", content: "Book a 30-minute demo with the Einklang team." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Contact,

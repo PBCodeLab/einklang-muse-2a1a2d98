@@ -7,6 +7,8 @@ export const Route = createFileRoute("/products/academy")({
       { name: "description", content: "Practitioner and Orchestrator certifications combining proven OE methodology with AI-native tools, supported by the Einklang Agent." },
       { property: "og:title", content: "Skill Build Academy — AI-Native OE certification" },
       { property: "og:description", content: "Two certification pathways for DACH and LatAm. 160+ leaders certified. 5:1 ROI demonstrated." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: AcademyPage,

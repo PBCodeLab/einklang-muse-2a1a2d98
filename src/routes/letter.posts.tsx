@@ -8,6 +8,8 @@ export const Route = createFileRoute("/letter/posts")({
       { name: "description", content: "Curated posts from Einklang on AI strategy, AI-native organizations, and operational excellence." },
       { property: "og:title", content: "Posts — AI Strategy — Einklang.AI" },
       { property: "og:description", content: "Curated posts from Einklang on AI strategy, AI-native organizations, and operational excellence." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: PostsPage,

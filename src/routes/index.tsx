@@ -8,6 +8,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Einklang Agent: scaled access to proven OE methods, sustained adoption, and stepwise AI design, for every team." },
       { property: "og:title", content: "Einklang.AI — Operational Excellence, finally scalable." },
       { property: "og:description", content: "The Einklang Agent gives every team access to proven improvement methods, inside Microsoft Teams." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Index,

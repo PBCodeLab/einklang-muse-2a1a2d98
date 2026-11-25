@@ -7,6 +7,8 @@ export const Route = createFileRoute("/case-studies/")({
       { name: "description", content: "Real-world results from organisations scaling operational excellence with the Einklang Agent." },
       { property: "og:title", content: "Case studies — Einklang.AI" },
       { property: "og:description", content: "Swiss bank · Swissmem — measurable impact across DACH." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: CaseStudiesIndex,
@@ -30,12 +32,6 @@ function CaseStudiesIndex() {
           <div className="txt-label-nav text-on-surface-variant mb-3">Industrial</div>
           <h2 className="txt-section-title text-primary mb-3">Swissmem · 1,300 member companies</h2>
           <p className="txt-body text-base mb-5">160+ leaders certified · CHF 3.8m+ impact. Three years co-developing OE programmes across the Swiss industrial ecosystem.</p>
-          <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
-        </Link>
-        <Link to="/case-studies/sara" className="bg-surface border border-outline-variant p-10 group hover:border-primary transition">
-          <div className="txt-label-nav text-on-surface-variant mb-3">Consulting</div>
-          <h2 className="txt-section-title text-primary mb-3">Sara by Brilliant Working</h2>
-          <p className="txt-body text-base mb-5">A custom AI agent for Baringa Management Consulting — the Brilliant Working methodology, embedded in AI and deployed via secure Azure architecture.</p>
           <span className="text-sm text-primary group-hover:underline">Read the case study →</span>
         </Link>
       </div>
